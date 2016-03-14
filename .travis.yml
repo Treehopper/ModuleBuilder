@@ -1,0 +1,10 @@
+language: java
+before_install: 
+ - cd parent
+notifications:
+ email:
+ recipients:
+   - travis-ci.modulebuilder@hohenegger.eu
+   on_success: change
+   on_failure: always
+
