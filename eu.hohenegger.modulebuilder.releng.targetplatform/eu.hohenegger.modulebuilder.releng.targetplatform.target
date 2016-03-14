@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1457991721">
+<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1457995069">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="4.5.2.v20160212-1500"/>
@@ -9,6 +9,14 @@
       <unit id="org.eclipse.e4.tools.compat" version="4.5.0.v20150430-0712"/>
       <unit id="org.eclipse.e4.tools.services" version="4.5.0.v20150430-0712"/>
       <repository location="http://download.eclipse.org/eclipse/updates/4.5"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
+      <unit id="org.eclipse.draw2d.feature.group" version="3.10.1.201508170204"/>
+      <repository location="http://download.eclipse.org/releases/mars"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
+      <unit id="org.eclipse.xtext.sdk.feature.group" version="2.9.2.v201603040440"/>
+      <repository location="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
     </location>
   </locations>
 </target>

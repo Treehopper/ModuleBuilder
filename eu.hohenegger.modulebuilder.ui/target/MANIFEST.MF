@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: eu.hohenegger.modulebuilder.ui;singleton:=true
+Bundle-Name: %pluginName
+Bundle-Version: 1.0.0.201603142246
+Bundle-ClassPath: .
+Require-Bundle: eu.hohenegger.modulebuilder,org.eclipse.ui,org.eclipse
+ .core.runtime,org.eclipse.e4.core.di,org.eclipse.e4.core.di.extension
+ s,org.eclipse.e4.ui.di,org.eclipse.e4.ui.services,org.eclipse.e4.ui.m
+ odel.workbench,org.eclipse.e4.core.contexts,org.eclipse.e4.ui.workben
+ ch,org.eclipse.e4.core.services,org.eclipse.core.resources,org.eclips
+ e.swt,org.eclipse.core.expressions,org.eclipse.jdt.core
+Bundle-ManifestVersion: 2
+Bundle-Activator: eu.hohenegger.modulebuilder.ui.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %providerName
+Import-Package: javax.inject;version="1.0.0",javax.annotation; version
+ ="1.0.0"
+

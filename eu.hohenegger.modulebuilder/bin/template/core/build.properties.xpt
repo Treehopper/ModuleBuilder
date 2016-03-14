@@ -1,0 +1,14 @@
+«IMPORT modulespecification»
+
+«DEFINE main FOR Module»
+«EXPAND updatesite FOREACH this.updatesites»
+«ENDDEFINE»
+
+«DEFINE updatesite FOR Updatesite»
+«FILE "build.properties"»source.. = src/
+output.. = bin/
+bin.includes = META-INF/,\
+               .,\
+               plugin.xml
+«ENDFILE»
+«ENDDEFINE»

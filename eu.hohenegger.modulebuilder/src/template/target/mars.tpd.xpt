@@ -1,0 +1,20 @@
+«IMPORT modulespecification»
+
+«EXTENSION metamodel::Extensions»
+
+«DEFINE main FOR Module»
+«EXPAND updatesite FOREACH this.updatesites»
+«ENDDEFINE»
+
+«DEFINE updatesite FOR Updatesite»
+«FILE this.targetFileName() + ".tpd"»target "«this.targetName»" with source configurePhase requirements
+
+location "http://download.eclipse.org/eclipse/updates/4.5"{
+	org.eclipse.sdk.feature.group [4.5.0,4.6.0)
+	org.eclipse.platform.feature.group [4.5.0,4.6.0)
+	org.eclipse.e4.tools.compat [4.5.0,4.6.0)
+	org.eclipse.e4.tools.services [4.5.0,4.6.0)
+}
+
+«ENDFILE»
+«ENDDEFINE»

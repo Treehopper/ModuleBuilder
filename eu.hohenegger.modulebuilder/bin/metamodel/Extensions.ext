@@ -1,0 +1,4 @@
+import modulespecification;
+
+String targetFileName(Updatesite m):
+	m.targetName;

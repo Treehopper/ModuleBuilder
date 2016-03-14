@@ -1,0 +1,34 @@
+@GenModel(modelDirectory="/eu.hohenegger.p2updatesite-wizard/src")
+package modulespecification
+
+class Module {
+	contains Updatesite[] updatesites
+}
+
+class Updatesite {
+	String baseName
+
+	derived String coreName get {
+		baseName
+	}
+	
+	derived String uiName get {
+		baseName + ".ui"
+	}
+
+	derived String testsName get {
+		baseName + ".tests"
+	}
+	
+	derived String updateSiteName get {
+		baseName + ".p2updateSite"
+	}
+	
+	derived String featureName get {
+		baseName + ".feature"
+	}
+	
+	derived String targetName get {
+		baseName + ".releng.targetplatform"
+	}
+}

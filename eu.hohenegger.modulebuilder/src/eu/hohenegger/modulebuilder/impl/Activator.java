@@ -1,4 +1,4 @@
-package eu.hohenegger.modulebuilder;
+package eu.hohenegger.modulebuilder.impl;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

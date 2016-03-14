@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='eu.hohenegger.modulebuilder' version='1.0.0.201603142246'>
+    <update id='eu.hohenegger.modulebuilder' range='[0.0.0,1.0.0.201603142246)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='maven-groupId' value='eu.hohenegger.modulebuilder'/>
+      <property name='maven-artifactId' value='eu.hohenegger.modulebuilder'/>
+      <property name='maven-version' value='1.0.0-SNAPSHOT'/>
+    </properties>
+    <provides size='7'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='eu.hohenegger.modulebuilder' version='1.0.0.201603142246'/>
+      <provided namespace='osgi.bundle' name='eu.hohenegger.modulebuilder' version='1.0.0.201603142246'/>
+      <provided namespace='java.package' name='eu.hohenegger.modulebuilder' version='0.0.0'/>
+      <provided namespace='java.package' name='modulespecification' version='0.0.0'/>
+      <provided namespace='java.package' name='modulespecification.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='modulespecification.util' version='0.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='9'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtext.xbase.lib' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xpand' range='2.1.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtend' range='2.1.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.xtend.typesystem.emf' range='2.1.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='eu.hohenegger.modulebuilder' version='1.0.0.201603142246'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: eu.hohenegger.modulebuilder;singleton:=true&#xA;Bundle-Version: 1.0.0.201603142246&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>
