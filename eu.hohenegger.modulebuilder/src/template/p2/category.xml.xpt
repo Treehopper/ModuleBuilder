@@ -8,9 +8,9 @@
 «FILE "category.xml"»<?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="" id="«this.featureName»" version="0.0.0">
-      <category name="«this.baseName»"/>
+      <category name="«this.coreName»"/>
    </feature>
-   <category-def name="«this.baseName»" label="TODO"/>
+   <category-def name="«this.coreName»" label="TODO"/>
 </site>
 «ENDFILE»
 «ENDDEFINE»

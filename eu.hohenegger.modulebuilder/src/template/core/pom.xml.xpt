@@ -10,13 +10,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>«this.baseName»</groupId>
+		<groupId>«this.coreName»</groupId>
 		<artifactId>«this.parentName»</artifactId>
 		<version>«this.mavenVersion»</version>
 		<relativePath>../«this.parentName»/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>«this.baseName»</artifactId>
+	<artifactId>«this.coreName»</artifactId>
 	<packaging>eclipse-plugin</packaging>
 </project> 
 «ENDFILE»

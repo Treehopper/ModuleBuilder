@@ -8,13 +8,13 @@
 «FILE "pom.xml"»<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>«this.baseName»</groupId>
+	<groupId>«this.coreName»</groupId>
 	<artifactId>«this.parentName»</artifactId>
 	<version>«this.mavenVersion»</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>../«this.baseName»</module>
+		<module>../«this.coreName»</module>
 		<module>../«this.featureName»</module>
 		<module>../«this.updateSiteName»</module>
 		<module>../«this.uiName»</module>
@@ -35,7 +35,7 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>«this.baseName»</groupId>
+							<groupId>«this.coreName»</groupId>
 							<artifactId>«this.targetName»</artifactId>
 							<version>«this.mavenVersion»</version>
 						</artifact>

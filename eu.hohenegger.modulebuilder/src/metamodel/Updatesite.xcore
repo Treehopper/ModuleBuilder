@@ -19,6 +19,7 @@ class Updatesite {
 	String tychoVersion = "0.24.0"
 	String javaVersion = "JavaSE-1.8"
 	
+	String coreSuffix = ""
 	String uiSuffix = ".ui"
 	String testsSuffix = ".tests"
 	String featureSuffix = ".feature"
@@ -29,7 +30,7 @@ class Updatesite {
 	String osgiVersionQualifier = ".qualifier"
 
 	derived String coreName get {
-		baseName
+		baseName + coreSuffix
 	}
 	
 	derived String uiName get {

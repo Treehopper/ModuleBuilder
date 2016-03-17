@@ -36,6 +36,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightYear"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/tychoVersion"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/javaVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/coreSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/uiSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/testsSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/featureSuffix"/>

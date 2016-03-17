@@ -13,7 +13,7 @@ Bundle-Version: «this.osgiVersion»
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Activator: «this.uiName».Activator
-Require-Bundle: «this.baseName»,
+Require-Bundle: «this.coreName»,
  org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.e4.core.di,

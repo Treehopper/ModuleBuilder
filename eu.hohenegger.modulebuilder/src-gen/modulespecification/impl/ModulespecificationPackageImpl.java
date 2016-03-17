@@ -231,7 +231,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UiSuffix() {
+	public EAttribute getUpdatesite_CoreSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -240,7 +240,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TestsSuffix() {
+	public EAttribute getUpdatesite_UiSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -249,7 +249,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_FeatureSuffix() {
+	public EAttribute getUpdatesite_TestsSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -258,7 +258,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UpdateSiteSuffix() {
+	public EAttribute getUpdatesite_FeatureSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -267,7 +267,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TargetSuffix() {
+	public EAttribute getUpdatesite_UpdateSiteSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -276,7 +276,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_MavenVersionSuffix() {
+	public EAttribute getUpdatesite_TargetSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -285,7 +285,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_OsgiVersionQualifier() {
+	public EAttribute getUpdatesite_MavenVersionSuffix() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -294,7 +294,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_CoreName() {
+	public EAttribute getUpdatesite_OsgiVersionQualifier() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -303,7 +303,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UiName() {
+	public EAttribute getUpdatesite_CoreName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -312,7 +312,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TestsName() {
+	public EAttribute getUpdatesite_UiName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -321,7 +321,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UpdateSiteName() {
+	public EAttribute getUpdatesite_TestsName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -330,7 +330,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_FeatureName() {
+	public EAttribute getUpdatesite_UpdateSiteName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -339,7 +339,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TargetName() {
+	public EAttribute getUpdatesite_FeatureName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -348,7 +348,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_MavenVersion() {
+	public EAttribute getUpdatesite_TargetName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -357,8 +357,17 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_OsgiVersion() {
+	public EAttribute getUpdatesite_MavenVersion() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(25);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_OsgiVersion() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(26);
 	}
 
 	/**
@@ -404,6 +413,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(updatesiteEClass, UPDATESITE__COPY_RIGHT_YEAR);
 		createEAttribute(updatesiteEClass, UPDATESITE__TYCHO_VERSION);
 		createEAttribute(updatesiteEClass, UPDATESITE__JAVA_VERSION);
+		createEAttribute(updatesiteEClass, UPDATESITE__CORE_SUFFIX);
 		createEAttribute(updatesiteEClass, UPDATESITE__UI_SUFFIX);
 		createEAttribute(updatesiteEClass, UPDATESITE__TESTS_SUFFIX);
 		createEAttribute(updatesiteEClass, UPDATESITE__FEATURE_SUFFIX);
@@ -469,6 +479,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getUpdatesite_CopyRightYear(), theEcorePackage.getEString(), "copyRightYear", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_TychoVersion(), theEcorePackage.getEString(), "tychoVersion", "0.24.0", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_JavaVersion(), theEcorePackage.getEString(), "javaVersion", "JavaSE-1.8", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_CoreSuffix(), theEcorePackage.getEString(), "coreSuffix", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_UiSuffix(), theEcorePackage.getEString(), "uiSuffix", ".ui", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_TestsSuffix(), theEcorePackage.getEString(), "testsSuffix", ".tests", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_FeatureSuffix(), theEcorePackage.getEString(), "featureSuffix", ".feature", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

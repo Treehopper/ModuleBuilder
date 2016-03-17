@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightYear <em>Copy Right Year</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getJavaVersion <em>Java Version</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTestsSuffix <em>Tests Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getFeatureSuffix <em>Feature Suffix</em>}</li>
@@ -270,6 +271,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected String javaVersion = JAVA_VERSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCoreSuffix() <em>Core Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoreSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CORE_SUFFIX_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getCoreSuffix() <em>Core Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoreSuffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String coreSuffix = CORE_SUFFIX_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUiSuffix() <em>Ui Suffix</em>}' attribute.
@@ -746,6 +767,27 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCoreSuffix() {
+		return coreSuffix;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoreSuffix(String newCoreSuffix) {
+		String oldCoreSuffix = coreSuffix;
+		coreSuffix = newCoreSuffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__CORE_SUFFIX, oldCoreSuffix, coreSuffix));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getUiSuffix() {
 		return uiSuffix;
 	}
@@ -894,7 +936,9 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @generated
 	 */
 	public String getCoreName() {
-		return this.getBaseName();
+		String _baseName = this.getBaseName();
+		String _coreSuffix = this.getCoreSuffix();
+		return (_baseName + _coreSuffix);
 	}
 
 	/**
@@ -1004,6 +1048,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getTychoVersion();
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
 				return getJavaVersion();
+			case ModulespecificationPackage.UPDATESITE__CORE_SUFFIX:
+				return getCoreSuffix();
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				return getUiSuffix();
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
@@ -1079,6 +1125,9 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
 				setJavaVersion((String)newValue);
 				return;
+			case ModulespecificationPackage.UPDATESITE__CORE_SUFFIX:
+				setCoreSuffix((String)newValue);
+				return;
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				setUiSuffix((String)newValue);
 				return;
@@ -1145,6 +1194,9 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
 				setJavaVersion(JAVA_VERSION_EDEFAULT);
 				return;
+			case ModulespecificationPackage.UPDATESITE__CORE_SUFFIX:
+				setCoreSuffix(CORE_SUFFIX_EDEFAULT);
+				return;
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				setUiSuffix(UI_SUFFIX_EDEFAULT);
 				return;
@@ -1200,6 +1252,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return TYCHO_VERSION_EDEFAULT == null ? tychoVersion != null : !TYCHO_VERSION_EDEFAULT.equals(tychoVersion);
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
 				return JAVA_VERSION_EDEFAULT == null ? javaVersion != null : !JAVA_VERSION_EDEFAULT.equals(javaVersion);
+			case ModulespecificationPackage.UPDATESITE__CORE_SUFFIX:
+				return CORE_SUFFIX_EDEFAULT == null ? coreSuffix != null : !CORE_SUFFIX_EDEFAULT.equals(coreSuffix);
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				return UI_SUFFIX_EDEFAULT == null ? uiSuffix != null : !UI_SUFFIX_EDEFAULT.equals(uiSuffix);
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
@@ -1266,6 +1320,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		result.append(tychoVersion);
 		result.append(", javaVersion: ");
 		result.append(javaVersion);
+		result.append(", coreSuffix: ");
+		result.append(coreSuffix);
 		result.append(", uiSuffix: ");
 		result.append(uiSuffix);
 		result.append(", testsSuffix: ");

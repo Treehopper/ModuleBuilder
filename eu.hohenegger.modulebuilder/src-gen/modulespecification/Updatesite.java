@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Updatesite#getCopyRightYear <em>Copy Right Year</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getJavaVersion <em>Java Version</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getTestsSuffix <em>Tests Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getFeatureSuffix <em>Feature Suffix</em>}</li>
@@ -344,6 +345,33 @@ public interface Updatesite extends EObject {
 	void setJavaVersion(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Core Suffix</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Core Suffix</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Core Suffix</em>' attribute.
+	 * @see #setCoreSuffix(String)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_CoreSuffix()
+	 * @model default="" unique="false"
+	 * @generated
+	 */
+	String getCoreSuffix();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#getCoreSuffix <em>Core Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Core Suffix</em>' attribute.
+	 * @see #getCoreSuffix()
+	 * @generated
+	 */
+	void setCoreSuffix(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Ui Suffix</b></em>' attribute.
 	 * The default value is <code>".ui"</code>.
 	 * <!-- begin-user-doc -->
@@ -543,7 +571,7 @@ public interface Updatesite extends EObject {
 	 * @return the value of the '<em>Core Name</em>' attribute.
 	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_CoreName()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='return this.getBaseName();'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _baseName = this.getBaseName();\n<%java.lang.String%> _coreSuffix = this.getCoreSuffix();\nreturn (_baseName + _coreSuffix);'"
 	 * @generated
 	 */
 	String getCoreName();

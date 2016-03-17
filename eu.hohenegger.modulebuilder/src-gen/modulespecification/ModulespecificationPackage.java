@@ -204,13 +204,22 @@ public interface ModulespecificationPackage extends EPackage {
 	int UPDATESITE__JAVA_VERSION = 10;
 
 	/**
+	 * The feature id for the '<em><b>Core Suffix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__CORE_SUFFIX = 11;
+
+	/**
 	 * The feature id for the '<em><b>Ui Suffix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_SUFFIX = 11;
+	int UPDATESITE__UI_SUFFIX = 12;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -219,7 +228,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_SUFFIX = 12;
+	int UPDATESITE__TESTS_SUFFIX = 13;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -228,7 +237,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_SUFFIX = 13;
+	int UPDATESITE__FEATURE_SUFFIX = 14;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -237,7 +246,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_SUFFIX = 14;
+	int UPDATESITE__UPDATE_SITE_SUFFIX = 15;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -246,7 +255,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_SUFFIX = 15;
+	int UPDATESITE__TARGET_SUFFIX = 16;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -255,7 +264,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION_SUFFIX = 16;
+	int UPDATESITE__MAVEN_VERSION_SUFFIX = 17;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -264,7 +273,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION_QUALIFIER = 17;
+	int UPDATESITE__OSGI_VERSION_QUALIFIER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Core Name</b></em>' attribute.
@@ -273,7 +282,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_NAME = 18;
+	int UPDATESITE__CORE_NAME = 19;
 
 	/**
 	 * The feature id for the '<em><b>Ui Name</b></em>' attribute.
@@ -282,7 +291,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_NAME = 19;
+	int UPDATESITE__UI_NAME = 20;
 
 	/**
 	 * The feature id for the '<em><b>Tests Name</b></em>' attribute.
@@ -291,7 +300,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_NAME = 20;
+	int UPDATESITE__TESTS_NAME = 21;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Name</b></em>' attribute.
@@ -300,7 +309,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_NAME = 21;
+	int UPDATESITE__UPDATE_SITE_NAME = 22;
 
 	/**
 	 * The feature id for the '<em><b>Feature Name</b></em>' attribute.
@@ -309,7 +318,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_NAME = 22;
+	int UPDATESITE__FEATURE_NAME = 23;
 
 	/**
 	 * The feature id for the '<em><b>Target Name</b></em>' attribute.
@@ -318,7 +327,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_NAME = 23;
+	int UPDATESITE__TARGET_NAME = 24;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -327,7 +336,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION = 24;
+	int UPDATESITE__MAVEN_VERSION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -336,7 +345,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION = 25;
+	int UPDATESITE__OSGI_VERSION = 26;
 
 	/**
 	 * The number of structural features of the '<em>Updatesite</em>' class.
@@ -345,7 +354,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE_FEATURE_COUNT = 26;
+	int UPDATESITE_FEATURE_COUNT = 27;
 
 	/**
 	 * The number of operations of the '<em>Updatesite</em>' class.
@@ -508,6 +517,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdatesite_JavaVersion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getCoreSuffix <em>Core Suffix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Core Suffix</em>'.
+	 * @see modulespecification.Updatesite#getCoreSuffix()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_CoreSuffix();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUiSuffix <em>Ui Suffix</em>}'.
@@ -812,6 +832,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATESITE__JAVA_VERSION = eINSTANCE.getUpdatesite_JavaVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Core Suffix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__CORE_SUFFIX = eINSTANCE.getUpdatesite_CoreSuffix();
 
 		/**
 		 * The meta object literal for the '<em><b>Ui Suffix</b></em>' attribute feature.
