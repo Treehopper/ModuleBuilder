@@ -8,15 +8,15 @@
 «FILE "feature.xml"»<?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="«this.featureName»"
-      label="TODO"
-      version="1.0.0.qualifier">
+      label="«this.moduleName»"
+      version="«this.osgiVersion»">
 
-   <copyright url="http://www.hohenegger.eu">
-      Copyright (c) 2012 Max Hohenegger.
+   <copyright url="«this.copyRightUrl»">
+      Copyright (c) «this.copyRightYear» «this.copyRightUrl».
 All rights reserved.
    </copyright>
 
-   <license />
+   <license>«this.license»</license>
 
    <requires />
 

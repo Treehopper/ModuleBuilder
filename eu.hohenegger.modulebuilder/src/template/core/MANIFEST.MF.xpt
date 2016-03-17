@@ -9,12 +9,12 @@
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: «this.baseName»;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: «this.osgiVersion»
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Activator: «this.baseName».Activator
 Require-Bundle: org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: «this.javaVersion»
 Bundle-ActivationPolicy: lazy
 «ENDFILE»
 «ENDDEFINE»

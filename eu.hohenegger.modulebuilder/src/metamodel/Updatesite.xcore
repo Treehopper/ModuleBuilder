@@ -1,4 +1,4 @@
-@GenModel(modelDirectory="/eu.hohenegger.p2updatesite-wizard/src")
+@GenModel(modelDirectory="/eu.hohenegger.modulebuilder/src")
 package modulespecification
 
 class Module {
@@ -6,29 +6,57 @@ class Module {
 }
 
 class Updatesite {
-	String baseName
+	String baseName = ""
+	String parentName = "parent"
+	String moduleName = "TODO"
+	String categoryName = "TODO"
+	String license = ""
+	String version = "1.0.0"
+	String copyRightAuthorName = ""
+	String copyRightUrl = ""
+	String copyRightYear = ""
+	
+	String tychoVersion = "0.24.0"
+	String javaVersion = "JavaSE-1.8"
+	
+	String uiSuffix = ".ui"
+	String testsSuffix = ".tests"
+	String featureSuffix = ".feature"
+	String updateSiteSuffix = ".p2updateSite"
+	String targetSuffix = ".releng.targetplatform"
+	
+	String mavenVersionSuffix = "-SNAPSHOT"
+	String osgiVersionQualifier = ".qualifier"
 
 	derived String coreName get {
 		baseName
 	}
 	
 	derived String uiName get {
-		baseName + ".ui"
+		baseName + uiSuffix
 	}
 
 	derived String testsName get {
-		baseName + ".tests"
+		baseName + testsSuffix
 	}
 	
 	derived String updateSiteName get {
-		baseName + ".p2updateSite"
+		baseName + updateSiteSuffix
 	}
 	
 	derived String featureName get {
-		baseName + ".feature"
+		baseName + featureSuffix
 	}
 	
 	derived String targetName get {
-		baseName + ".releng.targetplatform"
+		baseName + targetSuffix
+	}
+
+	derived String mavenVersion get {
+		version + mavenVersionSuffix
+	}
+	
+	derived String osgiVersion get {
+		version + osgiVersionQualifier
 	}
 }

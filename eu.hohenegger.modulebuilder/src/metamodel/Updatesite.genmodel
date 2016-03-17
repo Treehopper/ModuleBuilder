@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.hohenegger.p2updatesite-wizard/src" modelPluginID="eu.hohenegger.p2updatesite-wizard"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eu.hohenegger.modulebuilder/src" modelPluginID="eu.hohenegger.modulebuilder"
     runtimeJar="true" modelName="Updatesite" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     testsDirectory="" booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
     containmentProxies="true" complianceLevel="8.0" language="en" usedGenPackages="../../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"
@@ -26,12 +26,31 @@
     </genClasses>
     <genClasses ecoreClass="modulespecification.ecore#//Updatesite">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/baseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/parentName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/moduleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/categoryName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/license"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightAuthorName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightUrl"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/tychoVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/javaVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/uiSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/testsSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/featureSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/updateSiteSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/targetSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/mavenVersionSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/osgiVersionQualifier"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/coreName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/uiName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/testsName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/updateSiteName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/featureName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/targetName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/mavenVersion"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/osgiVersion"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

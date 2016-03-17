@@ -141,7 +141,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_CoreName() {
+	public EAttribute getUpdatesite_ParentName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -150,7 +150,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UiName() {
+	public EAttribute getUpdatesite_ModuleName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -159,7 +159,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TestsName() {
+	public EAttribute getUpdatesite_CategoryName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -168,7 +168,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_UpdateSiteName() {
+	public EAttribute getUpdatesite_License() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -177,7 +177,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_FeatureName() {
+	public EAttribute getUpdatesite_Version() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -186,8 +186,179 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getUpdatesite_TargetName() {
+	public EAttribute getUpdatesite_CopyRightAuthorName() {
 		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_CopyRightUrl() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_CopyRightYear() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_TychoVersion() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_JavaVersion() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_UiSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_TestsSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_FeatureSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_UpdateSiteSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_TargetSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_MavenVersionSuffix() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_OsgiVersionQualifier() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_CoreName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_UiName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_TestsName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_UpdateSiteName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_FeatureName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(22);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_TargetName() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(23);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_MavenVersion() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(24);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUpdatesite_OsgiVersion() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(25);
 	}
 
 	/**
@@ -223,12 +394,31 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 
 		updatesiteEClass = createEClass(UPDATESITE);
 		createEAttribute(updatesiteEClass, UPDATESITE__BASE_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__PARENT_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__MODULE_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__CATEGORY_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__LICENSE);
+		createEAttribute(updatesiteEClass, UPDATESITE__VERSION);
+		createEAttribute(updatesiteEClass, UPDATESITE__COPY_RIGHT_AUTHOR_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__COPY_RIGHT_URL);
+		createEAttribute(updatesiteEClass, UPDATESITE__COPY_RIGHT_YEAR);
+		createEAttribute(updatesiteEClass, UPDATESITE__TYCHO_VERSION);
+		createEAttribute(updatesiteEClass, UPDATESITE__JAVA_VERSION);
+		createEAttribute(updatesiteEClass, UPDATESITE__UI_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__TESTS_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__FEATURE_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__UPDATE_SITE_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__TARGET_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__MAVEN_VERSION_SUFFIX);
+		createEAttribute(updatesiteEClass, UPDATESITE__OSGI_VERSION_QUALIFIER);
 		createEAttribute(updatesiteEClass, UPDATESITE__CORE_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__UI_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__TESTS_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__UPDATE_SITE_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__FEATURE_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__TARGET_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__MAVEN_VERSION);
+		createEAttribute(updatesiteEClass, UPDATESITE__OSGI_VERSION);
 	}
 
 	/**
@@ -268,13 +458,32 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEReference(getModule_Updatesites(), this.getUpdatesite(), null, "updatesites", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(updatesiteEClass, Updatesite.class, "Updatesite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getUpdatesite_BaseName(), theEcorePackage.getEString(), "baseName", null, 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_BaseName(), theEcorePackage.getEString(), "baseName", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_ParentName(), theEcorePackage.getEString(), "parentName", "parent", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_ModuleName(), theEcorePackage.getEString(), "moduleName", "TODO", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_CategoryName(), theEcorePackage.getEString(), "categoryName", "TODO", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_License(), theEcorePackage.getEString(), "license", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_Version(), theEcorePackage.getEString(), "version", "1.0.0", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_CopyRightAuthorName(), theEcorePackage.getEString(), "copyRightAuthorName", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_CopyRightUrl(), theEcorePackage.getEString(), "copyRightUrl", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_CopyRightYear(), theEcorePackage.getEString(), "copyRightYear", "", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_TychoVersion(), theEcorePackage.getEString(), "tychoVersion", "0.24.0", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_JavaVersion(), theEcorePackage.getEString(), "javaVersion", "JavaSE-1.8", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_UiSuffix(), theEcorePackage.getEString(), "uiSuffix", ".ui", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_TestsSuffix(), theEcorePackage.getEString(), "testsSuffix", ".tests", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_FeatureSuffix(), theEcorePackage.getEString(), "featureSuffix", ".feature", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_UpdateSiteSuffix(), theEcorePackage.getEString(), "updateSiteSuffix", ".p2updateSite", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_TargetSuffix(), theEcorePackage.getEString(), "targetSuffix", ".releng.targetplatform", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_MavenVersionSuffix(), theEcorePackage.getEString(), "mavenVersionSuffix", "-SNAPSHOT", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_OsgiVersionQualifier(), theEcorePackage.getEString(), "osgiVersionQualifier", ".qualifier", 0, 1, Updatesite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_CoreName(), theEcorePackage.getEString(), "coreName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_UiName(), theEcorePackage.getEString(), "uiName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_TestsName(), theEcorePackage.getEString(), "testsName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_UpdateSiteName(), theEcorePackage.getEString(), "updateSiteName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_FeatureName(), theEcorePackage.getEString(), "featureName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_TargetName(), theEcorePackage.getEString(), "targetName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_MavenVersion(), theEcorePackage.getEString(), "mavenVersion", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_OsgiVersion(), theEcorePackage.getEString(), "osgiVersion", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

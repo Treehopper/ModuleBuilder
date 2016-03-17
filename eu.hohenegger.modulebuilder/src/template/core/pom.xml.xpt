@@ -11,9 +11,9 @@
 
 	<parent>
 		<groupId>«this.baseName»</groupId>
-		<artifactId>parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../parent/pom.xml</relativePath>
+		<artifactId>«this.parentName»</artifactId>
+		<version>«this.mavenVersion»</version>
+		<relativePath>../«this.parentName»/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>«this.baseName»</artifactId>
