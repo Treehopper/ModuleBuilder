@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1457995069">
+<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1458255607">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="4.5.2.v20160212-1500"/>
@@ -16,6 +16,7 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
       <unit id="org.eclipse.xtext.sdk.feature.group" version="2.9.2.v201603040440"/>
+      <unit id="org.eclipse.emf.ecore.xcore.lib.feature.group" version="1.2.0.v20150202-0452"/>
       <repository location="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
     </location>
   </locations>
