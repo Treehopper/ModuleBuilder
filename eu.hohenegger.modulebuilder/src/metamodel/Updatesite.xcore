@@ -1,4 +1,4 @@
-@GenModel(modelDirectory="/eu.hohenegger.modulebuilder/src")
+@GenModel(modelDirectory="/eu.hohenegger.modulebuilder/src-gen")
 package modulespecification
 
 class Module {
