@@ -19,17 +19,14 @@ import org.eclipse.jdt.core.IPackageFragment;
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
-import org.eclipse.jdt.launching.IVMInstall;
-import org.eclipse.jdt.launching.JavaRuntime;
-import org.eclipse.jdt.launching.LibraryLocation;
 
 public class ProjectFactory {
-	public static IJavaProject makeJavaProject(IProject project, IProgressMonitor monitor) throws CoreException {
+	public static IJavaProject makeJavaProject(IProject project, IProgressMonitor monitor, String javaVersion) throws CoreException {
 		addNature(project, monitor, JavaCore.NATURE_ID, "org.eclipse.pde.PluginNature");
 		IJavaProject javaProject = JavaCore.create(project);
 		addBuilders(project, monitor);
 		addBinPath(project, javaProject, monitor);
-		defineClassPathEntries(javaProject);
+		defineClassPathEntries(javaProject, javaVersion);
 		return javaProject;
 	}
 
@@ -83,15 +80,20 @@ public class ProjectFactory {
 		return sourceFolder;
 	}
 
-	private static void defineClassPathEntries(IJavaProject javaProject) throws JavaModelException {
+	private static void defineClassPathEntries(IJavaProject javaProject, String javaVersion) throws JavaModelException {
 		List<IClasspathEntry> entries = new ArrayList<IClasspathEntry>();
-		IVMInstall vmInstall = JavaRuntime.getDefaultVMInstall();
-		LibraryLocation[] locations = JavaRuntime.getLibraryLocations(vmInstall);
-		for (LibraryLocation element : locations) {
-			entries.add(JavaCore.newLibraryEntry(element.getSystemLibraryPath(), null, null));
-		}
-		// entries.add(JavaCore.newContainerEntry(new
-		// Path("org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5")));
+
+		// TODO: remove: alternate way to add java libs
+		// IVMInstall vmInstall = JavaRuntime.getDefaultVMInstall();
+		// LibraryLocation[] locations =
+		// JavaRuntime.getLibraryLocations(vmInstall);
+		// for (LibraryLocation element : locations) {
+		// entries.add(JavaCore.newLibraryEntry(element.getSystemLibraryPath(),
+		// null, null));
+		// }
+		entries.add(JavaCore.newContainerEntry(new Path(
+				"org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/"
+						+ javaVersion)));
 		entries.add(JavaCore.newContainerEntry(new Path("org.eclipse.pde.core.requiredPlugins")));
 
 		// add libs to project class path

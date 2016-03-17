@@ -111,7 +111,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		monitor.beginTask("Generating project", 6);
 		IProject project = createProject(projectName, monitor);
 		monitor.worked(1);
-		IJavaProject javaProject = makeJavaProject(project, monitor);
+		IJavaProject javaProject = makeJavaProject(project, monitor, module.getUpdatesites().get(0).getJavaVersion());
 		monitor.worked(1);
 		IFolder sourceFolder = addSourcePath(project, monitor);
 		monitor.worked(1);
