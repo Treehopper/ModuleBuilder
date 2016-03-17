@@ -1,0 +1,13 @@
+«IMPORT modulespecification»
+
+«DEFINE main FOR Module»
+«EXPAND updatesite FOREACH this.updatesites»
+«ENDDEFINE»
+
+«DEFINE updatesite FOR Updatesite»
+«FILE "plugin.properties"»#
+
+pluginName = «this.uiId»
+providerName = www.example.org
+«ENDFILE»
+«ENDDEFINE»

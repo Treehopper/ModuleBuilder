@@ -9,12 +9,9 @@
         eType="#//Updatesite" containment="true" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Updatesite">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parentName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="parent"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleName" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="TODO"/>
@@ -32,10 +29,16 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyRightUrl" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="http://www.example.org"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyRightYear" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerName" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="http://www.example.org"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoParentName" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="parent"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoVersion" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="0.24.0"/>
@@ -66,46 +69,45 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="osgiVersionQualifier" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".qualifier"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coreName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coreId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _coreSuffix = this.getCoreSuffix();&#xA;return (_baseName + _coreSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _coreSuffix = this.getCoreSuffix();&#xA;return (_baseId + _coreSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uiName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uiId" unique="false" eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _uiSuffix = this.getUiSuffix();&#xA;return (_baseName + _uiSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _uiSuffix = this.getUiSuffix();&#xA;return (_baseId + _uiSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testsName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="testsId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _testsSuffix = this.getTestsSuffix();&#xA;return (_baseName + _testsSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _testsSuffix = this.getTestsSuffix();&#xA;return (_baseId + _testsSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateSiteName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateSiteId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _updateSiteSuffix = this.getUpdateSiteSuffix();&#xA;return (_baseName + _updateSiteSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _updateSiteSuffix = this.getUpdateSiteSuffix();&#xA;return (_baseId + _updateSiteSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _featureSuffix = this.getFeatureSuffix();&#xA;return (_baseName + _featureSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _featureSuffix = this.getFeatureSuffix();&#xA;return (_baseId + _featureSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetName" unique="false"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="get" value="&lt;%java.lang.String%> _baseName = this.getBaseName();&#xA;&lt;%java.lang.String%> _targetSuffix = this.getTargetSuffix();&#xA;return (_baseName + _targetSuffix);"/>
+        <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _targetSuffix = this.getTargetSuffix();&#xA;return (_baseId + _targetSuffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mavenVersion" unique="false"
@@ -120,6 +122,20 @@
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="get" value="&lt;%java.lang.String%> _version = this.getVersion();&#xA;&lt;%java.lang.String%> _osgiVersionQualifier = this.getOsgiVersionQualifier();&#xA;return (_version + _osgiVersionQualifier);"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coreModuleName" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _moduleName = this.getModuleName();&#xA;return (_moduleName + &quot; Core&quot;);"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uiModuleName" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _moduleName = this.getModuleName();&#xA;return (_moduleName + &quot; UI&quot;);"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

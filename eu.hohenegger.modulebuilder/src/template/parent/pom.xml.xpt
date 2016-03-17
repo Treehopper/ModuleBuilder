@@ -8,17 +8,17 @@
 «FILE "pom.xml"»<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>«this.coreName»</groupId>
-	<artifactId>«this.parentName»</artifactId>
+	<groupId>«this.baseId»</groupId>
+	<artifactId>«this.tychoParentName»</artifactId>
 	<version>«this.mavenVersion»</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>../«this.coreName»</module>
-		<module>../«this.featureName»</module>
-		<module>../«this.updateSiteName»</module>
-		<module>../«this.uiName»</module>
-		<module>../«this.targetName»</module>
+		<module>../«this.coreId»</module>
+		<module>../«this.featureId»</module>
+		<module>../«this.updateSiteId»</module>
+		<module>../«this.uiId»</module>
+		<module>../«this.targetId»</module>
 	</modules>
 
 	<properties>
@@ -35,8 +35,8 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>«this.coreName»</groupId>
-							<artifactId>«this.targetName»</artifactId>
+							<groupId>«this.coreId»</groupId>
+							<artifactId>«this.targetId»</artifactId>
 							<version>«this.mavenVersion»</version>
 						</artifact>
 					</target>

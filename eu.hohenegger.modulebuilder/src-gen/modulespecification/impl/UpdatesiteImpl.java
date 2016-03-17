@@ -20,8 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getBaseName <em>Base Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getParentName <em>Parent Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getBaseId <em>Base Id</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getModuleName <em>Module Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCategoryName <em>Category Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getLicense <em>License</em>}</li>
@@ -29,6 +28,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightAuthorName <em>Copy Right Author Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightUrl <em>Copy Right Url</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightYear <em>Copy Right Year</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getProviderName <em>Provider Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoParentName <em>Tycho Parent Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getJavaVersion <em>Java Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreSuffix <em>Core Suffix</em>}</li>
@@ -39,58 +40,40 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTargetSuffix <em>Target Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getMavenVersionSuffix <em>Maven Version Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getOsgiVersionQualifier <em>Osgi Version Qualifier</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreName <em>Core Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiName <em>Ui Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTestsName <em>Tests Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUpdateSiteName <em>Update Site Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getFeatureName <em>Feature Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTargetName <em>Target Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreId <em>Core Id</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiId <em>Ui Id</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTestsId <em>Tests Id</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUpdateSiteId <em>Update Site Id</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getFeatureId <em>Feature Id</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTargetId <em>Target Id</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getMavenVersion <em>Maven Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getOsgiVersion <em>Osgi Version</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreModuleName <em>Core Module Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiModuleName <em>Ui Module Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Updatesite {
 	/**
-	 * The default value of the '{@link #getBaseName() <em>Base Name</em>}' attribute.
+	 * The default value of the '{@link #getBaseId() <em>Base Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBaseName()
+	 * @see #getBaseId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BASE_NAME_EDEFAULT = "";
+	protected static final String BASE_ID_EDEFAULT = "";
 
 	/**
-	 * The cached value of the '{@link #getBaseName() <em>Base Name</em>}' attribute.
+	 * The cached value of the '{@link #getBaseId() <em>Base Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBaseName()
+	 * @see #getBaseId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String baseName = BASE_NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getParentName() <em>Parent Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParentName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PARENT_NAME_EDEFAULT = "parent";
-
-	/**
-	 * The cached value of the '{@link #getParentName() <em>Parent Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParentName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String parentName = PARENT_NAME_EDEFAULT;
+	protected String baseId = BASE_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getModuleName() <em>Module Name</em>}' attribute.
@@ -200,7 +183,7 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COPY_RIGHT_URL_EDEFAULT = "";
+	protected static final String COPY_RIGHT_URL_EDEFAULT = "http://www.example.org";
 
 	/**
 	 * The cached value of the '{@link #getCopyRightUrl() <em>Copy Right Url</em>}' attribute.
@@ -231,6 +214,46 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected String copyRightYear = COPY_RIGHT_YEAR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROVIDER_NAME_EDEFAULT = "http://www.example.org";
+
+	/**
+	 * The cached value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String providerName = PROVIDER_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTychoParentName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYCHO_PARENT_NAME_EDEFAULT = "parent";
+
+	/**
+	 * The cached value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTychoParentName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String tychoParentName = TYCHO_PARENT_NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTychoVersion() <em>Tycho Version</em>}' attribute.
@@ -433,64 +456,64 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	protected String osgiVersionQualifier = OSGI_VERSION_QUALIFIER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCoreName() <em>Core Name</em>}' attribute.
+	 * The default value of the '{@link #getCoreId() <em>Core Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCoreName()
+	 * @see #getCoreId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CORE_NAME_EDEFAULT = null;
+	protected static final String CORE_ID_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getUiName() <em>Ui Name</em>}' attribute.
+	 * The default value of the '{@link #getUiId() <em>Ui Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUiName()
+	 * @see #getUiId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UI_NAME_EDEFAULT = null;
+	protected static final String UI_ID_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getTestsName() <em>Tests Name</em>}' attribute.
+	 * The default value of the '{@link #getTestsId() <em>Tests Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTestsName()
+	 * @see #getTestsId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TESTS_NAME_EDEFAULT = null;
+	protected static final String TESTS_ID_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getUpdateSiteName() <em>Update Site Name</em>}' attribute.
+	 * The default value of the '{@link #getUpdateSiteId() <em>Update Site Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUpdateSiteName()
+	 * @see #getUpdateSiteId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String UPDATE_SITE_NAME_EDEFAULT = null;
+	protected static final String UPDATE_SITE_ID_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getFeatureName() <em>Feature Name</em>}' attribute.
+	 * The default value of the '{@link #getFeatureId() <em>Feature Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFeatureName()
+	 * @see #getFeatureId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FEATURE_NAME_EDEFAULT = null;
+	protected static final String FEATURE_ID_EDEFAULT = null;
 
 	/**
-	 * The default value of the '{@link #getTargetName() <em>Target Name</em>}' attribute.
+	 * The default value of the '{@link #getTargetId() <em>Target Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTargetName()
+	 * @see #getTargetId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TARGET_NAME_EDEFAULT = null;
+	protected static final String TARGET_ID_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getMavenVersion() <em>Maven Version</em>}' attribute.
@@ -511,6 +534,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected static final String OSGI_VERSION_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCoreModuleName() <em>Core Module Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoreModuleName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CORE_MODULE_NAME_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getUiModuleName() <em>Ui Module Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUiModuleName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UI_MODULE_NAME_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -536,8 +579,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getBaseName() {
-		return baseName;
+	public String getBaseId() {
+		return baseId;
 	}
 
 	/**
@@ -545,32 +588,11 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBaseName(String newBaseName) {
-		String oldBaseName = baseName;
-		baseName = newBaseName;
+	public void setBaseId(String newBaseId) {
+		String oldBaseId = baseId;
+		baseId = newBaseId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__BASE_NAME, oldBaseName, baseName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getParentName() {
-		return parentName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentName(String newParentName) {
-		String oldParentName = parentName;
-		parentName = newParentName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__PARENT_NAME, oldParentName, parentName));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__BASE_ID, oldBaseId, baseId));
 	}
 
 	/**
@@ -718,6 +740,48 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		copyRightYear = newCopyRightYear;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR, oldCopyRightYear, copyRightYear));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getProviderName() {
+		return providerName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProviderName(String newProviderName) {
+		String oldProviderName = providerName;
+		providerName = newProviderName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__PROVIDER_NAME, oldProviderName, providerName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTychoParentName() {
+		return tychoParentName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTychoParentName(String newTychoParentName) {
+		String oldTychoParentName = tychoParentName;
+		tychoParentName = newTychoParentName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME, oldTychoParentName, tychoParentName));
 	}
 
 	/**
@@ -935,10 +999,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCoreName() {
-		String _baseName = this.getBaseName();
+	public String getCoreId() {
+		String _baseId = this.getBaseId();
 		String _coreSuffix = this.getCoreSuffix();
-		return (_baseName + _coreSuffix);
+		return (_baseId + _coreSuffix);
 	}
 
 	/**
@@ -946,10 +1010,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUiName() {
-		String _baseName = this.getBaseName();
+	public String getUiId() {
+		String _baseId = this.getBaseId();
 		String _uiSuffix = this.getUiSuffix();
-		return (_baseName + _uiSuffix);
+		return (_baseId + _uiSuffix);
 	}
 
 	/**
@@ -957,10 +1021,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTestsName() {
-		String _baseName = this.getBaseName();
+	public String getTestsId() {
+		String _baseId = this.getBaseId();
 		String _testsSuffix = this.getTestsSuffix();
-		return (_baseName + _testsSuffix);
+		return (_baseId + _testsSuffix);
 	}
 
 	/**
@@ -968,10 +1032,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUpdateSiteName() {
-		String _baseName = this.getBaseName();
+	public String getUpdateSiteId() {
+		String _baseId = this.getBaseId();
 		String _updateSiteSuffix = this.getUpdateSiteSuffix();
-		return (_baseName + _updateSiteSuffix);
+		return (_baseId + _updateSiteSuffix);
 	}
 
 	/**
@@ -979,10 +1043,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFeatureName() {
-		String _baseName = this.getBaseName();
+	public String getFeatureId() {
+		String _baseId = this.getBaseId();
 		String _featureSuffix = this.getFeatureSuffix();
-		return (_baseName + _featureSuffix);
+		return (_baseId + _featureSuffix);
 	}
 
 	/**
@@ -990,10 +1054,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTargetName() {
-		String _baseName = this.getBaseName();
+	public String getTargetId() {
+		String _baseId = this.getBaseId();
 		String _targetSuffix = this.getTargetSuffix();
-		return (_baseName + _targetSuffix);
+		return (_baseId + _targetSuffix);
 	}
 
 	/**
@@ -1023,13 +1087,31 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCoreModuleName() {
+		String _moduleName = this.getModuleName();
+		return (_moduleName + " Core");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUiModuleName() {
+		String _moduleName = this.getModuleName();
+		return (_moduleName + " UI");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModulespecificationPackage.UPDATESITE__BASE_NAME:
-				return getBaseName();
-			case ModulespecificationPackage.UPDATESITE__PARENT_NAME:
-				return getParentName();
+			case ModulespecificationPackage.UPDATESITE__BASE_ID:
+				return getBaseId();
 			case ModulespecificationPackage.UPDATESITE__MODULE_NAME:
 				return getModuleName();
 			case ModulespecificationPackage.UPDATESITE__CATEGORY_NAME:
@@ -1044,6 +1126,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getCopyRightUrl();
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR:
 				return getCopyRightYear();
+			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
+				return getProviderName();
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				return getTychoParentName();
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				return getTychoVersion();
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
@@ -1064,22 +1150,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getMavenVersionSuffix();
 			case ModulespecificationPackage.UPDATESITE__OSGI_VERSION_QUALIFIER:
 				return getOsgiVersionQualifier();
-			case ModulespecificationPackage.UPDATESITE__CORE_NAME:
-				return getCoreName();
-			case ModulespecificationPackage.UPDATESITE__UI_NAME:
-				return getUiName();
-			case ModulespecificationPackage.UPDATESITE__TESTS_NAME:
-				return getTestsName();
-			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_NAME:
-				return getUpdateSiteName();
-			case ModulespecificationPackage.UPDATESITE__FEATURE_NAME:
-				return getFeatureName();
-			case ModulespecificationPackage.UPDATESITE__TARGET_NAME:
-				return getTargetName();
+			case ModulespecificationPackage.UPDATESITE__CORE_ID:
+				return getCoreId();
+			case ModulespecificationPackage.UPDATESITE__UI_ID:
+				return getUiId();
+			case ModulespecificationPackage.UPDATESITE__TESTS_ID:
+				return getTestsId();
+			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_ID:
+				return getUpdateSiteId();
+			case ModulespecificationPackage.UPDATESITE__FEATURE_ID:
+				return getFeatureId();
+			case ModulespecificationPackage.UPDATESITE__TARGET_ID:
+				return getTargetId();
 			case ModulespecificationPackage.UPDATESITE__MAVEN_VERSION:
 				return getMavenVersion();
 			case ModulespecificationPackage.UPDATESITE__OSGI_VERSION:
 				return getOsgiVersion();
+			case ModulespecificationPackage.UPDATESITE__CORE_MODULE_NAME:
+				return getCoreModuleName();
+			case ModulespecificationPackage.UPDATESITE__UI_MODULE_NAME:
+				return getUiModuleName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1092,11 +1182,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModulespecificationPackage.UPDATESITE__BASE_NAME:
-				setBaseName((String)newValue);
-				return;
-			case ModulespecificationPackage.UPDATESITE__PARENT_NAME:
-				setParentName((String)newValue);
+			case ModulespecificationPackage.UPDATESITE__BASE_ID:
+				setBaseId((String)newValue);
 				return;
 			case ModulespecificationPackage.UPDATESITE__MODULE_NAME:
 				setModuleName((String)newValue);
@@ -1118,6 +1205,12 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return;
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR:
 				setCopyRightYear((String)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
+				setProviderName((String)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				setTychoParentName((String)newValue);
 				return;
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				setTychoVersion((String)newValue);
@@ -1161,11 +1254,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModulespecificationPackage.UPDATESITE__BASE_NAME:
-				setBaseName(BASE_NAME_EDEFAULT);
-				return;
-			case ModulespecificationPackage.UPDATESITE__PARENT_NAME:
-				setParentName(PARENT_NAME_EDEFAULT);
+			case ModulespecificationPackage.UPDATESITE__BASE_ID:
+				setBaseId(BASE_ID_EDEFAULT);
 				return;
 			case ModulespecificationPackage.UPDATESITE__MODULE_NAME:
 				setModuleName(MODULE_NAME_EDEFAULT);
@@ -1187,6 +1277,12 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return;
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR:
 				setCopyRightYear(COPY_RIGHT_YEAR_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
+				setProviderName(PROVIDER_NAME_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				setTychoParentName(TYCHO_PARENT_NAME_EDEFAULT);
 				return;
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				setTychoVersion(TYCHO_VERSION_EDEFAULT);
@@ -1230,10 +1326,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModulespecificationPackage.UPDATESITE__BASE_NAME:
-				return BASE_NAME_EDEFAULT == null ? baseName != null : !BASE_NAME_EDEFAULT.equals(baseName);
-			case ModulespecificationPackage.UPDATESITE__PARENT_NAME:
-				return PARENT_NAME_EDEFAULT == null ? parentName != null : !PARENT_NAME_EDEFAULT.equals(parentName);
+			case ModulespecificationPackage.UPDATESITE__BASE_ID:
+				return BASE_ID_EDEFAULT == null ? baseId != null : !BASE_ID_EDEFAULT.equals(baseId);
 			case ModulespecificationPackage.UPDATESITE__MODULE_NAME:
 				return MODULE_NAME_EDEFAULT == null ? moduleName != null : !MODULE_NAME_EDEFAULT.equals(moduleName);
 			case ModulespecificationPackage.UPDATESITE__CATEGORY_NAME:
@@ -1248,6 +1342,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return COPY_RIGHT_URL_EDEFAULT == null ? copyRightUrl != null : !COPY_RIGHT_URL_EDEFAULT.equals(copyRightUrl);
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR:
 				return COPY_RIGHT_YEAR_EDEFAULT == null ? copyRightYear != null : !COPY_RIGHT_YEAR_EDEFAULT.equals(copyRightYear);
+			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
+				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				return TYCHO_PARENT_NAME_EDEFAULT == null ? tychoParentName != null : !TYCHO_PARENT_NAME_EDEFAULT.equals(tychoParentName);
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				return TYCHO_VERSION_EDEFAULT == null ? tychoVersion != null : !TYCHO_VERSION_EDEFAULT.equals(tychoVersion);
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
@@ -1268,22 +1366,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return MAVEN_VERSION_SUFFIX_EDEFAULT == null ? mavenVersionSuffix != null : !MAVEN_VERSION_SUFFIX_EDEFAULT.equals(mavenVersionSuffix);
 			case ModulespecificationPackage.UPDATESITE__OSGI_VERSION_QUALIFIER:
 				return OSGI_VERSION_QUALIFIER_EDEFAULT == null ? osgiVersionQualifier != null : !OSGI_VERSION_QUALIFIER_EDEFAULT.equals(osgiVersionQualifier);
-			case ModulespecificationPackage.UPDATESITE__CORE_NAME:
-				return CORE_NAME_EDEFAULT == null ? getCoreName() != null : !CORE_NAME_EDEFAULT.equals(getCoreName());
-			case ModulespecificationPackage.UPDATESITE__UI_NAME:
-				return UI_NAME_EDEFAULT == null ? getUiName() != null : !UI_NAME_EDEFAULT.equals(getUiName());
-			case ModulespecificationPackage.UPDATESITE__TESTS_NAME:
-				return TESTS_NAME_EDEFAULT == null ? getTestsName() != null : !TESTS_NAME_EDEFAULT.equals(getTestsName());
-			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_NAME:
-				return UPDATE_SITE_NAME_EDEFAULT == null ? getUpdateSiteName() != null : !UPDATE_SITE_NAME_EDEFAULT.equals(getUpdateSiteName());
-			case ModulespecificationPackage.UPDATESITE__FEATURE_NAME:
-				return FEATURE_NAME_EDEFAULT == null ? getFeatureName() != null : !FEATURE_NAME_EDEFAULT.equals(getFeatureName());
-			case ModulespecificationPackage.UPDATESITE__TARGET_NAME:
-				return TARGET_NAME_EDEFAULT == null ? getTargetName() != null : !TARGET_NAME_EDEFAULT.equals(getTargetName());
+			case ModulespecificationPackage.UPDATESITE__CORE_ID:
+				return CORE_ID_EDEFAULT == null ? getCoreId() != null : !CORE_ID_EDEFAULT.equals(getCoreId());
+			case ModulespecificationPackage.UPDATESITE__UI_ID:
+				return UI_ID_EDEFAULT == null ? getUiId() != null : !UI_ID_EDEFAULT.equals(getUiId());
+			case ModulespecificationPackage.UPDATESITE__TESTS_ID:
+				return TESTS_ID_EDEFAULT == null ? getTestsId() != null : !TESTS_ID_EDEFAULT.equals(getTestsId());
+			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_ID:
+				return UPDATE_SITE_ID_EDEFAULT == null ? getUpdateSiteId() != null : !UPDATE_SITE_ID_EDEFAULT.equals(getUpdateSiteId());
+			case ModulespecificationPackage.UPDATESITE__FEATURE_ID:
+				return FEATURE_ID_EDEFAULT == null ? getFeatureId() != null : !FEATURE_ID_EDEFAULT.equals(getFeatureId());
+			case ModulespecificationPackage.UPDATESITE__TARGET_ID:
+				return TARGET_ID_EDEFAULT == null ? getTargetId() != null : !TARGET_ID_EDEFAULT.equals(getTargetId());
 			case ModulespecificationPackage.UPDATESITE__MAVEN_VERSION:
 				return MAVEN_VERSION_EDEFAULT == null ? getMavenVersion() != null : !MAVEN_VERSION_EDEFAULT.equals(getMavenVersion());
 			case ModulespecificationPackage.UPDATESITE__OSGI_VERSION:
 				return OSGI_VERSION_EDEFAULT == null ? getOsgiVersion() != null : !OSGI_VERSION_EDEFAULT.equals(getOsgiVersion());
+			case ModulespecificationPackage.UPDATESITE__CORE_MODULE_NAME:
+				return CORE_MODULE_NAME_EDEFAULT == null ? getCoreModuleName() != null : !CORE_MODULE_NAME_EDEFAULT.equals(getCoreModuleName());
+			case ModulespecificationPackage.UPDATESITE__UI_MODULE_NAME:
+				return UI_MODULE_NAME_EDEFAULT == null ? getUiModuleName() != null : !UI_MODULE_NAME_EDEFAULT.equals(getUiModuleName());
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1298,10 +1400,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (baseName: ");
-		result.append(baseName);
-		result.append(", parentName: ");
-		result.append(parentName);
+		result.append(" (baseId: ");
+		result.append(baseId);
 		result.append(", moduleName: ");
 		result.append(moduleName);
 		result.append(", categoryName: ");
@@ -1316,6 +1416,10 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		result.append(copyRightUrl);
 		result.append(", copyRightYear: ");
 		result.append(copyRightYear);
+		result.append(", providerName: ");
+		result.append(providerName);
+		result.append(", tychoParentName: ");
+		result.append(tychoParentName);
 		result.append(", tychoVersion: ");
 		result.append(tychoVersion);
 		result.append(", javaVersion: ");

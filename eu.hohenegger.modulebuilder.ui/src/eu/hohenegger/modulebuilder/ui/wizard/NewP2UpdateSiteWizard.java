@@ -70,15 +70,15 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 				Module module = createModel(containerName);
 				try {
 					Updatesite updatesite = module.getUpdatesites().get(0);
-					generateJavaProject(module, updatesite.getBaseName(), monitor, "template::core::%s::main");
+					generateJavaProject(module, updatesite.getBaseId(), monitor, "template::core::%s::main");
 
-					generateJavaProject(module, updatesite.getUiName(), monitor, "template::ui::%s::main");
+					generateJavaProject(module, updatesite.getUiId(), monitor, "template::ui::%s::main");
 
-					generateFullFeature(module, updatesite.getFeatureName(), monitor, "template::feature::%s::main");
+					generateFullFeature(module, updatesite.getFeatureId(), monitor, "template::feature::%s::main");
 
-					generateUpdatesiteProject(module, updatesite.getUpdateSiteName(), monitor,
+					generateUpdatesiteProject(module, updatesite.getUpdateSiteId(), monitor,
 							"template::p2::%s::main");
-					generateTargetProject(module, updatesite.getTargetName(), monitor, "template::target::%s::main");
+					generateTargetProject(module, updatesite.getTargetId(), monitor, "template::target::%s::main");
 
 					generateParentProject(module, "parent", monitor, "template::parent::%s::main");
 				} catch (CoreException e) {
@@ -95,9 +95,9 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		return true;
 	}
 
-	private Module createModel(String containerName) {
+	private Module createModel(String pluginId) {
 		Updatesite updatesite = ModulespecificationFactory.eINSTANCE.createUpdatesite();
-		updatesite.setBaseName(containerName);
+		updatesite.setBaseId(pluginId);
 
 		Module module = ModulespecificationFactory.eINSTANCE.createModule();
 		module.getUpdatesites().add(updatesite);
@@ -125,6 +125,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		expandTemplate(module, metaInf, "MANIFEST.MF", templateMask);
 		expandTemplate(module, javaPackage, "Activator.java", templateMask);
 		expandTemplate(module, project, "build.properties", templateMask);
+		expandTemplate(module, project, "plugin.properties", templateMask);
 		expandTemplate(module, project, "pom.xml", templateMask);
 		expandTemplate(module, project, "plugin.xml", templateMask);
 

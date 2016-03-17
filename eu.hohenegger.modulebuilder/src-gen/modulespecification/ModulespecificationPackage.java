@@ -105,22 +105,13 @@ public interface ModulespecificationPackage extends EPackage {
 	int UPDATESITE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Base Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Base Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__BASE_NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Parent Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATESITE__PARENT_NAME = 1;
+	int UPDATESITE__BASE_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Module Name</b></em>' attribute.
@@ -129,7 +120,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MODULE_NAME = 2;
+	int UPDATESITE__MODULE_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Category Name</b></em>' attribute.
@@ -138,7 +129,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CATEGORY_NAME = 3;
+	int UPDATESITE__CATEGORY_NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>License</b></em>' attribute.
@@ -147,7 +138,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__LICENSE = 4;
+	int UPDATESITE__LICENSE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -156,7 +147,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__VERSION = 5;
+	int UPDATESITE__VERSION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Author Name</b></em>' attribute.
@@ -165,7 +156,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__COPY_RIGHT_AUTHOR_NAME = 6;
+	int UPDATESITE__COPY_RIGHT_AUTHOR_NAME = 5;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Url</b></em>' attribute.
@@ -174,7 +165,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__COPY_RIGHT_URL = 7;
+	int UPDATESITE__COPY_RIGHT_URL = 6;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Year</b></em>' attribute.
@@ -183,7 +174,25 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__COPY_RIGHT_YEAR = 8;
+	int UPDATESITE__COPY_RIGHT_YEAR = 7;
+
+	/**
+	 * The feature id for the '<em><b>Provider Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__PROVIDER_NAME = 8;
+
+	/**
+	 * The feature id for the '<em><b>Tycho Parent Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__TYCHO_PARENT_NAME = 9;
 
 	/**
 	 * The feature id for the '<em><b>Tycho Version</b></em>' attribute.
@@ -192,7 +201,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TYCHO_VERSION = 9;
+	int UPDATESITE__TYCHO_VERSION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Java Version</b></em>' attribute.
@@ -201,7 +210,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__JAVA_VERSION = 10;
+	int UPDATESITE__JAVA_VERSION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Core Suffix</b></em>' attribute.
@@ -210,7 +219,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_SUFFIX = 11;
+	int UPDATESITE__CORE_SUFFIX = 12;
 
 	/**
 	 * The feature id for the '<em><b>Ui Suffix</b></em>' attribute.
@@ -219,7 +228,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_SUFFIX = 12;
+	int UPDATESITE__UI_SUFFIX = 13;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -228,7 +237,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_SUFFIX = 13;
+	int UPDATESITE__TESTS_SUFFIX = 14;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -237,7 +246,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_SUFFIX = 14;
+	int UPDATESITE__FEATURE_SUFFIX = 15;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -246,7 +255,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_SUFFIX = 15;
+	int UPDATESITE__UPDATE_SITE_SUFFIX = 16;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -255,7 +264,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_SUFFIX = 16;
+	int UPDATESITE__TARGET_SUFFIX = 17;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -264,7 +273,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION_SUFFIX = 17;
+	int UPDATESITE__MAVEN_VERSION_SUFFIX = 18;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -273,61 +282,61 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION_QUALIFIER = 18;
+	int UPDATESITE__OSGI_VERSION_QUALIFIER = 19;
 
 	/**
-	 * The feature id for the '<em><b>Core Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Core Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_NAME = 19;
+	int UPDATESITE__CORE_ID = 20;
 
 	/**
-	 * The feature id for the '<em><b>Ui Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Ui Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_NAME = 20;
+	int UPDATESITE__UI_ID = 21;
 
 	/**
-	 * The feature id for the '<em><b>Tests Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Tests Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_NAME = 21;
+	int UPDATESITE__TESTS_ID = 22;
 
 	/**
-	 * The feature id for the '<em><b>Update Site Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Update Site Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_NAME = 22;
+	int UPDATESITE__UPDATE_SITE_ID = 23;
 
 	/**
-	 * The feature id for the '<em><b>Feature Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Feature Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_NAME = 23;
+	int UPDATESITE__FEATURE_ID = 24;
 
 	/**
-	 * The feature id for the '<em><b>Target Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Target Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_NAME = 24;
+	int UPDATESITE__TARGET_ID = 25;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -336,7 +345,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION = 25;
+	int UPDATESITE__MAVEN_VERSION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -345,7 +354,25 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION = 26;
+	int UPDATESITE__OSGI_VERSION = 27;
+
+	/**
+	 * The feature id for the '<em><b>Core Module Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__CORE_MODULE_NAME = 28;
+
+	/**
+	 * The feature id for the '<em><b>Ui Module Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__UI_MODULE_NAME = 29;
 
 	/**
 	 * The number of structural features of the '<em>Updatesite</em>' class.
@@ -354,7 +381,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE_FEATURE_COUNT = 27;
+	int UPDATESITE_FEATURE_COUNT = 30;
 
 	/**
 	 * The number of operations of the '<em>Updatesite</em>' class.
@@ -398,26 +425,15 @@ public interface ModulespecificationPackage extends EPackage {
 	EClass getUpdatesite();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getBaseName <em>Base Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getBaseId <em>Base Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Base Name</em>'.
-	 * @see modulespecification.Updatesite#getBaseName()
+	 * @return the meta object for the attribute '<em>Base Id</em>'.
+	 * @see modulespecification.Updatesite#getBaseId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_BaseName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getParentName <em>Parent Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Parent Name</em>'.
-	 * @see modulespecification.Updatesite#getParentName()
-	 * @see #getUpdatesite()
-	 * @generated
-	 */
-	EAttribute getUpdatesite_ParentName();
+	EAttribute getUpdatesite_BaseId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getModuleName <em>Module Name</em>}'.
@@ -495,6 +511,28 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdatesite_CopyRightYear();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getProviderName <em>Provider Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provider Name</em>'.
+	 * @see modulespecification.Updatesite#getProviderName()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_ProviderName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tycho Parent Name</em>'.
+	 * @see modulespecification.Updatesite#getTychoParentName()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_TychoParentName();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTychoVersion <em>Tycho Version</em>}'.
@@ -607,70 +645,70 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getUpdatesite_OsgiVersionQualifier();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getCoreName <em>Core Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getCoreId <em>Core Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Core Name</em>'.
-	 * @see modulespecification.Updatesite#getCoreName()
+	 * @return the meta object for the attribute '<em>Core Id</em>'.
+	 * @see modulespecification.Updatesite#getCoreId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_CoreName();
+	EAttribute getUpdatesite_CoreId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUiName <em>Ui Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUiId <em>Ui Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Ui Name</em>'.
-	 * @see modulespecification.Updatesite#getUiName()
+	 * @return the meta object for the attribute '<em>Ui Id</em>'.
+	 * @see modulespecification.Updatesite#getUiId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_UiName();
+	EAttribute getUpdatesite_UiId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTestsName <em>Tests Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTestsId <em>Tests Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tests Name</em>'.
-	 * @see modulespecification.Updatesite#getTestsName()
+	 * @return the meta object for the attribute '<em>Tests Id</em>'.
+	 * @see modulespecification.Updatesite#getTestsId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_TestsName();
+	EAttribute getUpdatesite_TestsId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUpdateSiteName <em>Update Site Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUpdateSiteId <em>Update Site Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Update Site Name</em>'.
-	 * @see modulespecification.Updatesite#getUpdateSiteName()
+	 * @return the meta object for the attribute '<em>Update Site Id</em>'.
+	 * @see modulespecification.Updatesite#getUpdateSiteId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_UpdateSiteName();
+	EAttribute getUpdatesite_UpdateSiteId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getFeatureName <em>Feature Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getFeatureId <em>Feature Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Feature Name</em>'.
-	 * @see modulespecification.Updatesite#getFeatureName()
+	 * @return the meta object for the attribute '<em>Feature Id</em>'.
+	 * @see modulespecification.Updatesite#getFeatureId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_FeatureName();
+	EAttribute getUpdatesite_FeatureId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTargetName <em>Target Name</em>}'.
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTargetId <em>Target Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Target Name</em>'.
-	 * @see modulespecification.Updatesite#getTargetName()
+	 * @return the meta object for the attribute '<em>Target Id</em>'.
+	 * @see modulespecification.Updatesite#getTargetId()
 	 * @see #getUpdatesite()
 	 * @generated
 	 */
-	EAttribute getUpdatesite_TargetName();
+	EAttribute getUpdatesite_TargetId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getMavenVersion <em>Maven Version</em>}'.
@@ -693,6 +731,28 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdatesite_OsgiVersion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getCoreModuleName <em>Core Module Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Core Module Name</em>'.
+	 * @see modulespecification.Updatesite#getCoreModuleName()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_CoreModuleName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUiModuleName <em>Ui Module Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ui Module Name</em>'.
+	 * @see modulespecification.Updatesite#getUiModuleName()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_UiModuleName();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -746,20 +806,12 @@ public interface ModulespecificationPackage extends EPackage {
 		EClass UPDATESITE = eINSTANCE.getUpdatesite();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Base Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__BASE_NAME = eINSTANCE.getUpdatesite_BaseName();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UPDATESITE__PARENT_NAME = eINSTANCE.getUpdatesite_ParentName();
+		EAttribute UPDATESITE__BASE_ID = eINSTANCE.getUpdatesite_BaseId();
 
 		/**
 		 * The meta object literal for the '<em><b>Module Name</b></em>' attribute feature.
@@ -816,6 +868,22 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATESITE__COPY_RIGHT_YEAR = eINSTANCE.getUpdatesite_CopyRightYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Provider Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__PROVIDER_NAME = eINSTANCE.getUpdatesite_ProviderName();
+
+		/**
+		 * The meta object literal for the '<em><b>Tycho Parent Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__TYCHO_PARENT_NAME = eINSTANCE.getUpdatesite_TychoParentName();
 
 		/**
 		 * The meta object literal for the '<em><b>Tycho Version</b></em>' attribute feature.
@@ -898,52 +966,52 @@ public interface ModulespecificationPackage extends EPackage {
 		EAttribute UPDATESITE__OSGI_VERSION_QUALIFIER = eINSTANCE.getUpdatesite_OsgiVersionQualifier();
 
 		/**
-		 * The meta object literal for the '<em><b>Core Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Core Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__CORE_NAME = eINSTANCE.getUpdatesite_CoreName();
+		EAttribute UPDATESITE__CORE_ID = eINSTANCE.getUpdatesite_CoreId();
 
 		/**
-		 * The meta object literal for the '<em><b>Ui Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Ui Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__UI_NAME = eINSTANCE.getUpdatesite_UiName();
+		EAttribute UPDATESITE__UI_ID = eINSTANCE.getUpdatesite_UiId();
 
 		/**
-		 * The meta object literal for the '<em><b>Tests Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Tests Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__TESTS_NAME = eINSTANCE.getUpdatesite_TestsName();
+		EAttribute UPDATESITE__TESTS_ID = eINSTANCE.getUpdatesite_TestsId();
 
 		/**
-		 * The meta object literal for the '<em><b>Update Site Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Update Site Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__UPDATE_SITE_NAME = eINSTANCE.getUpdatesite_UpdateSiteName();
+		EAttribute UPDATESITE__UPDATE_SITE_ID = eINSTANCE.getUpdatesite_UpdateSiteId();
 
 		/**
-		 * The meta object literal for the '<em><b>Feature Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Feature Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__FEATURE_NAME = eINSTANCE.getUpdatesite_FeatureName();
+		EAttribute UPDATESITE__FEATURE_ID = eINSTANCE.getUpdatesite_FeatureId();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Target Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute UPDATESITE__TARGET_NAME = eINSTANCE.getUpdatesite_TargetName();
+		EAttribute UPDATESITE__TARGET_ID = eINSTANCE.getUpdatesite_TargetId();
 
 		/**
 		 * The meta object literal for the '<em><b>Maven Version</b></em>' attribute feature.
@@ -960,6 +1028,22 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATESITE__OSGI_VERSION = eINSTANCE.getUpdatesite_OsgiVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Core Module Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__CORE_MODULE_NAME = eINSTANCE.getUpdatesite_CoreModuleName();
+
+		/**
+		 * The meta object literal for the '<em><b>Ui Module Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__UI_MODULE_NAME = eINSTANCE.getUpdatesite_UiModuleName();
 
 	}
 

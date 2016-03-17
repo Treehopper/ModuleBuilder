@@ -7,7 +7,7 @@
 «ENDDEFINE»
 
 «DEFINE updatesite FOR Updatesite»
-«FILE this.targetFileName() + ".tpd"»target "«this.targetName»" with source configurePhase requirements
+«FILE this.targetFileName() + ".tpd"»target "«this.targetId»" with source configurePhase requirements
 
 location "http://download.eclipse.org/eclipse/updates/4.5"{
 	org.eclipse.sdk.feature.group [4.5.0,4.6.0)

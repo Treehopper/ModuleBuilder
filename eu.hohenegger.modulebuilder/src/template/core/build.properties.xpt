@@ -9,6 +9,7 @@
 output.. = bin/
 bin.includes = META-INF/,\
                .,\
-               plugin.xml
+               plugin.xml,\
+               plugin.properties
 «ENDFILE»
 «ENDDEFINE»

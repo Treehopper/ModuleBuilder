@@ -5,7 +5,7 @@
 «ENDDEFINE»
 
 «DEFINE updatesite FOR Updatesite»
-«FILE "Activator.java"»package «this.coreName»;
+«FILE "Activator.java"»package «this.coreId»;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

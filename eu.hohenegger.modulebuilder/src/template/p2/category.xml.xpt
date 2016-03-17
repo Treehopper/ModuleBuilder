@@ -7,10 +7,10 @@
 «DEFINE updatesite FOR Updatesite»
 «FILE "category.xml"»<?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="" id="«this.featureName»" version="0.0.0">
-      <category name="«this.coreName»"/>
+   <feature url="" id="«this.featureId»" version="0.0.0">
+      <category name="«this.baseId»"/>
    </feature>
-   <category-def name="«this.coreName»" label="TODO"/>
+   <category-def name="«this.baseId»" label="TODO"/>
 </site>
 «ENDFILE»
 «ENDDEFINE»

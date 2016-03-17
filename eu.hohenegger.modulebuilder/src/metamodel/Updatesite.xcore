@@ -6,16 +6,18 @@ class Module {
 }
 
 class Updatesite {
-	String baseName = ""
-	String parentName = "parent"
+	String baseId = ""
 	String moduleName = "TODO"
 	String categoryName = "TODO"
 	String license = ""
 	String version = "1.0.0"
 	String copyRightAuthorName = ""
-	String copyRightUrl = ""
+	String copyRightUrl = "http://www.example.org"
 	String copyRightYear = ""
 	
+	String providerName = "http://www.example.org"
+	
+	String tychoParentName = "parent"
 	String tychoVersion = "0.24.0"
 	String javaVersion = "JavaSE-1.8"
 	
@@ -29,28 +31,28 @@ class Updatesite {
 	String mavenVersionSuffix = "-SNAPSHOT"
 	String osgiVersionQualifier = ".qualifier"
 
-	derived String coreName get {
-		baseName + coreSuffix
+	derived String coreId get {
+		baseId + coreSuffix
 	}
 	
-	derived String uiName get {
-		baseName + uiSuffix
+	derived String uiId get {
+		baseId + uiSuffix
 	}
 
-	derived String testsName get {
-		baseName + testsSuffix
+	derived String testsId get {
+		baseId + testsSuffix
 	}
 	
-	derived String updateSiteName get {
-		baseName + updateSiteSuffix
+	derived String updateSiteId get {
+		baseId + updateSiteSuffix
 	}
 	
-	derived String featureName get {
-		baseName + featureSuffix
+	derived String featureId get {
+		baseId + featureSuffix
 	}
 	
-	derived String targetName get {
-		baseName + targetSuffix
+	derived String targetId get {
+		baseId + targetSuffix
 	}
 
 	derived String mavenVersion get {
@@ -59,5 +61,13 @@ class Updatesite {
 	
 	derived String osgiVersion get {
 		version + osgiVersionQualifier
+	}
+	
+	derived String coreModuleName get {
+		moduleName + " Core"
+	}
+	
+	derived String uiModuleName get {
+		moduleName + " UI"
 	}
 }
