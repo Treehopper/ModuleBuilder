@@ -6,6 +6,6 @@
       <package
             uri="modulespecification"
             class="modulespecification.ModulespecificationPackage"
-            genModel="src/metamodel/Updatesite.genmodel"/>
+            genModel="src/metamodel/Updatesite.xcore"/>
    </extension>
 </plugin>
