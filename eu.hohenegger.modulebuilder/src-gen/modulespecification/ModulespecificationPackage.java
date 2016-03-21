@@ -186,22 +186,13 @@ public interface ModulespecificationPackage extends EPackage {
 	int UPDATESITE__PROVIDER_NAME = 8;
 
 	/**
-	 * The feature id for the '<em><b>Tycho Parent Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UPDATESITE__TYCHO_PARENT_NAME = 9;
-
-	/**
 	 * The feature id for the '<em><b>Tycho Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TYCHO_VERSION = 10;
+	int UPDATESITE__TYCHO_VERSION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Java Version</b></em>' attribute.
@@ -210,7 +201,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__JAVA_VERSION = 11;
+	int UPDATESITE__JAVA_VERSION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Core Suffix</b></em>' attribute.
@@ -219,7 +210,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_SUFFIX = 12;
+	int UPDATESITE__CORE_SUFFIX = 11;
 
 	/**
 	 * The feature id for the '<em><b>Ui Suffix</b></em>' attribute.
@@ -228,7 +219,34 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_SUFFIX = 13;
+	int UPDATESITE__UI_SUFFIX = 12;
+
+	/**
+	 * The feature id for the '<em><b>Generate Parent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__GENERATE_PARENT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Tycho Parent Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__TYCHO_PARENT_NAME = 14;
+
+	/**
+	 * The feature id for the '<em><b>Generate Tests</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__GENERATE_TESTS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -237,7 +255,16 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_SUFFIX = 14;
+	int UPDATESITE__TESTS_SUFFIX = 16;
+
+	/**
+	 * The feature id for the '<em><b>Generate Feature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__GENERATE_FEATURE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -246,7 +273,16 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_SUFFIX = 15;
+	int UPDATESITE__FEATURE_SUFFIX = 18;
+
+	/**
+	 * The feature id for the '<em><b>Generate Updatesite</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__GENERATE_UPDATESITE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -255,7 +291,16 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_SUFFIX = 16;
+	int UPDATESITE__UPDATE_SITE_SUFFIX = 20;
+
+	/**
+	 * The feature id for the '<em><b>Generate Target</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__GENERATE_TARGET = 21;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -264,7 +309,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_SUFFIX = 17;
+	int UPDATESITE__TARGET_SUFFIX = 22;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -273,7 +318,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION_SUFFIX = 18;
+	int UPDATESITE__MAVEN_VERSION_SUFFIX = 23;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -282,7 +327,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION_QUALIFIER = 19;
+	int UPDATESITE__OSGI_VERSION_QUALIFIER = 24;
 
 	/**
 	 * The feature id for the '<em><b>Core Id</b></em>' attribute.
@@ -291,7 +336,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_ID = 20;
+	int UPDATESITE__CORE_ID = 25;
 
 	/**
 	 * The feature id for the '<em><b>Ui Id</b></em>' attribute.
@@ -300,7 +345,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_ID = 21;
+	int UPDATESITE__UI_ID = 26;
 
 	/**
 	 * The feature id for the '<em><b>Tests Id</b></em>' attribute.
@@ -309,7 +354,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TESTS_ID = 22;
+	int UPDATESITE__TESTS_ID = 27;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Id</b></em>' attribute.
@@ -318,7 +363,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UPDATE_SITE_ID = 23;
+	int UPDATESITE__UPDATE_SITE_ID = 28;
 
 	/**
 	 * The feature id for the '<em><b>Feature Id</b></em>' attribute.
@@ -327,7 +372,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__FEATURE_ID = 24;
+	int UPDATESITE__FEATURE_ID = 29;
 
 	/**
 	 * The feature id for the '<em><b>Target Id</b></em>' attribute.
@@ -336,7 +381,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__TARGET_ID = 25;
+	int UPDATESITE__TARGET_ID = 30;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -345,7 +390,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__MAVEN_VERSION = 26;
+	int UPDATESITE__MAVEN_VERSION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -354,7 +399,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__OSGI_VERSION = 27;
+	int UPDATESITE__OSGI_VERSION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Core Module Name</b></em>' attribute.
@@ -363,7 +408,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__CORE_MODULE_NAME = 28;
+	int UPDATESITE__CORE_MODULE_NAME = 33;
 
 	/**
 	 * The feature id for the '<em><b>Ui Module Name</b></em>' attribute.
@@ -372,7 +417,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE__UI_MODULE_NAME = 29;
+	int UPDATESITE__UI_MODULE_NAME = 34;
 
 	/**
 	 * The number of structural features of the '<em>Updatesite</em>' class.
@@ -381,7 +426,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE_FEATURE_COUNT = 30;
+	int UPDATESITE_FEATURE_COUNT = 35;
 
 	/**
 	 * The number of operations of the '<em>Updatesite</em>' class.
@@ -524,17 +569,6 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getUpdatesite_ProviderName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tycho Parent Name</em>'.
-	 * @see modulespecification.Updatesite#getTychoParentName()
-	 * @see #getUpdatesite()
-	 * @generated
-	 */
-	EAttribute getUpdatesite_TychoParentName();
-
-	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTychoVersion <em>Tycho Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,6 +613,39 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getUpdatesite_UiSuffix();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isGenerateParent <em>Generate Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generate Parent</em>'.
+	 * @see modulespecification.Updatesite#isGenerateParent()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_GenerateParent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tycho Parent Name</em>'.
+	 * @see modulespecification.Updatesite#getTychoParentName()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_TychoParentName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isGenerateTests <em>Generate Tests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generate Tests</em>'.
+	 * @see modulespecification.Updatesite#isGenerateTests()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_GenerateTests();
+
+	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTestsSuffix <em>Tests Suffix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,6 +655,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdatesite_TestsSuffix();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isGenerateFeature <em>Generate Feature</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generate Feature</em>'.
+	 * @see modulespecification.Updatesite#isGenerateFeature()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_GenerateFeature();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getFeatureSuffix <em>Feature Suffix</em>}'.
@@ -601,6 +679,17 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getUpdatesite_FeatureSuffix();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isGenerateUpdatesite <em>Generate Updatesite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generate Updatesite</em>'.
+	 * @see modulespecification.Updatesite#isGenerateUpdatesite()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_GenerateUpdatesite();
+
+	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getUpdateSiteSuffix <em>Update Site Suffix</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -610,6 +699,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getUpdatesite_UpdateSiteSuffix();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isGenerateTarget <em>Generate Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Generate Target</em>'.
+	 * @see modulespecification.Updatesite#isGenerateTarget()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_GenerateTarget();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#getTargetSuffix <em>Target Suffix</em>}'.
@@ -878,14 +978,6 @@ public interface ModulespecificationPackage extends EPackage {
 		EAttribute UPDATESITE__PROVIDER_NAME = eINSTANCE.getUpdatesite_ProviderName();
 
 		/**
-		 * The meta object literal for the '<em><b>Tycho Parent Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UPDATESITE__TYCHO_PARENT_NAME = eINSTANCE.getUpdatesite_TychoParentName();
-
-		/**
 		 * The meta object literal for the '<em><b>Tycho Version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -918,12 +1010,44 @@ public interface ModulespecificationPackage extends EPackage {
 		EAttribute UPDATESITE__UI_SUFFIX = eINSTANCE.getUpdatesite_UiSuffix();
 
 		/**
+		 * The meta object literal for the '<em><b>Generate Parent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__GENERATE_PARENT = eINSTANCE.getUpdatesite_GenerateParent();
+
+		/**
+		 * The meta object literal for the '<em><b>Tycho Parent Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__TYCHO_PARENT_NAME = eINSTANCE.getUpdatesite_TychoParentName();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate Tests</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__GENERATE_TESTS = eINSTANCE.getUpdatesite_GenerateTests();
+
+		/**
 		 * The meta object literal for the '<em><b>Tests Suffix</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute UPDATESITE__TESTS_SUFFIX = eINSTANCE.getUpdatesite_TestsSuffix();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate Feature</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__GENERATE_FEATURE = eINSTANCE.getUpdatesite_GenerateFeature();
 
 		/**
 		 * The meta object literal for the '<em><b>Feature Suffix</b></em>' attribute feature.
@@ -934,12 +1058,28 @@ public interface ModulespecificationPackage extends EPackage {
 		EAttribute UPDATESITE__FEATURE_SUFFIX = eINSTANCE.getUpdatesite_FeatureSuffix();
 
 		/**
+		 * The meta object literal for the '<em><b>Generate Updatesite</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__GENERATE_UPDATESITE = eINSTANCE.getUpdatesite_GenerateUpdatesite();
+
+		/**
 		 * The meta object literal for the '<em><b>Update Site Suffix</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute UPDATESITE__UPDATE_SITE_SUFFIX = eINSTANCE.getUpdatesite_UpdateSiteSuffix();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate Target</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__GENERATE_TARGET = eINSTANCE.getUpdatesite_GenerateTarget();
 
 		/**
 		 * The meta object literal for the '<em><b>Target Suffix</b></em>' attribute feature.

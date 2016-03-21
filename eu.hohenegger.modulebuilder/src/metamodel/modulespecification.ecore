@@ -40,9 +40,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerName" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="http://www.example.org"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoParentName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="parent"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoVersion" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="0.24.0"/>
@@ -55,15 +52,33 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uiSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".ui"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateParent" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoParentName" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        defaultValueLiteral="parent"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateTests" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testsSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".tests"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateFeature" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".feature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateUpdatesite" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateSiteSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".p2updateSite"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateTarget" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=".releng.targetplatform"/>

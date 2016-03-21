@@ -69,14 +69,19 @@ public class UpdatesiteItemProvider
 			addCopyRightUrlPropertyDescriptor(object);
 			addCopyRightYearPropertyDescriptor(object);
 			addProviderNamePropertyDescriptor(object);
-			addTychoParentNamePropertyDescriptor(object);
 			addTychoVersionPropertyDescriptor(object);
 			addJavaVersionPropertyDescriptor(object);
 			addCoreSuffixPropertyDescriptor(object);
 			addUiSuffixPropertyDescriptor(object);
+			addGenerateParentPropertyDescriptor(object);
+			addTychoParentNamePropertyDescriptor(object);
+			addGenerateTestsPropertyDescriptor(object);
 			addTestsSuffixPropertyDescriptor(object);
+			addGenerateFeaturePropertyDescriptor(object);
 			addFeatureSuffixPropertyDescriptor(object);
+			addGenerateUpdatesitePropertyDescriptor(object);
 			addUpdateSiteSuffixPropertyDescriptor(object);
+			addGenerateTargetPropertyDescriptor(object);
 			addTargetSuffixPropertyDescriptor(object);
 			addMavenVersionSuffixPropertyDescriptor(object);
 			addOsgiVersionQualifierPropertyDescriptor(object);
@@ -315,6 +320,28 @@ public class UpdatesiteItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Generate Tests feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateTestsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Updatesite_generateTests_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Updatesite_generateTests_feature", "_UI_Updatesite_type"),
+				 ModulespecificationPackage.Literals.UPDATESITE__GENERATE_TESTS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Tycho Version feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -403,6 +430,28 @@ public class UpdatesiteItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Generate Parent feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateParentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Updatesite_generateParent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Updatesite_generateParent_feature", "_UI_Updatesite_type"),
+				 ModulespecificationPackage.Literals.UPDATESITE__GENERATE_PARENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Tests Suffix feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -420,6 +469,28 @@ public class UpdatesiteItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Generate Feature feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateFeaturePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Updatesite_generateFeature_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Updatesite_generateFeature_feature", "_UI_Updatesite_type"),
+				 ModulespecificationPackage.Literals.UPDATESITE__GENERATE_FEATURE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -447,6 +518,28 @@ public class UpdatesiteItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Generate Updatesite feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateUpdatesitePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Updatesite_generateUpdatesite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Updatesite_generateUpdatesite_feature", "_UI_Updatesite_type"),
+				 ModulespecificationPackage.Literals.UPDATESITE__GENERATE_UPDATESITE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Update Site Suffix feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -464,6 +557,28 @@ public class UpdatesiteItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Generate Target feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Updatesite_generateTarget_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Updatesite_generateTarget_feature", "_UI_Updatesite_type"),
+				 ModulespecificationPackage.Literals.UPDATESITE__GENERATE_TARGET,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -801,14 +916,19 @@ public class UpdatesiteItemProvider
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_URL:
 			case ModulespecificationPackage.UPDATESITE__COPY_RIGHT_YEAR:
 			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
-			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
 			case ModulespecificationPackage.UPDATESITE__CORE_SUFFIX:
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
+			case ModulespecificationPackage.UPDATESITE__GENERATE_PARENT:
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TESTS:
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
+			case ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE:
 			case ModulespecificationPackage.UPDATESITE__FEATURE_SUFFIX:
+			case ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE:
 			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX:
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TARGET:
 			case ModulespecificationPackage.UPDATESITE__TARGET_SUFFIX:
 			case ModulespecificationPackage.UPDATESITE__MAVEN_VERSION_SUFFIX:
 			case ModulespecificationPackage.UPDATESITE__OSGI_VERSION_QUALIFIER:

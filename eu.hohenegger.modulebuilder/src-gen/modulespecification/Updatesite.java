@@ -22,14 +22,19 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Updatesite#getCopyRightUrl <em>Copy Right Url</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getCopyRightYear <em>Copy Right Year</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getProviderName <em>Provider Name</em>}</li>
- *   <li>{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getJavaVersion <em>Java Version</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getUiSuffix <em>Ui Suffix</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isGenerateParent <em>Generate Parent</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isGenerateTests <em>Generate Tests</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getTestsSuffix <em>Tests Suffix</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isGenerateFeature <em>Generate Feature</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getFeatureSuffix <em>Feature Suffix</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isGenerateUpdatesite <em>Generate Updatesite</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getTargetSuffix <em>Target Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getMavenVersionSuffix <em>Maven Version Suffix</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getOsgiVersionQualifier <em>Osgi Version Qualifier</em>}</li>
@@ -295,33 +300,6 @@ public interface Updatesite extends EObject {
 	void setProviderName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Tycho Parent Name</b></em>' attribute.
-	 * The default value is <code>"parent"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tycho Parent Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tycho Parent Name</em>' attribute.
-	 * @see #setTychoParentName(String)
-	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_TychoParentName()
-	 * @model default="parent" unique="false"
-	 * @generated
-	 */
-	String getTychoParentName();
-
-	/**
-	 * Sets the value of the '{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tycho Parent Name</em>' attribute.
-	 * @see #getTychoParentName()
-	 * @generated
-	 */
-	void setTychoParentName(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Tycho Version</b></em>' attribute.
 	 * The default value is <code>"0.24.0"</code>.
 	 * <!-- begin-user-doc -->
@@ -430,6 +408,87 @@ public interface Updatesite extends EObject {
 	void setUiSuffix(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Generate Parent</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Parent</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Parent</em>' attribute.
+	 * @see #setGenerateParent(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_GenerateParent()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateParent();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#isGenerateParent <em>Generate Parent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Parent</em>' attribute.
+	 * @see #isGenerateParent()
+	 * @generated
+	 */
+	void setGenerateParent(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Tycho Parent Name</b></em>' attribute.
+	 * The default value is <code>"parent"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tycho Parent Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tycho Parent Name</em>' attribute.
+	 * @see #setTychoParentName(String)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_TychoParentName()
+	 * @model default="parent" unique="false"
+	 * @generated
+	 */
+	String getTychoParentName();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#getTychoParentName <em>Tycho Parent Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tycho Parent Name</em>' attribute.
+	 * @see #getTychoParentName()
+	 * @generated
+	 */
+	void setTychoParentName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Generate Tests</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Tests</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Tests</em>' attribute.
+	 * @see #setGenerateTests(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_GenerateTests()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateTests();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#isGenerateTests <em>Generate Tests</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Tests</em>' attribute.
+	 * @see #isGenerateTests()
+	 * @generated
+	 */
+	void setGenerateTests(boolean value);
+
+	/**
 	 * Returns the value of the '<em><b>Tests Suffix</b></em>' attribute.
 	 * The default value is <code>".tests"</code>.
 	 * <!-- begin-user-doc -->
@@ -455,6 +514,33 @@ public interface Updatesite extends EObject {
 	 * @generated
 	 */
 	void setTestsSuffix(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Generate Feature</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Feature</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Feature</em>' attribute.
+	 * @see #setGenerateFeature(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_GenerateFeature()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateFeature();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#isGenerateFeature <em>Generate Feature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Feature</em>' attribute.
+	 * @see #isGenerateFeature()
+	 * @generated
+	 */
+	void setGenerateFeature(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Feature Suffix</b></em>' attribute.
@@ -484,6 +570,33 @@ public interface Updatesite extends EObject {
 	void setFeatureSuffix(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Generate Updatesite</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Updatesite</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Updatesite</em>' attribute.
+	 * @see #setGenerateUpdatesite(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_GenerateUpdatesite()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateUpdatesite();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#isGenerateUpdatesite <em>Generate Updatesite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Updatesite</em>' attribute.
+	 * @see #isGenerateUpdatesite()
+	 * @generated
+	 */
+	void setGenerateUpdatesite(boolean value);
+
+	/**
 	 * Returns the value of the '<em><b>Update Site Suffix</b></em>' attribute.
 	 * The default value is <code>".p2updateSite"</code>.
 	 * <!-- begin-user-doc -->
@@ -509,6 +622,33 @@ public interface Updatesite extends EObject {
 	 * @generated
 	 */
 	void setUpdateSiteSuffix(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Generate Target</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Target</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Target</em>' attribute.
+	 * @see #setGenerateTarget(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_GenerateTarget()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateTarget();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Updatesite#isGenerateTarget <em>Generate Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Target</em>' attribute.
+	 * @see #isGenerateTarget()
+	 * @generated
+	 */
+	void setGenerateTarget(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Target Suffix</b></em>' attribute.

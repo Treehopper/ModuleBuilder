@@ -137,6 +137,10 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	}
 
 	private void generateFullFeature(Module module, String baseName, IProgressMonitor monitor, String templateMask) throws CoreException {
+		if (!module.getUpdatesites().get(0).isGenerateFeature()) {
+			return;
+		}
+
 		monitor.beginTask("Generating project", 1);
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
@@ -149,6 +153,10 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	}
 
 	private void generateUpdatesiteProject(Module module, String baseName, IProgressMonitor monitor, String templateMask) throws CoreException {
+		if (!module.getUpdatesites().get(0).isGenerateUpdatesite()) {
+			return;
+		}
+
 		monitor.beginTask("Generating project", 1);
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
@@ -159,6 +167,9 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	private void generateTargetProject(Module module, String baseName, IProgressMonitor monitor, String templateMask) throws CoreException {
+		if (!module.getUpdatesites().get(0).isGenerateTarget()) {
+			return;
+		}
 		monitor.beginTask("Generating project", 1);
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
@@ -169,6 +180,10 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	private void generateParentProject(Module module, String baseName, IProgressMonitor monitor, String templateMask) throws CoreException {
+		if (!module.getUpdatesites().get(0).isGenerateParent()) {
+			return;
+		}
+
 		monitor.beginTask("Generating project", 1);
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);

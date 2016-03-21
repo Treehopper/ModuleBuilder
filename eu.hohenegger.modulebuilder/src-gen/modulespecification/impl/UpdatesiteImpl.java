@@ -29,14 +29,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightUrl <em>Copy Right Url</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCopyRightYear <em>Copy Right Year</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getProviderName <em>Provider Name</em>}</li>
- *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoParentName <em>Tycho Parent Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getJavaVersion <em>Java Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiSuffix <em>Ui Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isGenerateParent <em>Generate Parent</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTychoParentName <em>Tycho Parent Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isGenerateTests <em>Generate Tests</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTestsSuffix <em>Tests Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isGenerateFeature <em>Generate Feature</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getFeatureSuffix <em>Feature Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isGenerateUpdatesite <em>Generate Updatesite</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getTargetSuffix <em>Target Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getMavenVersionSuffix <em>Maven Version Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getOsgiVersionQualifier <em>Osgi Version Qualifier</em>}</li>
@@ -236,26 +241,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	protected String providerName = PROVIDER_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTychoParentName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYCHO_PARENT_NAME_EDEFAULT = "parent";
-
-	/**
-	 * The cached value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTychoParentName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String tychoParentName = TYCHO_PARENT_NAME_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getTychoVersion() <em>Tycho Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -336,6 +321,66 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	protected String uiSuffix = UI_SUFFIX_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isGenerateParent() <em>Generate Parent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_PARENT_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateParent() <em>Generate Parent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateParent = GENERATE_PARENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTychoParentName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYCHO_PARENT_NAME_EDEFAULT = "parent";
+
+	/**
+	 * The cached value of the '{@link #getTychoParentName() <em>Tycho Parent Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTychoParentName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String tychoParentName = TYCHO_PARENT_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isGenerateTests() <em>Generate Tests</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateTests()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_TESTS_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateTests() <em>Generate Tests</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateTests()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateTests = GENERATE_TESTS_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getTestsSuffix() <em>Tests Suffix</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -354,6 +399,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected String testsSuffix = TESTS_SUFFIX_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isGenerateFeature() <em>Generate Feature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateFeature()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_FEATURE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateFeature() <em>Generate Feature</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateFeature()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateFeature = GENERATE_FEATURE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFeatureSuffix() <em>Feature Suffix</em>}' attribute.
@@ -376,6 +441,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	protected String featureSuffix = FEATURE_SUFFIX_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isGenerateUpdatesite() <em>Generate Updatesite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateUpdatesite()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_UPDATESITE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateUpdatesite() <em>Generate Updatesite</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateUpdatesite()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateUpdatesite = GENERATE_UPDATESITE_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getUpdateSiteSuffix() <em>Update Site Suffix</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -394,6 +479,26 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected String updateSiteSuffix = UPDATE_SITE_SUFFIX_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isGenerateTarget() <em>Generate Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_TARGET_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateTarget() <em>Generate Target</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateTarget()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateTarget = GENERATE_TARGET_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTargetSuffix() <em>Target Suffix</em>}' attribute.
@@ -768,27 +873,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTychoParentName() {
-		return tychoParentName;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTychoParentName(String newTychoParentName) {
-		String oldTychoParentName = tychoParentName;
-		tychoParentName = newTychoParentName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME, oldTychoParentName, tychoParentName));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getTychoVersion() {
 		return tychoVersion;
 	}
@@ -873,6 +957,69 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isGenerateParent() {
+		return generateParent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateParent(boolean newGenerateParent) {
+		boolean oldGenerateParent = generateParent;
+		generateParent = newGenerateParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__GENERATE_PARENT, oldGenerateParent, generateParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTychoParentName() {
+		return tychoParentName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTychoParentName(String newTychoParentName) {
+		String oldTychoParentName = tychoParentName;
+		tychoParentName = newTychoParentName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME, oldTychoParentName, tychoParentName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGenerateTests() {
+		return generateTests;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateTests(boolean newGenerateTests) {
+		boolean oldGenerateTests = generateTests;
+		generateTests = newGenerateTests;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__GENERATE_TESTS, oldGenerateTests, generateTests));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getTestsSuffix() {
 		return testsSuffix;
 	}
@@ -887,6 +1034,27 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		testsSuffix = newTestsSuffix;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX, oldTestsSuffix, testsSuffix));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGenerateFeature() {
+		return generateFeature;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateFeature(boolean newGenerateFeature) {
+		boolean oldGenerateFeature = generateFeature;
+		generateFeature = newGenerateFeature;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE, oldGenerateFeature, generateFeature));
 	}
 
 	/**
@@ -915,6 +1083,27 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isGenerateUpdatesite() {
+		return generateUpdatesite;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateUpdatesite(boolean newGenerateUpdatesite) {
+		boolean oldGenerateUpdatesite = generateUpdatesite;
+		generateUpdatesite = newGenerateUpdatesite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE, oldGenerateUpdatesite, generateUpdatesite));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getUpdateSiteSuffix() {
 		return updateSiteSuffix;
 	}
@@ -929,6 +1118,27 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		updateSiteSuffix = newUpdateSiteSuffix;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX, oldUpdateSiteSuffix, updateSiteSuffix));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isGenerateTarget() {
+		return generateTarget;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateTarget(boolean newGenerateTarget) {
+		boolean oldGenerateTarget = generateTarget;
+		generateTarget = newGenerateTarget;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.UPDATESITE__GENERATE_TARGET, oldGenerateTarget, generateTarget));
 	}
 
 	/**
@@ -1128,8 +1338,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getCopyRightYear();
 			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
 				return getProviderName();
-			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
-				return getTychoParentName();
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				return getTychoVersion();
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
@@ -1138,12 +1346,24 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getCoreSuffix();
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				return getUiSuffix();
+			case ModulespecificationPackage.UPDATESITE__GENERATE_PARENT:
+				return isGenerateParent();
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				return getTychoParentName();
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TESTS:
+				return isGenerateTests();
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
 				return getTestsSuffix();
+			case ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE:
+				return isGenerateFeature();
 			case ModulespecificationPackage.UPDATESITE__FEATURE_SUFFIX:
 				return getFeatureSuffix();
+			case ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE:
+				return isGenerateUpdatesite();
 			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX:
 				return getUpdateSiteSuffix();
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TARGET:
+				return isGenerateTarget();
 			case ModulespecificationPackage.UPDATESITE__TARGET_SUFFIX:
 				return getTargetSuffix();
 			case ModulespecificationPackage.UPDATESITE__MAVEN_VERSION_SUFFIX:
@@ -1209,9 +1429,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
 				setProviderName((String)newValue);
 				return;
-			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
-				setTychoParentName((String)newValue);
-				return;
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				setTychoVersion((String)newValue);
 				return;
@@ -1224,14 +1441,32 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				setUiSuffix((String)newValue);
 				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_PARENT:
+				setGenerateParent((Boolean)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				setTychoParentName((String)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TESTS:
+				setGenerateTests((Boolean)newValue);
+				return;
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
 				setTestsSuffix((String)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE:
+				setGenerateFeature((Boolean)newValue);
 				return;
 			case ModulespecificationPackage.UPDATESITE__FEATURE_SUFFIX:
 				setFeatureSuffix((String)newValue);
 				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE:
+				setGenerateUpdatesite((Boolean)newValue);
+				return;
 			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX:
 				setUpdateSiteSuffix((String)newValue);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TARGET:
+				setGenerateTarget((Boolean)newValue);
 				return;
 			case ModulespecificationPackage.UPDATESITE__TARGET_SUFFIX:
 				setTargetSuffix((String)newValue);
@@ -1281,9 +1516,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
 				setProviderName(PROVIDER_NAME_EDEFAULT);
 				return;
-			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
-				setTychoParentName(TYCHO_PARENT_NAME_EDEFAULT);
-				return;
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				setTychoVersion(TYCHO_VERSION_EDEFAULT);
 				return;
@@ -1296,14 +1528,32 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				setUiSuffix(UI_SUFFIX_EDEFAULT);
 				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_PARENT:
+				setGenerateParent(GENERATE_PARENT_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				setTychoParentName(TYCHO_PARENT_NAME_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TESTS:
+				setGenerateTests(GENERATE_TESTS_EDEFAULT);
+				return;
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
 				setTestsSuffix(TESTS_SUFFIX_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE:
+				setGenerateFeature(GENERATE_FEATURE_EDEFAULT);
 				return;
 			case ModulespecificationPackage.UPDATESITE__FEATURE_SUFFIX:
 				setFeatureSuffix(FEATURE_SUFFIX_EDEFAULT);
 				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE:
+				setGenerateUpdatesite(GENERATE_UPDATESITE_EDEFAULT);
+				return;
 			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX:
 				setUpdateSiteSuffix(UPDATE_SITE_SUFFIX_EDEFAULT);
+				return;
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TARGET:
+				setGenerateTarget(GENERATE_TARGET_EDEFAULT);
 				return;
 			case ModulespecificationPackage.UPDATESITE__TARGET_SUFFIX:
 				setTargetSuffix(TARGET_SUFFIX_EDEFAULT);
@@ -1344,8 +1594,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return COPY_RIGHT_YEAR_EDEFAULT == null ? copyRightYear != null : !COPY_RIGHT_YEAR_EDEFAULT.equals(copyRightYear);
 			case ModulespecificationPackage.UPDATESITE__PROVIDER_NAME:
 				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
-			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
-				return TYCHO_PARENT_NAME_EDEFAULT == null ? tychoParentName != null : !TYCHO_PARENT_NAME_EDEFAULT.equals(tychoParentName);
 			case ModulespecificationPackage.UPDATESITE__TYCHO_VERSION:
 				return TYCHO_VERSION_EDEFAULT == null ? tychoVersion != null : !TYCHO_VERSION_EDEFAULT.equals(tychoVersion);
 			case ModulespecificationPackage.UPDATESITE__JAVA_VERSION:
@@ -1354,12 +1602,24 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return CORE_SUFFIX_EDEFAULT == null ? coreSuffix != null : !CORE_SUFFIX_EDEFAULT.equals(coreSuffix);
 			case ModulespecificationPackage.UPDATESITE__UI_SUFFIX:
 				return UI_SUFFIX_EDEFAULT == null ? uiSuffix != null : !UI_SUFFIX_EDEFAULT.equals(uiSuffix);
+			case ModulespecificationPackage.UPDATESITE__GENERATE_PARENT:
+				return generateParent != GENERATE_PARENT_EDEFAULT;
+			case ModulespecificationPackage.UPDATESITE__TYCHO_PARENT_NAME:
+				return TYCHO_PARENT_NAME_EDEFAULT == null ? tychoParentName != null : !TYCHO_PARENT_NAME_EDEFAULT.equals(tychoParentName);
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TESTS:
+				return generateTests != GENERATE_TESTS_EDEFAULT;
 			case ModulespecificationPackage.UPDATESITE__TESTS_SUFFIX:
 				return TESTS_SUFFIX_EDEFAULT == null ? testsSuffix != null : !TESTS_SUFFIX_EDEFAULT.equals(testsSuffix);
+			case ModulespecificationPackage.UPDATESITE__GENERATE_FEATURE:
+				return generateFeature != GENERATE_FEATURE_EDEFAULT;
 			case ModulespecificationPackage.UPDATESITE__FEATURE_SUFFIX:
 				return FEATURE_SUFFIX_EDEFAULT == null ? featureSuffix != null : !FEATURE_SUFFIX_EDEFAULT.equals(featureSuffix);
+			case ModulespecificationPackage.UPDATESITE__GENERATE_UPDATESITE:
+				return generateUpdatesite != GENERATE_UPDATESITE_EDEFAULT;
 			case ModulespecificationPackage.UPDATESITE__UPDATE_SITE_SUFFIX:
 				return UPDATE_SITE_SUFFIX_EDEFAULT == null ? updateSiteSuffix != null : !UPDATE_SITE_SUFFIX_EDEFAULT.equals(updateSiteSuffix);
+			case ModulespecificationPackage.UPDATESITE__GENERATE_TARGET:
+				return generateTarget != GENERATE_TARGET_EDEFAULT;
 			case ModulespecificationPackage.UPDATESITE__TARGET_SUFFIX:
 				return TARGET_SUFFIX_EDEFAULT == null ? targetSuffix != null : !TARGET_SUFFIX_EDEFAULT.equals(targetSuffix);
 			case ModulespecificationPackage.UPDATESITE__MAVEN_VERSION_SUFFIX:
@@ -1418,8 +1678,6 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		result.append(copyRightYear);
 		result.append(", providerName: ");
 		result.append(providerName);
-		result.append(", tychoParentName: ");
-		result.append(tychoParentName);
 		result.append(", tychoVersion: ");
 		result.append(tychoVersion);
 		result.append(", javaVersion: ");
@@ -1428,12 +1686,24 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 		result.append(coreSuffix);
 		result.append(", uiSuffix: ");
 		result.append(uiSuffix);
+		result.append(", generateParent: ");
+		result.append(generateParent);
+		result.append(", tychoParentName: ");
+		result.append(tychoParentName);
+		result.append(", generateTests: ");
+		result.append(generateTests);
 		result.append(", testsSuffix: ");
 		result.append(testsSuffix);
+		result.append(", generateFeature: ");
+		result.append(generateFeature);
 		result.append(", featureSuffix: ");
 		result.append(featureSuffix);
+		result.append(", generateUpdatesite: ");
+		result.append(generateUpdatesite);
 		result.append(", updateSiteSuffix: ");
 		result.append(updateSiteSuffix);
+		result.append(", generateTarget: ");
+		result.append(generateTarget);
 		result.append(", targetSuffix: ");
 		result.append(targetSuffix);
 		result.append(", mavenVersionSuffix: ");
