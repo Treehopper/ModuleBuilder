@@ -11,6 +11,8 @@ class Updatesite {
 	
 	String moduleName = "TODO"
 	String categoryName = "TODO"
+ 	
+ 	@GenModel(propertyMultiLine="true")
 	String license = ""
 	String version = "1.0.0"
 	String copyRightAuthorName = ""

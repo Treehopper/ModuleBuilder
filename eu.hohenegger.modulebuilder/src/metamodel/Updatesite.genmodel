@@ -28,7 +28,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/baseId"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/moduleName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/categoryName"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/license"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/license"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightAuthorName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/copyRightUrl"/>

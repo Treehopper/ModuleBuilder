@@ -12,6 +12,7 @@
 		<module>../eu.hohenegger.modulebuilder.p2updateSite</module>
 		<module>../eu.hohenegger.modulebuilder.ui</module>
 		<module>../eu.hohenegger.modulebuilder.releng.targetplatform</module>
+		<module>../eu.hohenegger.modulebuilder.edit</module>
 	</modules>
 
 	<properties>

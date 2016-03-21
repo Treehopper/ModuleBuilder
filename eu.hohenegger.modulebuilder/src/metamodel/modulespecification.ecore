@@ -20,7 +20,11 @@
         defaultValueLiteral="TODO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="license" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="propertyMultiLine" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="1.0.0"/>
