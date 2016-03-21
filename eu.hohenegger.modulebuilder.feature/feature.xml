@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="eu.hohenegger.modulebuilder.feature"
-      label="TODO"
+      label="Module Builder"
       version="1.0.0.qualifier">
 
    <copyright url="http://www.hohenegger.eu">
       Copyright (c) 2012 Max Hohenegger.
 All rights reserved.
    </copyright>
-
-   <license />
-
-   <requires />
 
    <plugin
          id="eu.hohenegger.modulebuilder"
@@ -28,4 +24,3 @@ All rights reserved.
          unpack="false"/>
 
 </feature>
-
