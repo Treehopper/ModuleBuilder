@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>eu.hohenegger.modulebuilder.edit</groupId>
+		<groupId>eu.hohenegger.modulebuilder</groupId>
 		<artifactId>parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
-	<artifactId>eu.hohenegger.modulebuilder</artifactId>
+	<artifactId>eu.hohenegger.modulebuilder.edit</artifactId>
 	<packaging>eclipse-plugin</packaging>
 </project> 
