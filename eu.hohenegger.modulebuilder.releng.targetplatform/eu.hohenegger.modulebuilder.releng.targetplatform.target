@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1458255607">
+<target name="eu.hohenegger.modulebuilder.releng.targetplatform" sequenceNumber="1458584942">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
       <unit id="org.eclipse.sdk.feature.group" version="4.5.2.v20160212-1500"/>
@@ -18,6 +18,36 @@
       <unit id="org.eclipse.xtext.sdk.feature.group" version="2.9.2.v201603040440"/>
       <unit id="org.eclipse.emf.ecore.xcore.lib.feature.group" version="1.2.0.v20150202-0452"/>
       <repository location="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
+      <unit id="org.eclipse.emf.ecp.emfforms.runtime.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.categorization.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.compoundcontrol.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.custom.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.di.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.group.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.horizontal.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.label.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.mappingdmr.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.model.controls.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.model.editor.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.rule.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.section.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.stack.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.table.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.template.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.treemasterdetail.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.unset.feature.source.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.vertical.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.view.viewproxy.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.ecore.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.workspace.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.e4.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.e3.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <unit id="org.eclipse.emf.ecp.viewmodel.feature.feature.group" version="1.8.0.20160216-1319"/>
+      <repository location="http://download.eclipse.org/ecp/releases/releases_18/"/>
     </location>
   </locations>
 </target>

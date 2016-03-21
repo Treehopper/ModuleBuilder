@@ -17,13 +17,10 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchWizard;
-
 import eu.hohenegger.modulebuilder.ProjectFactory;
 import modulespecification.Module;
 import modulespecification.ModulespecificationFactory;
@@ -42,7 +39,7 @@ import modulespecification.Updatesite;
 
 public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	private NewP2UpdateSiteWizardPage page;
-	private ISelection selection;
+	private Module module;
 
 	/**
 	 * Constructor for NewP2UpdateSiteWizard.
@@ -57,17 +54,15 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	 */
 
 	public void addPages() {
-		page = new NewP2UpdateSiteWizardPage(selection);
+		module = createModel("TODO");
+		page = new NewP2UpdateSiteWizardPage(module.getUpdatesites().get(0));
 		addPage(page);
 	}
 
 	@Override
 	public boolean performFinish() {
-		final String containerName = page.getContainerName();
-
 		try {
 			getContainer().run(true, false, monitor -> {
-				Module module = createModel(containerName);
 				try {
 					Updatesite updatesite = module.getUpdatesites().get(0);
 					generateJavaProject(module, updatesite.getBaseId(), monitor, "template::core::%s::main");
@@ -133,8 +128,6 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-
-
 	private void generateFullFeature(Module module, String baseName, IProgressMonitor monitor, String templateMask) throws CoreException {
 		monitor.beginTask("Generating project", 1);
 		IProject project = ProjectFactory.createProject(baseName, monitor);
@@ -177,13 +170,8 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-
-	/**
-	 * We will accept the selection in the workbench to see if
-	 * we can initialize from it.
-	 * @see IWorkbenchWizard#init(IWorkbench, IStructuredSelection)
-	 */
+	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		this.selection = selection;
+		// intentionally left empty
 	}
 }
