@@ -10,7 +10,7 @@
    <feature url="" id="«this.featureId»" version="0.0.0">
       <category name="«this.baseId»"/>
    </feature>
-   <category-def name="«this.baseId»" label="TODO"/>
+   <category-def name="«this.baseId»" label="«this.categoryName»"/>
 </site>
 «ENDFILE»
 «ENDDEFINE»
