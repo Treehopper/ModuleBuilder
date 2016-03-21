@@ -9,6 +9,10 @@
 All rights reserved.
    </copyright>
 
+   <requires>
+      <import feature="org.eclipse.emf.ecp.emfforms.runtime.feature" version="1.8.0.20160216-1319"/>
+   </requires>
+
    <plugin
          id="eu.hohenegger.modulebuilder"
          download-size="0"
