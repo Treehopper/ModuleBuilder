@@ -110,8 +110,10 @@ public class ProjectFactory {
 	public static IProject createProject(String projectName, IProgressMonitor monitor) throws CoreException {
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IProject project = root.getProject(projectName);
-		project.create(monitor);
-		project.open(monitor);
+		if (!project.exists()) {
+			project.create(monitor);
+			project.open(monitor);
+		}
 		return project;
 	}
 }
