@@ -1,12 +1,16 @@
 package eu.hohenegger.modulebuilder.ui.wizard;
 
 import org.eclipse.emf.ecp.ui.view.ECPRendererException;
+import org.eclipse.emf.ecp.ui.view.swt.ECPSWTView;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
 import org.eclipse.jface.dialogs.IDialogPage;
+import org.eclipse.jface.layout.GridDataFactory;
+import org.eclipse.jface.layout.GridLayoutFactory;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 
 import modulespecification.Updatesite;
 
@@ -36,21 +40,36 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
-		Composite container = new Composite(parent, SWT.NULL);
-		GridLayout layout = new GridLayout();
-		container.setLayout(layout);
+		Composite rootComposite = new Composite(parent, SWT.NULL);
+		rootComposite.setLayout(GridLayoutFactory.fillDefaults().create());
 
-		render(container);
+		scrolled(rootComposite);
 
-		setControl(container);
+		setControl(rootComposite);
 	}
 
-	private void render(Composite parent) {
+	private void scrolled(Composite rootComposite) {
+		ScrolledComposite sc = new ScrolledComposite(rootComposite, SWT.H_SCROLL | SWT.V_SCROLL);
+		sc.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).hint(SWT.DEFAULT, 400).create());
+		sc.setExpandHorizontal(true);
+		sc.setExpandVertical(true);
+
+		Composite containerMain = new Composite(sc, SWT.NONE);
+		containerMain.setLayout(GridLayoutFactory.swtDefaults().numColumns(1).create());
+
+		render(containerMain);
+
+		sc.setContent(containerMain);
+		sc.setMinSize(containerMain.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+	}
+
+
+	private Control render(Composite parent) {
 		try {
-			ECPSWTViewRenderer.INSTANCE.render(parent, updatesite);
+			ECPSWTView render = ECPSWTViewRenderer.INSTANCE.render(parent, updatesite);
+			return render.getSWTControl();
 		} catch (ECPRendererException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 }
