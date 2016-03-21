@@ -8,6 +8,7 @@ import static eu.hohenegger.modulebuilder.ProjectFactory.createJavaPackage;
 import static eu.hohenegger.modulebuilder.ProjectFactory.createProject;
 import static eu.hohenegger.modulebuilder.ProjectFactory.makeJavaProject;
 import static eu.hohenegger.modulebuilder.XPandUtil.expandTemplate;
+import static org.eclipse.emf.common.util.Diagnostic.OK;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -16,6 +17,8 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
@@ -61,6 +64,11 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 
 	@Override
 	public boolean performFinish() {
+		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(module);
+		if (diagnostic.getSeverity() != OK) {
+			return false;
+		}
+
 		try {
 			getContainer().run(true, false, monitor -> {
 				try {

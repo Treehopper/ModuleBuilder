@@ -6,7 +6,9 @@ class Module {
 }
 
 class Updatesite {
+	//@ExtendedMetaData(pattern=".+")
 	String baseId = ""
+	
 	String moduleName = "TODO"
 	String categoryName = "TODO"
 	String license = ""
