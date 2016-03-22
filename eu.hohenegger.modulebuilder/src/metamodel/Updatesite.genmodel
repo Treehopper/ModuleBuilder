@@ -60,6 +60,7 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/osgiVersion"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/coreModuleName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/uiModuleName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Updatesite/isLicenseEmpty"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

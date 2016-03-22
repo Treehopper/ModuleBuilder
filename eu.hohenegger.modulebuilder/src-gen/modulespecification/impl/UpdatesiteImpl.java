@@ -55,6 +55,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getOsgiVersion <em>Osgi Version</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getCoreModuleName <em>Core Module Name</em>}</li>
  *   <li>{@link modulespecification.impl.UpdatesiteImpl#getUiModuleName <em>Ui Module Name</em>}</li>
+ *   <li>{@link modulespecification.impl.UpdatesiteImpl#isIsLicenseEmpty <em>Is License Empty</em>}</li>
  * </ul>
  *
  * @generated
@@ -659,6 +660,16 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * @ordered
 	 */
 	protected static final String UI_MODULE_NAME_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #isIsLicenseEmpty() <em>Is License Empty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsLicenseEmpty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_LICENSE_EMPTY_EDEFAULT = false;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1317,6 +1328,16 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsLicenseEmpty() {
+		String _license = this.getLicense();
+		return _license.isEmpty();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -1390,6 +1411,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return getCoreModuleName();
 			case ModulespecificationPackage.UPDATESITE__UI_MODULE_NAME:
 				return getUiModuleName();
+			case ModulespecificationPackage.UPDATESITE__IS_LICENSE_EMPTY:
+				return isIsLicenseEmpty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1646,6 +1669,8 @@ public class UpdatesiteImpl extends MinimalEObjectImpl.Container implements Upda
 				return CORE_MODULE_NAME_EDEFAULT == null ? getCoreModuleName() != null : !CORE_MODULE_NAME_EDEFAULT.equals(getCoreModuleName());
 			case ModulespecificationPackage.UPDATESITE__UI_MODULE_NAME:
 				return UI_MODULE_NAME_EDEFAULT == null ? getUiModuleName() != null : !UI_MODULE_NAME_EDEFAULT.equals(getUiModuleName());
+			case ModulespecificationPackage.UPDATESITE__IS_LICENSE_EMPTY:
+				return isIsLicenseEmpty() != IS_LICENSE_EMPTY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

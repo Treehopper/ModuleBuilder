@@ -157,5 +157,12 @@
         <details key="get" value="&lt;%java.lang.String%> _moduleName = this.getModuleName();&#xA;return (_moduleName + &quot; UI&quot;);"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLicenseEmpty" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _license = this.getLicense();&#xA;return _license.isEmpty();"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

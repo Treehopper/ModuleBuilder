@@ -84,4 +84,8 @@ class Updatesite {
 	derived String uiModuleName get {
 		moduleName + " UI"
 	}
+
+	derived boolean isLicenseEmpty get {
+		license.empty
+	}
 }

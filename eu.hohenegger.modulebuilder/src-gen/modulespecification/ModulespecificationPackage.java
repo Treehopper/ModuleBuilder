@@ -420,13 +420,22 @@ public interface ModulespecificationPackage extends EPackage {
 	int UPDATESITE__UI_MODULE_NAME = 34;
 
 	/**
+	 * The feature id for the '<em><b>Is License Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATESITE__IS_LICENSE_EMPTY = 35;
+
+	/**
 	 * The number of structural features of the '<em>Updatesite</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATESITE_FEATURE_COUNT = 35;
+	int UPDATESITE_FEATURE_COUNT = 36;
 
 	/**
 	 * The number of operations of the '<em>Updatesite</em>' class.
@@ -855,6 +864,17 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getUpdatesite_UiModuleName();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Updatesite#isIsLicenseEmpty <em>Is License Empty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is License Empty</em>'.
+	 * @see modulespecification.Updatesite#isIsLicenseEmpty()
+	 * @see #getUpdatesite()
+	 * @generated
+	 */
+	EAttribute getUpdatesite_IsLicenseEmpty();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1184,6 +1204,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute UPDATESITE__UI_MODULE_NAME = eINSTANCE.getUpdatesite_UiModuleName();
+
+		/**
+		 * The meta object literal for the '<em><b>Is License Empty</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UPDATESITE__IS_LICENSE_EMPTY = eINSTANCE.getUpdatesite_IsLicenseEmpty();
 
 	}
 

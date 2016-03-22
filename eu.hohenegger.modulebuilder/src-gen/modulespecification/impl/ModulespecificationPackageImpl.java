@@ -447,6 +447,15 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getUpdatesite_IsLicenseEmpty() {
+		return (EAttribute)updatesiteEClass.getEStructuralFeatures().get(35);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModulespecificationFactory getModulespecificationFactory() {
 		return (ModulespecificationFactory)getEFactoryInstance();
 	}
@@ -509,6 +518,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(updatesiteEClass, UPDATESITE__OSGI_VERSION);
 		createEAttribute(updatesiteEClass, UPDATESITE__CORE_MODULE_NAME);
 		createEAttribute(updatesiteEClass, UPDATESITE__UI_MODULE_NAME);
+		createEAttribute(updatesiteEClass, UPDATESITE__IS_LICENSE_EMPTY);
 	}
 
 	/**
@@ -583,6 +593,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getUpdatesite_OsgiVersion(), theEcorePackage.getEString(), "osgiVersion", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_CoreModuleName(), theEcorePackage.getEString(), "coreModuleName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUpdatesite_UiModuleName(), theEcorePackage.getEString(), "uiModuleName", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUpdatesite_IsLicenseEmpty(), theEcorePackage.getEBoolean(), "isLicenseEmpty", null, 0, 1, Updatesite.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

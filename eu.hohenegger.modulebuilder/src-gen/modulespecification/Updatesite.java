@@ -48,6 +48,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Updatesite#getOsgiVersion <em>Osgi Version</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getCoreModuleName <em>Core Module Name</em>}</li>
  *   <li>{@link modulespecification.Updatesite#getUiModuleName <em>Ui Module Name</em>}</li>
+ *   <li>{@link modulespecification.Updatesite#isIsLicenseEmpty <em>Is License Empty</em>}</li>
  * </ul>
  *
  * @see modulespecification.ModulespecificationPackage#getUpdatesite()
@@ -890,5 +891,21 @@ public interface Updatesite extends EObject {
 	 * @generated
 	 */
 	String getUiModuleName();
+
+	/**
+	 * Returns the value of the '<em><b>Is License Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is License Empty</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is License Empty</em>' attribute.
+	 * @see modulespecification.ModulespecificationPackage#getUpdatesite_IsLicenseEmpty()
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _license = this.getLicense();\nreturn _license.isEmpty();'"
+	 * @generated
+	 */
+	boolean isIsLicenseEmpty();
 
 } // Updatesite

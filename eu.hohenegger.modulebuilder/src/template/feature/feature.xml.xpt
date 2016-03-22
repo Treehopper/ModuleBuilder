@@ -16,7 +16,9 @@
 All rights reserved.
    </copyright>
 
+	«IF !this.isLicenseEmpty»
    <license>«this.license»</license>
+	«ENDIF»
 
    <requires />
 
