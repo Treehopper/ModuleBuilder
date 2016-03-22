@@ -7,7 +7,7 @@
 «DEFINE updatesite FOR Updatesite»
 «FILE "plugin.properties"»#
 
-pluginName = «this.uiId»
-providerName = www.example.org
+pluginName = «this.uiModuleName»
+providerName = «this.providerName»
 «ENDFILE»
 «ENDDEFINE»
