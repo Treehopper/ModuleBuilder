@@ -20,7 +20,6 @@ import org.eclipse.ui.IWorkbench;
 
 import modulespecification.Module;
 import modulespecification.ModulespecificationFactory;
-import modulespecification.Updatesite;
 
 /**
  * This is a sample new wizard. Its role is to create a new file 
@@ -51,7 +50,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 
 	public void addPages() {
 		module = createModel("TODO");
-		page = new NewP2UpdateSiteWizardPage(module.getUpdatesites().get(0));
+		page = new NewP2UpdateSiteWizardPage(module);
 		addPage(page);
 	}
 
@@ -65,16 +64,15 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		try {
 			getContainer().run(true, false, monitor -> {
 				try {
-					Updatesite updatesite = module.getUpdatesites().get(0);
-					generateJavaProject(module, updatesite.getBaseId(), monitor, "template::core::%s::main");
+					generateJavaProject(module, module.getBaseId(), monitor, "template::core::%s::main");
 
-					generateJavaProject(module, updatesite.getUiId(), monitor, "template::ui::%s::main");
+					generateJavaProject(module, module.getUiId(), monitor, "template::ui::%s::main");
 
-					generateFullFeature(module, updatesite.getFeatureId(), monitor, "template::feature::%s::main");
+					generateFullFeature(module, module.getFeatureId(), monitor, "template::feature::%s::main");
 
-					generateUpdatesiteProject(module, updatesite.getUpdateSiteId(), monitor, "template::p2::%s::main");
+					generateUpdatesiteProject(module, module.getUpdateSiteId(), monitor, "template::p2::%s::main");
 
-					generateTargetProject(module, updatesite.getTargetId(), monitor, "template::target::%s::main");
+					generateTargetProject(module, module.getTargetId(), monitor, "template::target::%s::main");
 
 					generateParentProject(module, "parent", monitor, "template::parent::%s::main");
 				} catch (CoreException e) {
@@ -92,11 +90,8 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	}
 
 	private Module createModel(String pluginId) {
-		Updatesite updatesite = ModulespecificationFactory.eINSTANCE.createUpdatesite();
-		updatesite.setBaseId(pluginId);
-
 		Module module = ModulespecificationFactory.eINSTANCE.createModule();
-		module.getUpdatesites().add(updatesite);
+		module.setBaseId(pluginId);
 
 		return module;
 	}

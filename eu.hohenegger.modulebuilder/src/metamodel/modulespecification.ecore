@@ -5,10 +5,6 @@
     <details key="modelDirectory" value="/eu.hohenegger.modulebuilder/src-gen"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="updatesites" upperBound="-1"
-        eType="#//Updatesite" containment="true" resolveProxies="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Updatesite">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseId" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>

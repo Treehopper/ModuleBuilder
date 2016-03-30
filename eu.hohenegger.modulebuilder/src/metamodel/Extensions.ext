@@ -1,4 +1,4 @@
 import modulespecification;
 
-String targetFileName(Updatesite m):
+String targetFileName(Module m):
 	m.targetId;

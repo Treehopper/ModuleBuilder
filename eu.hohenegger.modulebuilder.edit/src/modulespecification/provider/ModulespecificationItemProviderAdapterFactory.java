@@ -95,29 +95,6 @@ public class ModulespecificationItemProviderAdapterFactory extends Modulespecifi
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link modulespecification.Updatesite} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UpdatesiteItemProvider updatesiteItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link modulespecification.Updatesite}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUpdatesiteAdapter() {
-		if (updatesiteItemProvider == null) {
-			updatesiteItemProvider = new UpdatesiteItemProvider(this);
-		}
-
-		return updatesiteItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -217,7 +194,6 @@ public class ModulespecificationItemProviderAdapterFactory extends Modulespecifi
 	 */
 	public void dispose() {
 		if (moduleItemProvider != null) moduleItemProvider.dispose();
-		if (updatesiteItemProvider != null) updatesiteItemProvider.dispose();
 	}
 
 }

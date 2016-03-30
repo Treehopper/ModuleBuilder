@@ -31,15 +31,6 @@ public interface ModulespecificationFactory extends EFactory {
 	Module createModule();
 
 	/**
-	 * Returns a new object of class '<em>Updatesite</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Updatesite</em>'.
-	 * @generated
-	 */
-	Updatesite createUpdatesite();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

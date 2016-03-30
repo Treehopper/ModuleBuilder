@@ -2,10 +2,6 @@
 package modulespecification
 
 class Module {
-	contains Updatesite[] updatesites
-}
-
-class Updatesite {
 	//@ExtendedMetaData(pattern=".+")
 	String baseId = ""
 	

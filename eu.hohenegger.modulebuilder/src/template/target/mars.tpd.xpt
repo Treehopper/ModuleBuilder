@@ -3,10 +3,10 @@
 «EXTENSION metamodel::Extensions»
 
 «DEFINE main FOR Module»
-«EXPAND updatesite FOREACH this.updatesites»
+«EXPAND modulespecification FOR this»
 «ENDDEFINE»
 
-«DEFINE updatesite FOR Updatesite»
+«DEFINE modulespecification FOR Module»
 «FILE this.targetFileName() + ".tpd"»target "«this.targetId»" with source configurePhase requirements
 
 location "http://download.eclipse.org/eclipse/updates/4.5"{

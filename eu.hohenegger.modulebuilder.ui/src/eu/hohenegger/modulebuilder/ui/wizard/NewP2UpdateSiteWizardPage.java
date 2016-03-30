@@ -12,7 +12,7 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
-import modulespecification.Updatesite;
+import modulespecification.Module;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -21,17 +21,17 @@ import modulespecification.Updatesite;
  */
 
 public class NewP2UpdateSiteWizardPage extends WizardPage {
-	private Updatesite updatesite;
+	private Module updatesite;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
 	 * 
-	 * @param updatesite
+	 * @param module
 	 * @param pageName
 	 */
-	public NewP2UpdateSiteWizardPage(Updatesite updatesite) {
+	public NewP2UpdateSiteWizardPage(Module module) {
 		super("wizardPage");
-		this.updatesite = updatesite;
+		this.updatesite = module;
 		setTitle("Tycho p2 layout");
 		setDescription("This wizard creates new projects that can be built with Tycho, producing a p2 update site.");
 	}

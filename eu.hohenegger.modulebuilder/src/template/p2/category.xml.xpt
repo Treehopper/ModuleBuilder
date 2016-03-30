@@ -1,10 +1,10 @@
 «IMPORT modulespecification»
 
 «DEFINE main FOR Module»
-«EXPAND updatesite FOREACH this.updatesites»
+«EXPAND modulespecification FOR this»
 «ENDDEFINE»
 
-«DEFINE updatesite FOR Updatesite»
+«DEFINE modulespecification FOR Module»
 «FILE "category.xml"»<?xml version="1.0" encoding="UTF-8"?>
 <site>
    <feature url="" id="«this.featureId»" version="0.0.0">

@@ -25,7 +25,7 @@ public class ModuleUtil {
 		monitor.beginTask("Generating project", 6);
 		IProject project = createProject(projectName, monitor);
 		monitor.worked(1);
-		IJavaProject javaProject = makeJavaProject(project, monitor, module.getUpdatesites().get(0).getJavaVersion());
+		IJavaProject javaProject = makeJavaProject(project, monitor, module.getJavaVersion());
 		monitor.worked(1);
 		IFolder sourceFolder = addSourcePath(project, monitor);
 		monitor.worked(1);
@@ -49,7 +49,7 @@ public class ModuleUtil {
 
 	public static void generateFullFeature(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
-		if (!module.getUpdatesites().get(0).isGenerateFeature()) {
+		if (!module.isGenerateFeature()) {
 			return;
 		}
 
@@ -66,7 +66,7 @@ public class ModuleUtil {
 
 	public static void generateUpdatesiteProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
-		if (!module.getUpdatesites().get(0).isGenerateUpdatesite()) {
+		if (!module.isGenerateUpdatesite()) {
 			return;
 		}
 
@@ -82,7 +82,7 @@ public class ModuleUtil {
 
 	public static void generateTargetProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
-		if (!module.getUpdatesites().get(0).isGenerateTarget()) {
+		if (!module.isGenerateTarget()) {
 			return;
 		}
 		monitor.beginTask("Generating project", 1);
@@ -97,7 +97,7 @@ public class ModuleUtil {
 
 	public static void generateParentProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
-		if (!module.getUpdatesites().get(0).isGenerateParent()) {
+		if (!module.isGenerateParent()) {
 			return;
 		}
 

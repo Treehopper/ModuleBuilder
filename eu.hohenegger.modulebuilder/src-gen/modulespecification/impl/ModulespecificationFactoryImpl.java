@@ -57,7 +57,6 @@ public class ModulespecificationFactoryImpl extends EFactoryImpl implements Modu
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ModulespecificationPackage.MODULE: return createModule();
-			case ModulespecificationPackage.UPDATESITE: return createUpdatesite();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -71,16 +70,6 @@ public class ModulespecificationFactoryImpl extends EFactoryImpl implements Modu
 	public Module createModule() {
 		ModuleImpl module = new ModuleImpl();
 		return module;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Updatesite createUpdatesite() {
-		UpdatesiteImpl updatesite = new UpdatesiteImpl();
-		return updatesite;
 	}
 
 	/**

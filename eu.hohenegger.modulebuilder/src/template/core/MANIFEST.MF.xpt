@@ -1,10 +1,10 @@
 «IMPORT modulespecification»
 
 «DEFINE main FOR Module»
-«EXPAND updatesite FOREACH this.updatesites»
+«EXPAND modulespecification FOR this»
 «ENDDEFINE»
 
-«DEFINE updatesite FOR Updatesite»
+«DEFINE modulespecification FOR Module»
 «FILE "MANIFEST.MF"»Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
@@ -12,7 +12,6 @@ Bundle-SymbolicName: «this.coreId»;singleton:=true
 Bundle-Version: «this.osgiVersion»
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
-Bundle-Localization: plugin
 Bundle-Activator: «this.coreId».Activator
 Require-Bundle: org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: «this.javaVersion»
