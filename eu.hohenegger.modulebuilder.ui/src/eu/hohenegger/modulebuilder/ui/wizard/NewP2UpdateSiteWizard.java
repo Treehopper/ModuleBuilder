@@ -59,11 +59,13 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 		try {
 			getContainer().run(true, false, monitor -> {
 				generateModule(module, monitor);
+				monitor.done();
 			});
 		} catch (InvocationTargetException | InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 
 		return true;
 	}

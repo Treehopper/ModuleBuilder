@@ -13,6 +13,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 
 import modulespecification.Module;
@@ -30,108 +31,104 @@ public class ModuleUtil {
 	private static void generateJavaProject(Module module, String projectName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		// get project root folder as absolute file system path
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating Java project", 13);
 
-		monitor.beginTask("Generating project", 6);
-		IProject project = createProject(projectName, monitor);
-		monitor.worked(1);
-		IJavaProject javaProject = makeJavaProject(project, monitor, module.getJavaVersion());
-		monitor.worked(1);
-		IFolder sourceFolder = addSourcePath(project, monitor);
-		monitor.worked(1);
-		addToClassPathEntries(javaProject, sourceFolder, monitor);
-		monitor.worked(1);
-		IResource javaPackage = createJavaPackage(javaProject, sourceFolder, monitor);
-		monitor.worked(1);
-		IFolder metaInf = createFolder("META-INF", project, monitor);
-		monitor.worked(1);
+		IProject project = createProject(projectName, sub.newChild(1));
+		IJavaProject javaProject = makeJavaProject(project, sub.newChild(1), module.getJavaVersion());
+		IFolder sourceFolder = addSourcePath(project, sub.newChild(1));
+		addToClassPathEntries(javaProject, sourceFolder, sub.newChild(1));
+		IResource javaPackage = createJavaPackage(javaProject, sourceFolder, sub.newChild(1));
+		IFolder metaInf = createFolder("META-INF", project, sub.newChild(1));
 
-		expandTemplate(module, metaInf, MANIFEST_MF, templateMask);
-		expandTemplate(module, javaPackage, ACTIVATOR_JAVA, templateMask);
-		expandTemplate(module, project, BUILD_PROPERTIES, templateMask);
-		expandTemplate(module, project, PLUGIN_PROPERTIES, templateMask);
-		expandTemplate(module, project, POM_XML, templateMask);
-		expandTemplate(module, project, PLUGIN_XML, templateMask);
+		expandTemplate(module, metaInf, MANIFEST_MF, templateMask, sub.newChild(1));
+		expandTemplate(module, javaPackage, ACTIVATOR_JAVA, templateMask, sub.newChild(1));
+		expandTemplate(module, project, BUILD_PROPERTIES, templateMask, sub.newChild(1));
+		expandTemplate(module, project, PLUGIN_PROPERTIES, templateMask, sub.newChild(1));
+		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, PLUGIN_XML, templateMask, sub.newChild(1));
 
 		// refresh the project to get external updates:
-		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}
 
 	private static void generateFullFeature(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating Feature project", 5);
+
 		if (!module.isGenerateFeature()) {
 			return;
 		}
 
-		monitor.beginTask("Generating project", 1);
-		IProject project = ProjectFactory.createProject(baseName, monitor);
-		monitor.worked(1);
+		IProject project = ProjectFactory.createProject(baseName, sub.newChild(1));
 
-		expandTemplate(module, project, FEATURE_XML, templateMask);
-		expandTemplate(module, project, POM_XML, templateMask);
-		expandTemplate(module, project, BUILD_PROPERTIES, templateMask);
+		expandTemplate(module, project, FEATURE_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, BUILD_PROPERTIES, templateMask, sub.newChild(1));
 
-		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}
 
 	private static void generateUpdatesiteProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating p2 update site project", 4);
+
 		if (!module.isGenerateUpdatesite()) {
 			return;
 		}
 
-		monitor.beginTask("Generating project", 1);
-		IProject project = ProjectFactory.createProject(baseName, monitor);
-		monitor.worked(1);
+		IProject project = ProjectFactory.createProject(baseName, sub.newChild(1));
 
-		expandTemplate(module, project, CATEGORY_XML, templateMask);
-		expandTemplate(module, project, POM_XML, templateMask);
+		expandTemplate(module, project, CATEGORY_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
 
-		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}
 
 	private static void generateTargetProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating target project", 4);
+
 		if (!module.isGenerateTarget()) {
 			return;
 		}
-		monitor.beginTask("Generating project", 1);
-		IProject project = ProjectFactory.createProject(baseName, monitor);
-		monitor.worked(1);
+		IProject project = ProjectFactory.createProject(baseName, sub.newChild(1));
 
-		expandTemplate(module, project, "mars.tpd", templateMask);
-		expandTemplate(module, project, POM_XML, templateMask);
+		expandTemplate(module, project, "mars.tpd", templateMask, sub.newChild(1));
+		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
 
-		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}
 
 	private static void generateParentProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating parent project", 3);
+
 		if (!module.isGenerateParent()) {
 			return;
 		}
 
-		monitor.beginTask("Generating project", 1);
-		IProject project = ProjectFactory.createProject(baseName, monitor);
-		monitor.worked(1);
+		IProject project = ProjectFactory.createProject(baseName, sub.newChild(1));
 
-		expandTemplate(module, project, POM_XML, templateMask);
+		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
 
-		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}
 
 	public static void generateModule(Module module, IProgressMonitor monitor) {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating module", 6);
+
 		try {
-			generateJavaProject(module, module.getBaseId(), monitor, "template::core::%s::main");
+			generateJavaProject(module, module.getBaseId(), sub.newChild(1), "template::core::%s::main");
 
-			generateJavaProject(module, module.getUiId(), monitor, "template::ui::%s::main");
+			generateJavaProject(module, module.getUiId(), sub.newChild(1), "template::ui::%s::main");
 
-			generateFullFeature(module, module.getFeatureId(), monitor, "template::feature::%s::main");
+			generateFullFeature(module, module.getFeatureId(), sub.newChild(1), "template::feature::%s::main");
 
-			generateUpdatesiteProject(module, module.getUpdateSiteId(), monitor, "template::p2::%s::main");
+			generateUpdatesiteProject(module, module.getUpdateSiteId(), sub.newChild(1), "template::p2::%s::main");
 
-			generateTargetProject(module, module.getTargetId(), monitor, "template::target::%s::main");
+			generateTargetProject(module, module.getTargetId(), sub.newChild(1), "template::target::%s::main");
 
-			generateParentProject(module, module.getTychoParentName(), monitor, "template::parent::%s::main");
+			generateParentProject(module, module.getTychoParentName(), sub.newChild(1), "template::parent::%s::main");
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.xpand2.XpandExecutionContextImpl;
@@ -17,7 +19,11 @@ import modulespecification.Module;
 import modulespecification.ModulespecificationPackage;
 
 public class XPandUtil {
-	public static void expandTemplate(Module module, IResource container, String templateName, String templateMask) {
+	public static void expandTemplate(Module module, IResource container, String templateName, String templateMask,
+			IProgressMonitor monitor) {
+		SubMonitor sub = SubMonitor.convert(monitor, 3);
+		sub.beginTask("Expanding template " + templateName, 2);
+
 		String fullTemplatePath = String.format(templateMask, templateName);
 
 		String containerName = container.getLocation().toPortableString();
@@ -37,9 +43,11 @@ public class XPandUtil {
 			}
 		};
 		execCtx.registerMetaModel(metamodel);
+		sub.worked(1);
 
 		// generate
 		XpandFacade facade = XpandFacade.create(execCtx);
 		facade.evaluate(fullTemplatePath, module);
+		sub.worked(1);
 	}
 }
