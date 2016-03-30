@@ -76,7 +76,9 @@ public class ProjectFactory {
 
 	public static IFolder createFolder(String folderName, IProject project, IProgressMonitor monitor) throws CoreException {
 		IFolder sourceFolder = project.getFolder(folderName);
-		sourceFolder.create(false, true, monitor);
+		if (!sourceFolder.exists()) {
+			sourceFolder.create(false, true, monitor);
+		}
 		return sourceFolder;
 	}
 
@@ -103,8 +105,10 @@ public class ProjectFactory {
 
 	private static void addBinPath(IProject project, IJavaProject javaProject, IProgressMonitor monitor) throws CoreException {
 		IFolder binFolder = project.getFolder("bin");
-		binFolder.create(false, true, monitor);
-		javaProject.setOutputLocation(binFolder.getFullPath(), monitor);
+		if (!binFolder.exists()) {
+			binFolder.create(false, true, monitor);
+			javaProject.setOutputLocation(binFolder.getFullPath(), monitor);
+		}
 	}
 
 	public static IProject createProject(String projectName, IProgressMonitor monitor) throws CoreException {
