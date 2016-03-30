@@ -18,7 +18,16 @@ import org.eclipse.jdt.core.IJavaProject;
 import modulespecification.Module;
 
 public class ModuleUtil {
-	public static void generateJavaProject(Module module, String projectName, IProgressMonitor monitor,
+	private static final String CATEGORY_XML = "category.xml";
+	private static final String FEATURE_XML = "feature.xml";
+	private static final String PLUGIN_XML = "plugin.xml";
+	private static final String ACTIVATOR_JAVA = "Activator.java";
+	private static final String PLUGIN_PROPERTIES = "plugin.properties";
+	private static final String BUILD_PROPERTIES = "build.properties";
+	private static final String MANIFEST_MF = "MANIFEST.MF";
+	private static final String POM_XML = "pom.xml";
+
+	private static void generateJavaProject(Module module, String projectName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		// get project root folder as absolute file system path
 
@@ -36,18 +45,18 @@ public class ModuleUtil {
 		IFolder metaInf = createFolder("META-INF", project, monitor);
 		monitor.worked(1);
 
-		expandTemplate(module, metaInf, "MANIFEST.MF", templateMask);
-		expandTemplate(module, javaPackage, "Activator.java", templateMask);
-		expandTemplate(module, project, "build.properties", templateMask);
-		expandTemplate(module, project, "plugin.properties", templateMask);
-		expandTemplate(module, project, "pom.xml", templateMask);
-		expandTemplate(module, project, "plugin.xml", templateMask);
+		expandTemplate(module, metaInf, MANIFEST_MF, templateMask);
+		expandTemplate(module, javaPackage, ACTIVATOR_JAVA, templateMask);
+		expandTemplate(module, project, BUILD_PROPERTIES, templateMask);
+		expandTemplate(module, project, PLUGIN_PROPERTIES, templateMask);
+		expandTemplate(module, project, POM_XML, templateMask);
+		expandTemplate(module, project, PLUGIN_XML, templateMask);
 
 		// refresh the project to get external updates:
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-	public static void generateFullFeature(Module module, String baseName, IProgressMonitor monitor,
+	private static void generateFullFeature(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		if (!module.isGenerateFeature()) {
 			return;
@@ -57,14 +66,14 @@ public class ModuleUtil {
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
 
-		expandTemplate(module, project, "feature.xml", templateMask);
-		expandTemplate(module, project, "pom.xml", templateMask);
-		expandTemplate(module, project, "build.properties", templateMask);
+		expandTemplate(module, project, FEATURE_XML, templateMask);
+		expandTemplate(module, project, POM_XML, templateMask);
+		expandTemplate(module, project, BUILD_PROPERTIES, templateMask);
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-	public static void generateUpdatesiteProject(Module module, String baseName, IProgressMonitor monitor,
+	private static void generateUpdatesiteProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		if (!module.isGenerateUpdatesite()) {
 			return;
@@ -74,13 +83,13 @@ public class ModuleUtil {
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
 
-		expandTemplate(module, project, "category.xml", templateMask);
-		expandTemplate(module, project, "pom.xml", templateMask);
+		expandTemplate(module, project, CATEGORY_XML, templateMask);
+		expandTemplate(module, project, POM_XML, templateMask);
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-	public static void generateTargetProject(Module module, String baseName, IProgressMonitor monitor,
+	private static void generateTargetProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		if (!module.isGenerateTarget()) {
 			return;
@@ -90,12 +99,12 @@ public class ModuleUtil {
 		monitor.worked(1);
 
 		expandTemplate(module, project, "mars.tpd", templateMask);
-		expandTemplate(module, project, "pom.xml", templateMask);
+		expandTemplate(module, project, POM_XML, templateMask);
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 
-	public static void generateParentProject(Module module, String baseName, IProgressMonitor monitor,
+	private static void generateParentProject(Module module, String baseName, IProgressMonitor monitor,
 			String templateMask) throws CoreException {
 		if (!module.isGenerateParent()) {
 			return;
@@ -105,8 +114,27 @@ public class ModuleUtil {
 		IProject project = ProjectFactory.createProject(baseName, monitor);
 		monitor.worked(1);
 
-		expandTemplate(module, project, "pom.xml", templateMask);
+		expandTemplate(module, project, POM_XML, templateMask);
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
+	}
+
+	public static void generateModule(Module module, IProgressMonitor monitor) {
+		try {
+			generateJavaProject(module, module.getBaseId(), monitor, "template::core::%s::main");
+
+			generateJavaProject(module, module.getUiId(), monitor, "template::ui::%s::main");
+
+			generateFullFeature(module, module.getFeatureId(), monitor, "template::feature::%s::main");
+
+			generateUpdatesiteProject(module, module.getUpdateSiteId(), monitor, "template::p2::%s::main");
+
+			generateTargetProject(module, module.getTargetId(), monitor, "template::target::%s::main");
+
+			generateParentProject(module, "parent", monitor, "template::parent::%s::main");
+		} catch (CoreException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

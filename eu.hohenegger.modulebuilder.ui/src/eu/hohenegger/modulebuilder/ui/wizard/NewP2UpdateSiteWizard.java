@@ -1,16 +1,11 @@
 package eu.hohenegger.modulebuilder.ui.wizard;
 
 
-import static eu.hohenegger.modulebuilder.ModuleUtil.generateFullFeature;
-import static eu.hohenegger.modulebuilder.ModuleUtil.generateJavaProject;
-import static eu.hohenegger.modulebuilder.ModuleUtil.generateParentProject;
-import static eu.hohenegger.modulebuilder.ModuleUtil.generateTargetProject;
-import static eu.hohenegger.modulebuilder.ModuleUtil.generateUpdatesiteProject;
+import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -63,23 +58,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 
 		try {
 			getContainer().run(true, false, monitor -> {
-				try {
-					generateJavaProject(module, module.getBaseId(), monitor, "template::core::%s::main");
-
-					generateJavaProject(module, module.getUiId(), monitor, "template::ui::%s::main");
-
-					generateFullFeature(module, module.getFeatureId(), monitor, "template::feature::%s::main");
-
-					generateUpdatesiteProject(module, module.getUpdateSiteId(), monitor, "template::p2::%s::main");
-
-					generateTargetProject(module, module.getTargetId(), monitor, "template::target::%s::main");
-
-					generateParentProject(module, "parent", monitor, "template::parent::%s::main");
-				} catch (CoreException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
+				generateModule(module, monitor);
 			});
 		} catch (InvocationTargetException | InterruptedException e) {
 			// TODO Auto-generated catch block
