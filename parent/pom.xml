@@ -13,6 +13,7 @@
 		<module>../eu.hohenegger.modulebuilder.ui</module>
 		<module>../eu.hohenegger.modulebuilder.releng.targetplatform</module>
 		<module>../eu.hohenegger.modulebuilder.edit</module>
+		<module>../eu.hohenegger.modulebuilder.test</module>
 	</modules>
 
 	<properties>
