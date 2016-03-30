@@ -6,6 +6,7 @@ import static org.eclipse.emf.common.util.Diagnostic.OK;
 
 import java.lang.reflect.InvocationTargetException;
 
+import org.eclipse.core.resources.IProjectNature;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -30,6 +31,7 @@ import modulespecification.ModulespecificationFactory;
 public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	private NewP2UpdateSiteWizardPage page;
 	private Module module;
+	private IStructuredSelection selection;
 
 	/**
 	 * Constructor for NewP2UpdateSiteWizard.
@@ -44,7 +46,12 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	 */
 
 	public void addPages() {
-		module = createModel("TODO");
+		String intialBaseId = "foo.bar";
+		if (!selection.isEmpty() && selection.getFirstElement() instanceof IProjectNature) {
+			IProjectNature nature = (IProjectNature) selection.getFirstElement();
+			intialBaseId = nature.getProject().getName();
+		}
+		module = createModel(intialBaseId);
 		page = new NewP2UpdateSiteWizardPage(module);
 		addPage(page);
 	}
@@ -81,6 +88,6 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		// intentionally left empty
+		this.selection = selection;
 	}
 }

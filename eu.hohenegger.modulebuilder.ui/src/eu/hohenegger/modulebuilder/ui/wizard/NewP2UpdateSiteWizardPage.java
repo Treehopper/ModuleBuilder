@@ -38,7 +38,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 		}
 	}
 
-	private Module updatesite;
+	private Module module;
 	private ValidationStatusUpdater validationStatusUpdater;
 
 	/**
@@ -49,11 +49,11 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 	 */
 	public NewP2UpdateSiteWizardPage(Module module) {
 		super("wizardPage");
-		this.updatesite = module;
+		this.module = module;
 		setTitle("Tycho p2 layout");
 		setDescription("This wizard creates new projects that can be built with Tycho, producing a p2 update site.");
 		validationStatusUpdater = new ValidationStatusUpdater();
-		updatesite.eAdapters().add(validationStatusUpdater);
+		module.eAdapters().add(validationStatusUpdater);
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 	}
 
 	private void dialogChanged() {
-		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(updatesite);
+		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(module);
 		if (OK != diagnostic.getSeverity()) {
 			updateStatus("There are validation errors");
 			return;
@@ -99,7 +99,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 
 	private Control render(Composite parent) {
 		try {
-			ECPSWTView render = ECPSWTViewRenderer.INSTANCE.render(parent, updatesite);
+			ECPSWTView render = ECPSWTViewRenderer.INSTANCE.render(parent, module);
 			return render.getSWTControl();
 		} catch (ECPRendererException e) {
 			throw new RuntimeException(e);
@@ -108,7 +108,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 
 	@Override
 	public void dispose() {
-		updatesite.eAdapters().remove(validationStatusUpdater);
+		module.eAdapters().remove(validationStatusUpdater);
 		super.dispose();
 	}
 }
