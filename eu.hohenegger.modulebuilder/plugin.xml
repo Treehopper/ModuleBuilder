@@ -8,4 +8,5 @@
             class="modulespecification.ModulespecificationPackage"
             genModel="src/metamodel/modulespecification.xcore"/>
    </extension>
+
 </plugin>

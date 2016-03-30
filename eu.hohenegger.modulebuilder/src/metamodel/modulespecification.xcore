@@ -2,16 +2,29 @@
 @GenModel(editDirectory="/eu.hohenegger.modulebuilder.edit/src-gen")
 package modulespecification
 
+@ExtendedMetaData(pattern="((\\d+)\\.)((\\d+)\\.)(\\d+)")
+type Version wraps String
+
+//Bundle symbolic Legal characters are A-Z a-z 0-9 . _ -
+@ExtendedMetaData(pattern="[a-zA-Z_.\\-0-9]*")
+type OSGiSegment wraps String
+
+//Bundle symbolic Legal characters are A-Z a-z 0-9 . _ -
+@ExtendedMetaData(pattern="[a-zA-Z_.\\-0-9]+", minLength="1")
+type OSGiName wraps String
+
+@ExtendedMetaData(pattern=".+", minLength="1")
+type MandatoryString wraps String
+
 class Module {
-	//@ExtendedMetaData(pattern=".+")
-	String baseId = ""
+	OSGiName baseId = "TODO"
 	
-	String moduleName = "TODO"
-	String categoryName = "TODO"
+	MandatoryString moduleName = "TODO"
+	MandatoryString categoryName = "TODO"
  	
  	@GenModel(propertyMultiLine="true")
 	String license = ""
-	String version = "1.0.0"
+	Version version = "1.0.0"
 	String copyRightAuthorName = ""
 	String copyRightUrl = "http://www.example.org"
 	String copyRightYear = ""
@@ -21,23 +34,23 @@ class Module {
 	String tychoVersion = "0.24.0"
 	String javaVersion = "JavaSE-1.8"
 	
-	String coreSuffix = ""
-	String uiSuffix = ".ui"
+	OSGiSegment coreSuffix = ""
+	OSGiSegment uiSuffix = ".ui"
 	
 	boolean generateParent = "true"
-	String tychoParentName = "parent"
+	OSGiName tychoParentName = "parent"
 	
 	boolean generateTests = "true"
-	String testsSuffix = ".tests"
+	OSGiSegment testsSuffix = ".tests"
 	
 	boolean generateFeature = "true"
-	String featureSuffix = ".feature"
+	OSGiSegment featureSuffix = ".feature"
 	
 	boolean generateUpdatesite = "true"
-	String updateSiteSuffix = ".p2updateSite"
+	OSGiSegment updateSiteSuffix = ".p2updateSite"
 	
 	boolean generateTarget = "true"
-	String targetSuffix = ".releng.targetplatform"
+	OSGiSegment targetSuffix = ".releng.targetplatform"
 	
 	String mavenVersionSuffix = "-SNAPSHOT"
 	String osgiVersionQualifier = ".qualifier"

@@ -3,17 +3,37 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modulespecification" nsURI="modulespecification" nsPrefix="modulespecification">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="modelDirectory" value="/eu.hohenegger.modulebuilder/src-gen"/>
+    <details key="editDirectory" value="/eu.hohenegger.modulebuilder.edit/src-gen"/>
   </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="Version" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value="((\d+)\.)((\d+)\.)(\d+)"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="OSGiSegment" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value="[a-zA-Z_.\-0-9]*"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="OSGiName" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value="[a-zA-Z_.\-0-9]+"/>
+      <details key="minLength" value="1"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="MandatoryString" instanceClassName="java.lang.String">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="pattern" value=".+"/>
+      <details key="minLength" value="1"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseId" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=""/>
+        eType="#//OSGiName" defaultValueLiteral="TODO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="TODO"/>
+        eType="#//MandatoryString" defaultValueLiteral="TODO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="categoryName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="TODO"/>
+        eType="#//MandatoryString" defaultValueLiteral="TODO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="license" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="">
@@ -22,8 +42,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="1.0.0"/>
+        eType="#//Version" defaultValueLiteral="1.0.0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="copyRightAuthorName" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral=""/>
@@ -43,41 +62,34 @@
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="JavaSE-1.8"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coreSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=""/>
+        eType="#//OSGiSegment" defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uiSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=".ui"/>
+        eType="#//OSGiSegment" defaultValueLiteral=".ui"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateParent" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoParentName" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="parent"/>
+        eType="#//OSGiName" defaultValueLiteral="parent"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateTests" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testsSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=".tests"/>
+        eType="#//OSGiSegment" defaultValueLiteral=".tests"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateFeature" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="featureSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=".feature"/>
+        eType="#//OSGiSegment" defaultValueLiteral=".feature"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateUpdatesite" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="updateSiteSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=".p2updateSite"/>
+        eType="#//OSGiSegment" defaultValueLiteral=".p2updateSite"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateTarget" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSuffix" unique="false"
-        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral=".releng.targetplatform"/>
+        eType="#//OSGiSegment" defaultValueLiteral=".releng.targetplatform"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mavenVersionSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="-SNAPSHOT"/>

@@ -4,6 +4,7 @@ package modulespecification;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EPackage;
 
 /**
@@ -407,6 +408,46 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODULE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '<em>Version</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see modulespecification.impl.ModulespecificationPackageImpl#getVersion()
+	 * @generated
+	 */
+	int VERSION = 1;
+
+	/**
+	 * The meta object id for the '<em>OS Gi Segment</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see modulespecification.impl.ModulespecificationPackageImpl#getOSGiSegment()
+	 * @generated
+	 */
+	int OS_GI_SEGMENT = 2;
+
+	/**
+	 * The meta object id for the '<em>OS Gi Name</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see modulespecification.impl.ModulespecificationPackageImpl#getOSGiName()
+	 * @generated
+	 */
+	int OS_GI_NAME = 3;
+
+	/**
+	 * The meta object id for the '<em>Mandatory String</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see modulespecification.impl.ModulespecificationPackageImpl#getMandatoryString()
+	 * @generated
+	 */
+	int MANDATORY_STRING = 4;
 
 
 	/**
@@ -816,6 +857,54 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getModule_IsLicenseEmpty();
 
 	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Version</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="pattern='((\\d+)\\.)((\\d+)\\.)(\\d+)'"
+	 * @generated
+	 */
+	EDataType getVersion();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>OS Gi Segment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>OS Gi Segment</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="pattern='[a-zA-Z_.\\-0-9]*'"
+	 * @generated
+	 */
+	EDataType getOSGiSegment();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>OS Gi Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>OS Gi Name</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="pattern='[a-zA-Z_.\\-0-9]+' minLength='1'"
+	 * @generated
+	 */
+	EDataType getOSGiName();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Mandatory String</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>Mandatory String</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="pattern='.+' minLength='1'"
+	 * @generated
+	 */
+	EDataType getMandatoryString();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1135,6 +1224,46 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__IS_LICENSE_EMPTY = eINSTANCE.getModule_IsLicenseEmpty();
+
+		/**
+		 * The meta object literal for the '<em>Version</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see modulespecification.impl.ModulespecificationPackageImpl#getVersion()
+		 * @generated
+		 */
+		EDataType VERSION = eINSTANCE.getVersion();
+
+		/**
+		 * The meta object literal for the '<em>OS Gi Segment</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see modulespecification.impl.ModulespecificationPackageImpl#getOSGiSegment()
+		 * @generated
+		 */
+		EDataType OS_GI_SEGMENT = eINSTANCE.getOSGiSegment();
+
+		/**
+		 * The meta object literal for the '<em>OS Gi Name</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see modulespecification.impl.ModulespecificationPackageImpl#getOSGiName()
+		 * @generated
+		 */
+		EDataType OS_GI_NAME = eINSTANCE.getOSGiName();
+
+		/**
+		 * The meta object literal for the '<em>Mandatory String</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.String
+		 * @see modulespecification.impl.ModulespecificationPackageImpl#getMandatoryString()
+		 * @generated
+		 */
+		EDataType MANDATORY_STRING = eINSTANCE.getMandatoryString();
 
 	}
 

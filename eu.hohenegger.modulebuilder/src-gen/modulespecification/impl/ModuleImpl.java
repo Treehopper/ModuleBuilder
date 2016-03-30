@@ -69,7 +69,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BASE_ID_EDEFAULT = "";
+	protected static final String BASE_ID_EDEFAULT = "TODO";
 
 	/**
 	 * The cached value of the '{@link #getBaseId() <em>Base Id</em>}' attribute.

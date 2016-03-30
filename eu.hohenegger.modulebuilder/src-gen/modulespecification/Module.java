@@ -58,7 +58,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Module extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Base Id</b></em>' attribute.
-	 * The default value is <code>""</code>.
+	 * The default value is <code>"TODO"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Base Id</em>' attribute isn't clear,
@@ -68,7 +68,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Base Id</em>' attribute.
 	 * @see #setBaseId(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_BaseId()
-	 * @model default="" unique="false"
+	 * @model default="TODO" unique="false" dataType="modulespecification.OSGiName"
 	 * @generated
 	 */
 	String getBaseId();
@@ -95,7 +95,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Module Name</em>' attribute.
 	 * @see #setModuleName(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_ModuleName()
-	 * @model default="TODO" unique="false"
+	 * @model default="TODO" unique="false" dataType="modulespecification.MandatoryString"
 	 * @generated
 	 */
 	String getModuleName();
@@ -122,7 +122,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Category Name</em>' attribute.
 	 * @see #setCategoryName(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_CategoryName()
-	 * @model default="TODO" unique="false"
+	 * @model default="TODO" unique="false" dataType="modulespecification.MandatoryString"
 	 * @generated
 	 */
 	String getCategoryName();
@@ -177,7 +177,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_Version()
-	 * @model default="1.0.0" unique="false"
+	 * @model default="1.0.0" unique="false" dataType="modulespecification.Version"
 	 * @generated
 	 */
 	String getVersion();
@@ -366,7 +366,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Core Suffix</em>' attribute.
 	 * @see #setCoreSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_CoreSuffix()
-	 * @model default="" unique="false"
+	 * @model default="" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getCoreSuffix();
@@ -393,7 +393,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Ui Suffix</em>' attribute.
 	 * @see #setUiSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_UiSuffix()
-	 * @model default=".ui" unique="false"
+	 * @model default=".ui" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getUiSuffix();
@@ -447,7 +447,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Tycho Parent Name</em>' attribute.
 	 * @see #setTychoParentName(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_TychoParentName()
-	 * @model default="parent" unique="false"
+	 * @model default="parent" unique="false" dataType="modulespecification.OSGiName"
 	 * @generated
 	 */
 	String getTychoParentName();
@@ -501,7 +501,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Tests Suffix</em>' attribute.
 	 * @see #setTestsSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_TestsSuffix()
-	 * @model default=".tests" unique="false"
+	 * @model default=".tests" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getTestsSuffix();
@@ -555,7 +555,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Feature Suffix</em>' attribute.
 	 * @see #setFeatureSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_FeatureSuffix()
-	 * @model default=".feature" unique="false"
+	 * @model default=".feature" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getFeatureSuffix();
@@ -609,7 +609,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Update Site Suffix</em>' attribute.
 	 * @see #setUpdateSiteSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_UpdateSiteSuffix()
-	 * @model default=".p2updateSite" unique="false"
+	 * @model default=".p2updateSite" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getUpdateSiteSuffix();
@@ -663,7 +663,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Target Suffix</em>' attribute.
 	 * @see #setTargetSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_TargetSuffix()
-	 * @model default=".releng.targetplatform" unique="false"
+	 * @model default=".releng.targetplatform" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getTargetSuffix();

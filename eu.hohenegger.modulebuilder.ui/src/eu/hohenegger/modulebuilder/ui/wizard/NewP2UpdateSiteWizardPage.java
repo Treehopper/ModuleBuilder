@@ -1,5 +1,11 @@
 package eu.hohenegger.modulebuilder.ui.wizard;
 
+import static org.eclipse.emf.common.util.Diagnostic.OK;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecp.ui.view.ECPRendererException;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTView;
 import org.eclipse.emf.ecp.ui.view.swt.ECPSWTViewRenderer;
@@ -21,7 +27,19 @@ import modulespecification.Module;
  */
 
 public class NewP2UpdateSiteWizardPage extends WizardPage {
+	private final class ValidationStatusUpdater extends AdapterImpl {
+		@Override
+		public void notifyChanged(Notification msg) {
+			if (msg.getEventType() != Notification.SET) {
+				return;
+			}
+			dialogChanged();
+			super.notifyChanged(msg);
+		}
+	}
+
 	private Module updatesite;
+	private ValidationStatusUpdater validationStatusUpdater;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
@@ -34,6 +52,8 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 		this.updatesite = module;
 		setTitle("Tycho p2 layout");
 		setDescription("This wizard creates new projects that can be built with Tycho, producing a p2 update site.");
+		validationStatusUpdater = new ValidationStatusUpdater();
+		updatesite.eAdapters().add(validationStatusUpdater);
 	}
 
 	/**
@@ -63,6 +83,19 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 		sc.setMinSize(containerMain.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 	}
 
+	private void dialogChanged() {
+		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(updatesite);
+		if (OK != diagnostic.getSeverity()) {
+			updateStatus("There are validation errors");
+			return;
+		}
+		updateStatus(null);
+	}
+
+	private void updateStatus(String message) {
+		setErrorMessage(message);
+		setPageComplete(message == null);
+	}
 
 	private Control render(Composite parent) {
 		try {
@@ -71,5 +104,11 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 		} catch (ECPRendererException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	@Override
+	public void dispose() {
+		updatesite.eAdapters().remove(validationStatusUpdater);
+		super.dispose();
 	}
 }
