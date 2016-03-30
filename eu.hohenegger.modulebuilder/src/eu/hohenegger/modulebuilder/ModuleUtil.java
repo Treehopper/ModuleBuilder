@@ -131,7 +131,7 @@ public class ModuleUtil {
 
 			generateTargetProject(module, module.getTargetId(), monitor, "template::target::%s::main");
 
-			generateParentProject(module, "parent", monitor, "template::parent::%s::main");
+			generateParentProject(module, module.getTychoParentName(), monitor, "template::parent::%s::main");
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
