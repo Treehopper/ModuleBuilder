@@ -992,7 +992,7 @@ public class ModuleItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return UpdatesiteEditPlugin.INSTANCE;
+		return ModulespecificationEditPlugin.INSTANCE;
 	}
 
 }

@@ -6,24 +6,20 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.provider.EcoreEditPlugin;
-
-import org.osgi.framework.BundleActivator;
-
 /**
- * This is the central singleton for the Updatesite edit plugin.
+ * This is the central singleton for the Modulespecification edit plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class UpdatesiteEditPlugin extends EMFPlugin {
+public final class ModulespecificationEditPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final UpdatesiteEditPlugin INSTANCE = new UpdatesiteEditPlugin();
+	public static final ModulespecificationEditPlugin INSTANCE = new ModulespecificationEditPlugin();
 
 	/**
 	 * Keep track of the singleton.
@@ -39,10 +35,9 @@ public final class UpdatesiteEditPlugin extends EMFPlugin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UpdatesiteEditPlugin() {
+	public ModulespecificationEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     EcoreEditPlugin.INSTANCE,
 		   });
 	}
 
@@ -88,19 +83,6 @@ public final class UpdatesiteEditPlugin extends EMFPlugin {
 			// Remember the static instance.
 			//
 			plugin = this;
-		}
-	
-		/**
-		 * The actual implementation of the purely OSGi-compatible <b>Bundle Activator</b>.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		public static final class Activator extends EMFPlugin.OSGiDelegatingBundleActivator {
-			@Override
-			protected BundleActivator createBundle() {
-				return new Implementation();
-			}
 		}
 	}
 
