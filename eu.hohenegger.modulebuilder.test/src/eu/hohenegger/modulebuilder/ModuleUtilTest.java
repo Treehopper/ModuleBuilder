@@ -4,7 +4,6 @@ import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
 import static org.junit.Assert.assertTrue;
 
-import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
@@ -42,7 +41,10 @@ public class ModuleUtilTest {
 		generateModule(module, monitor);
 
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		IProject project = root.getProject(module.getBaseId());
-		assertTrue(project.exists());
+		assertTrue(root.getProject(module.getCoreId()).exists());
+		assertTrue(root.getProject(module.getFeatureId()).exists());
+		assertTrue(root.getProject(module.getUpdateSiteId()).exists());
+		assertTrue(root.getProject(module.getTargetId()).exists());
+		assertTrue(root.getProject(module.getUiId()).exists());
 	}
 }
