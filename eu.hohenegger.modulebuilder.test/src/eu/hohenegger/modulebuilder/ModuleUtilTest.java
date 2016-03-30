@@ -2,6 +2,7 @@ package eu.hohenegger.modulebuilder;
 
 import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.eclipse.core.resources.IWorkspaceRoot;
@@ -34,10 +35,7 @@ public class ModuleUtilTest {
 	}
 
 	@Test
-	public void testGenerateJavaProject() {
-		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(module);
-		assertTrue(diagnostic.getSeverity() == OK);
-
+	public void testGenerateModule() {
 		generateModule(module, monitor);
 
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
@@ -46,5 +44,11 @@ public class ModuleUtilTest {
 		assertTrue(root.getProject(module.getUpdateSiteId()).exists());
 		assertTrue(root.getProject(module.getTargetId()).exists());
 		assertTrue(root.getProject(module.getUiId()).exists());
+	}
+
+	@Test
+	public void testValidation() {
+		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(module);
+		assertEquals(OK, diagnostic.getSeverity());
 	}
 }
