@@ -20,6 +20,7 @@ import eu.hohenegger.modulebuilder.impl.ProjectFactory;
 import modulespecification.Module;
 
 public class ModuleUtil {
+	private static final String FRAGMENT_XML = "fragment.xml";
 	private static final String STD_MAIN = "main";
 	private static final String TEMPLATE_PACKAGE = "template";
 	private static final String CATEGORY_XML = "category.xml";
@@ -32,7 +33,7 @@ public class ModuleUtil {
 	private static final String POM_XML = "pom.xml";
 
 	private static void generateJavaProject(Module module, String projectName, String templateMask,
-			IProgressMonitor monitor) throws CoreException {
+			IProgressMonitor monitor, boolean isFragment) throws CoreException {
 		// get project root folder as absolute file system path
 		SubMonitor sub = SubMonitor.convert(monitor, "Generating Java project", 13);
 
@@ -44,14 +45,21 @@ public class ModuleUtil {
 		IFolder metaInf = createFolder("META-INF", project, sub.newChild(1));
 
 		expandTemplate(module, metaInf, MANIFEST_MF, templateMask, sub.newChild(1));
-		expandTemplate(module, javaPackage, ACTIVATOR_JAVA, templateMask, sub.newChild(1));
+		if (!isFragment) {
+			expandTemplate(module, javaPackage, ACTIVATOR_JAVA, templateMask, sub.newChild(1));
+		}
 		expandTemplate(module, project, BUILD_PROPERTIES, templateMask, sub.newChild(1));
 		expandTemplate(module, project, PLUGIN_PROPERTIES, templateMask, sub.newChild(1));
 		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
-		expandTemplate(module, project, PLUGIN_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, (!isFragment) ? PLUGIN_XML : FRAGMENT_XML, templateMask, sub.newChild(1));
 
 		// refresh the project to get external updates:
 		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
+	}
+
+	private static void generateJavaProject(Module module, String projectName, String templateMask,
+			IProgressMonitor monitor) throws CoreException {
+		generateJavaProject(module, projectName, templateMask, monitor, false);
 	}
 
 	private static void generateFullFeature(Module module, String baseName, String templateMask,
@@ -118,12 +126,14 @@ public class ModuleUtil {
 	}
 
 	public static void generateModule(Module module, IProgressMonitor monitor) {
-		SubMonitor sub = SubMonitor.convert(monitor, "Generating module", 6);
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating module", 7);
 
 		try {
 			generateJavaProject(module, module.getBaseId(), createTemplateMask("core"), sub.newChild(1));
 
 			generateJavaProject(module, module.getUiId(), createTemplateMask("ui"), sub.newChild(1));
+
+			generateJavaProject(module, module.getUie3Id(), createTemplateMask("ui::e3"), sub.newChild(1), true);
 
 			generateFullFeature(module, module.getFeatureId(), createTemplateMask("feature"), sub.newChild(1));
 

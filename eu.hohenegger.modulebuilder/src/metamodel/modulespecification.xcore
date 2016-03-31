@@ -52,6 +52,9 @@ class Module {
 	boolean generateTarget = "true"
 	OSGiSegment targetSuffix = ".releng.targetplatform"
 	
+	boolean generateUiFragment = "true"
+	OSGiSegment uie3Suffix = ".e3"
+	
 	String mavenVersionSuffix = "-SNAPSHOT"
 	String osgiVersionQualifier = ".qualifier"
 
@@ -61,6 +64,10 @@ class Module {
 	
 	derived String uiId get {
 		baseId + uiSuffix
+	}
+	
+	derived String uie3Id get {
+		uiId + uie3Suffix
 	}
 
 	derived String testsId get {

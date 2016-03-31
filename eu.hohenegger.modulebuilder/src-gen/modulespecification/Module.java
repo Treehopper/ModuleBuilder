@@ -36,10 +36,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.Module#getTargetSuffix <em>Target Suffix</em>}</li>
+ *   <li>{@link modulespecification.Module#isGenerateUiFragment <em>Generate Ui Fragment</em>}</li>
+ *   <li>{@link modulespecification.Module#getUie3Suffix <em>Uie3 Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#getMavenVersionSuffix <em>Maven Version Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#getOsgiVersionQualifier <em>Osgi Version Qualifier</em>}</li>
  *   <li>{@link modulespecification.Module#getCoreId <em>Core Id</em>}</li>
  *   <li>{@link modulespecification.Module#getUiId <em>Ui Id</em>}</li>
+ *   <li>{@link modulespecification.Module#getUie3Id <em>Uie3 Id</em>}</li>
  *   <li>{@link modulespecification.Module#getTestsId <em>Tests Id</em>}</li>
  *   <li>{@link modulespecification.Module#getUpdateSiteId <em>Update Site Id</em>}</li>
  *   <li>{@link modulespecification.Module#getFeatureId <em>Feature Id</em>}</li>
@@ -679,6 +682,60 @@ public interface Module extends EObject {
 	void setTargetSuffix(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Generate Ui Fragment</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Generate Ui Fragment</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Generate Ui Fragment</em>' attribute.
+	 * @see #setGenerateUiFragment(boolean)
+	 * @see modulespecification.ModulespecificationPackage#getModule_GenerateUiFragment()
+	 * @model default="true" unique="false"
+	 * @generated
+	 */
+	boolean isGenerateUiFragment();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#isGenerateUiFragment <em>Generate Ui Fragment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Generate Ui Fragment</em>' attribute.
+	 * @see #isGenerateUiFragment()
+	 * @generated
+	 */
+	void setGenerateUiFragment(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Uie3 Suffix</b></em>' attribute.
+	 * The default value is <code>".e3"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uie3 Suffix</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uie3 Suffix</em>' attribute.
+	 * @see #setUie3Suffix(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_Uie3Suffix()
+	 * @model default=".e3" unique="false" dataType="modulespecification.OSGiSegment"
+	 * @generated
+	 */
+	String getUie3Suffix();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getUie3Suffix <em>Uie3 Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uie3 Suffix</em>' attribute.
+	 * @see #getUie3Suffix()
+	 * @generated
+	 */
+	void setUie3Suffix(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Maven Version Suffix</b></em>' attribute.
 	 * The default value is <code>"-SNAPSHOT"</code>.
 	 * <!-- begin-user-doc -->
@@ -763,6 +820,22 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	String getUiId();
+
+	/**
+	 * Returns the value of the '<em><b>Uie3 Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uie3 Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uie3 Id</em>' attribute.
+	 * @see modulespecification.ModulespecificationPackage#getModule_Uie3Id()
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _uiId = this.getUiId();\n<%java.lang.String%> _uie3Suffix = this.getUie3Suffix();\nreturn (_uiId + _uie3Suffix);'"
+	 * @generated
+	 */
+	String getUie3Id();
 
 	/**
 	 * Returns the value of the '<em><b>Tests Id</b></em>' attribute.

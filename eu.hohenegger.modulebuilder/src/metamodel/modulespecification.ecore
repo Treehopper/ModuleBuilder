@@ -90,6 +90,11 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetSuffix" unique="false"
         eType="#//OSGiSegment" defaultValueLiteral=".releng.targetplatform"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateUiFragment" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uie3Suffix" unique="false"
+        eType="#//OSGiSegment" defaultValueLiteral=".e3"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mavenVersionSuffix" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="-SNAPSHOT"/>
@@ -107,6 +112,13 @@
         changeable="false" volatile="true" transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="get" value="&lt;%java.lang.String%> _baseId = this.getBaseId();&#xA;&lt;%java.lang.String%> _uiSuffix = this.getUiSuffix();&#xA;return (_baseId + _uiSuffix);"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uie3Id" unique="false"
+        eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
+        changeable="false" volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="get" value="&lt;%java.lang.String%> _uiId = this.getUiId();&#xA;&lt;%java.lang.String%> _uie3Suffix = this.getUie3Suffix();&#xA;return (_uiId + _uie3Suffix);"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testsId" unique="false"

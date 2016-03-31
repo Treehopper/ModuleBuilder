@@ -50,10 +50,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/updateSiteSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/generateTarget"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/targetSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/generateUiFragment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/uie3Suffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/mavenVersionSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/osgiVersionQualifier"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/coreId"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/uiId"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/uie3Id"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/testsId"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/updateSiteId"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/featureId"/>

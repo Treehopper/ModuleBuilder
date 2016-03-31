@@ -83,10 +83,13 @@ public class ModuleItemProvider
 			addUpdateSiteSuffixPropertyDescriptor(object);
 			addGenerateTargetPropertyDescriptor(object);
 			addTargetSuffixPropertyDescriptor(object);
+			addGenerateUiFragmentPropertyDescriptor(object);
+			addUie3SuffixPropertyDescriptor(object);
 			addMavenVersionSuffixPropertyDescriptor(object);
 			addOsgiVersionQualifierPropertyDescriptor(object);
 			addCoreIdPropertyDescriptor(object);
 			addUiIdPropertyDescriptor(object);
+			addUie3IdPropertyDescriptor(object);
 			addTestsIdPropertyDescriptor(object);
 			addUpdateSiteIdPropertyDescriptor(object);
 			addFeatureIdPropertyDescriptor(object);
@@ -387,6 +390,28 @@ public class ModuleItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Uie3 Suffix feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUie3SuffixPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_uie3Suffix_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_uie3Suffix_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__UIE3_SUFFIX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Generate Parent feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,6 +632,28 @@ public class ModuleItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Generate Ui Fragment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGenerateUiFragmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_generateUiFragment_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_generateUiFragment_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__GENERATE_UI_FRAGMENT,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Maven Version Suffix feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -686,6 +733,28 @@ public class ModuleItemProvider
 				 getString("_UI_Module_uiId_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_uiId_feature", "_UI_Module_type"),
 				 ModulespecificationPackage.Literals.MODULE__UI_ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uie3 Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUie3IdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_uie3Id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_uie3Id_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__UIE3_ID,
 				 false,
 				 false,
 				 false,
@@ -953,10 +1022,13 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
+			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
+			case ModulespecificationPackage.MODULE__UIE3_SUFFIX:
 			case ModulespecificationPackage.MODULE__MAVEN_VERSION_SUFFIX:
 			case ModulespecificationPackage.MODULE__OSGI_VERSION_QUALIFIER:
 			case ModulespecificationPackage.MODULE__CORE_ID:
 			case ModulespecificationPackage.MODULE__UI_ID:
+			case ModulespecificationPackage.MODULE__UIE3_ID:
 			case ModulespecificationPackage.MODULE__TESTS_ID:
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_ID:
 			case ModulespecificationPackage.MODULE__FEATURE_ID:

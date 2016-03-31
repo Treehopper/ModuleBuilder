@@ -43,10 +43,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTargetSuffix <em>Target Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateUiFragment <em>Generate Ui Fragment</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getUie3Suffix <em>Uie3 Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getMavenVersionSuffix <em>Maven Version Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getOsgiVersionQualifier <em>Osgi Version Qualifier</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCoreId <em>Core Id</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getUiId <em>Ui Id</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getUie3Id <em>Uie3 Id</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTestsId <em>Tests Id</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getUpdateSiteId <em>Update Site Id</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getFeatureId <em>Feature Id</em>}</li>
@@ -522,6 +525,46 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	protected String targetSuffix = TARGET_SUFFIX_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #isGenerateUiFragment() <em>Generate Ui Fragment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateUiFragment()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean GENERATE_UI_FRAGMENT_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isGenerateUiFragment() <em>Generate Ui Fragment</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isGenerateUiFragment()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean generateUiFragment = GENERATE_UI_FRAGMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUie3Suffix() <em>Uie3 Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUie3Suffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UIE3_SUFFIX_EDEFAULT = ".e3";
+
+	/**
+	 * The cached value of the '{@link #getUie3Suffix() <em>Uie3 Suffix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUie3Suffix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String uie3Suffix = UIE3_SUFFIX_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getMavenVersionSuffix() <em>Maven Version Suffix</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +623,16 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @ordered
 	 */
 	protected static final String UI_ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getUie3Id() <em>Uie3 Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUie3Id()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UIE3_ID_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getTestsId() <em>Tests Id</em>}' attribute.
@@ -1178,6 +1231,48 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isGenerateUiFragment() {
+		return generateUiFragment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGenerateUiFragment(boolean newGenerateUiFragment) {
+		boolean oldGenerateUiFragment = generateUiFragment;
+		generateUiFragment = newGenerateUiFragment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT, oldGenerateUiFragment, generateUiFragment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUie3Suffix() {
+		return uie3Suffix;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUie3Suffix(String newUie3Suffix) {
+		String oldUie3Suffix = uie3Suffix;
+		uie3Suffix = newUie3Suffix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__UIE3_SUFFIX, oldUie3Suffix, uie3Suffix));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getMavenVersionSuffix() {
 		return mavenVersionSuffix;
 	}
@@ -1235,6 +1330,17 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		String _baseId = this.getBaseId();
 		String _uiSuffix = this.getUiSuffix();
 		return (_baseId + _uiSuffix);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUie3Id() {
+		String _uiId = this.getUiId();
+		String _uie3Suffix = this.getUie3Suffix();
+		return (_uiId + _uie3Suffix);
 	}
 
 	/**
@@ -1387,6 +1493,10 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return isGenerateTarget();
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
 				return getTargetSuffix();
+			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
+				return isGenerateUiFragment();
+			case ModulespecificationPackage.MODULE__UIE3_SUFFIX:
+				return getUie3Suffix();
 			case ModulespecificationPackage.MODULE__MAVEN_VERSION_SUFFIX:
 				return getMavenVersionSuffix();
 			case ModulespecificationPackage.MODULE__OSGI_VERSION_QUALIFIER:
@@ -1395,6 +1505,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return getCoreId();
 			case ModulespecificationPackage.MODULE__UI_ID:
 				return getUiId();
+			case ModulespecificationPackage.MODULE__UIE3_ID:
+				return getUie3Id();
 			case ModulespecificationPackage.MODULE__TESTS_ID:
 				return getTestsId();
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_ID:
@@ -1494,6 +1606,12 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
 				setTargetSuffix((String)newValue);
 				return;
+			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
+				setGenerateUiFragment((Boolean)newValue);
+				return;
+			case ModulespecificationPackage.MODULE__UIE3_SUFFIX:
+				setUie3Suffix((String)newValue);
+				return;
 			case ModulespecificationPackage.MODULE__MAVEN_VERSION_SUFFIX:
 				setMavenVersionSuffix((String)newValue);
 				return;
@@ -1581,6 +1699,12 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
 				setTargetSuffix(TARGET_SUFFIX_EDEFAULT);
 				return;
+			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
+				setGenerateUiFragment(GENERATE_UI_FRAGMENT_EDEFAULT);
+				return;
+			case ModulespecificationPackage.MODULE__UIE3_SUFFIX:
+				setUie3Suffix(UIE3_SUFFIX_EDEFAULT);
+				return;
 			case ModulespecificationPackage.MODULE__MAVEN_VERSION_SUFFIX:
 				setMavenVersionSuffix(MAVEN_VERSION_SUFFIX_EDEFAULT);
 				return;
@@ -1645,6 +1769,10 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return generateTarget != GENERATE_TARGET_EDEFAULT;
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
 				return TARGET_SUFFIX_EDEFAULT == null ? targetSuffix != null : !TARGET_SUFFIX_EDEFAULT.equals(targetSuffix);
+			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
+				return generateUiFragment != GENERATE_UI_FRAGMENT_EDEFAULT;
+			case ModulespecificationPackage.MODULE__UIE3_SUFFIX:
+				return UIE3_SUFFIX_EDEFAULT == null ? uie3Suffix != null : !UIE3_SUFFIX_EDEFAULT.equals(uie3Suffix);
 			case ModulespecificationPackage.MODULE__MAVEN_VERSION_SUFFIX:
 				return MAVEN_VERSION_SUFFIX_EDEFAULT == null ? mavenVersionSuffix != null : !MAVEN_VERSION_SUFFIX_EDEFAULT.equals(mavenVersionSuffix);
 			case ModulespecificationPackage.MODULE__OSGI_VERSION_QUALIFIER:
@@ -1653,6 +1781,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return CORE_ID_EDEFAULT == null ? getCoreId() != null : !CORE_ID_EDEFAULT.equals(getCoreId());
 			case ModulespecificationPackage.MODULE__UI_ID:
 				return UI_ID_EDEFAULT == null ? getUiId() != null : !UI_ID_EDEFAULT.equals(getUiId());
+			case ModulespecificationPackage.MODULE__UIE3_ID:
+				return UIE3_ID_EDEFAULT == null ? getUie3Id() != null : !UIE3_ID_EDEFAULT.equals(getUie3Id());
 			case ModulespecificationPackage.MODULE__TESTS_ID:
 				return TESTS_ID_EDEFAULT == null ? getTestsId() != null : !TESTS_ID_EDEFAULT.equals(getTestsId());
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_ID:
@@ -1731,6 +1861,10 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(generateTarget);
 		result.append(", targetSuffix: ");
 		result.append(targetSuffix);
+		result.append(", generateUiFragment: ");
+		result.append(generateUiFragment);
+		result.append(", uie3Suffix: ");
+		result.append(uie3Suffix);
 		result.append(", mavenVersionSuffix: ");
 		result.append(mavenVersionSuffix);
 		result.append(", osgiVersionQualifier: ");
