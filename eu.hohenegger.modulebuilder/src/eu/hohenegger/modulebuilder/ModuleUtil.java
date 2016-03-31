@@ -1,12 +1,12 @@
 package eu.hohenegger.modulebuilder;
 
-import static eu.hohenegger.modulebuilder.ProjectFactory.addSourcePath;
-import static eu.hohenegger.modulebuilder.ProjectFactory.addToClassPathEntries;
-import static eu.hohenegger.modulebuilder.ProjectFactory.createFolder;
-import static eu.hohenegger.modulebuilder.ProjectFactory.createJavaPackage;
-import static eu.hohenegger.modulebuilder.ProjectFactory.createProject;
-import static eu.hohenegger.modulebuilder.ProjectFactory.makeJavaProject;
-import static eu.hohenegger.modulebuilder.XPandUtil.expandTemplate;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addSourcePath;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addToClassPathEntries;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.createFolder;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.createJavaPackage;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.createProject;
+import static eu.hohenegger.modulebuilder.impl.ProjectFactory.makeJavaProject;
+import static eu.hohenegger.modulebuilder.impl.XPandUtil.expandTemplate;
 
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -16,6 +16,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubMonitor;
 import org.eclipse.jdt.core.IJavaProject;
 
+import eu.hohenegger.modulebuilder.impl.ProjectFactory;
 import modulespecification.Module;
 
 public class ModuleUtil {

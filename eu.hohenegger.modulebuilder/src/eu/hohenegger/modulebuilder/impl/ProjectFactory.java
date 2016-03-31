@@ -1,4 +1,4 @@
-package eu.hohenegger.modulebuilder;
+package eu.hohenegger.modulebuilder.impl;
 
 import java.util.ArrayList;
 import java.util.List;
