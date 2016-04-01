@@ -6,11 +6,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -61,5 +63,14 @@ public class ModuleUtilTest {
 		module.setBaseId("!@#$%^&*()");
 		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(failingMmodule);
 		assertNotEquals(OK, diagnostic.getSeverity());
+	}
+
+	@AfterClass
+	public static void tearDown() throws Exception {
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		IProject[] projects = root.getProjects();
+		for (IProject iProject : projects) {
+			iProject.delete(true, null);
+		}
 	}
 }
