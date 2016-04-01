@@ -36,7 +36,7 @@ All rights reserved.
          version="0.0.0"
          unpack="false"/>
 
-«IF !this.generateUiFragment»
+«IF this.generateUiFragment»
    <plugin
          id="«this.uie3Id»"
          download-size="0"
