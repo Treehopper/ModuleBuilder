@@ -8,9 +8,11 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.IClasspathEntry;
@@ -111,11 +113,16 @@ public class ProjectFactory {
 		}
 	}
 
-	public static IProject createProject(String projectName, IProgressMonitor monitor) throws CoreException {
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+	public static IProject createProject(String projectName, String baseLocation, IProgressMonitor monitor) throws CoreException {
+		IWorkspace workspace = ResourcesPlugin.getWorkspace();
+		IWorkspaceRoot root = workspace.getRoot();
+		IProjectDescription projectDescription = workspace.newProjectDescription(projectName);
+
+		IPath location = Path.fromOSString(baseLocation).addTrailingSeparator().append(projectName);
+		projectDescription.setLocation(location);
 		IProject project = root.getProject(projectName);
 		if (!project.exists()) {
-			project.create(monitor);
+			project.create(projectDescription, monitor);
 			project.open(monitor);
 		}
 		return project;

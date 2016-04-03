@@ -7,6 +7,9 @@ import static org.eclipse.emf.common.util.Diagnostic.OK;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.resources.IProjectNature;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -52,8 +55,15 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 			intialBaseId = nature.getProject().getName();
 		}
 		module = createModel(intialBaseId);
+		module.setBaseLocation(getOSWorkspaceLocation());
 		page = new NewP2UpdateSiteWizardPage(module);
 		addPage(page);
+	}
+
+	private String getOSWorkspaceLocation() {
+		IWorkspace workspace = ResourcesPlugin.getWorkspace();
+		IWorkspaceRoot root = workspace.getRoot();
+		return root.getLocation().addTrailingSeparator().toOSString();
 	}
 
 	@Override

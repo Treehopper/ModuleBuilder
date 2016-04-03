@@ -34,6 +34,8 @@ class Module {
 	String tychoVersion = "0.24.0"
 	String javaVersion = "JavaSE-1.8"
 	
+	String baseLocation = ""
+	
 	OSGiSegment coreSuffix = ""
 	OSGiSegment uiSuffix = ".ui"
 	

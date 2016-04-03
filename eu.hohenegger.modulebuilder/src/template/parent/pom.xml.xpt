@@ -14,22 +14,22 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>../«this.coreId»</module>
+		<module>«this.coreId»</module>
 «IF this.generateFeature»
-		<module>../«this.featureId»</module>
+		<module>«this.featureId»</module>
 «ENDIF»
 «IF this.generateUpdatesite»
-		<module>../«this.updateSiteId»</module>
+		<module>«this.updateSiteId»</module>
 «ENDIF»
-		<module>../«this.uiId»</module>
+		<module>«this.uiId»</module>
 «IF this.generateUiFragment»
-		<module>../«this.uie3Id»</module>
+		<module>«this.uie3Id»</module>
 «ENDIF»
 «IF this.generateTests»
-		<module>../«this.testsId»</module>
+		<module>«this.testsId»</module>
 «ENDIF»
 «IF this.generateTarget»
-		<module>../«this.targetId»</module>
+		<module>«this.targetId»</module>
 «ENDIF»
 	</modules>
 

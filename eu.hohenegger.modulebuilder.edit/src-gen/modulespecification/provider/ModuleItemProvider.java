@@ -71,6 +71,7 @@ public class ModuleItemProvider
 			addProviderNamePropertyDescriptor(object);
 			addTychoVersionPropertyDescriptor(object);
 			addJavaVersionPropertyDescriptor(object);
+			addBaseLocationPropertyDescriptor(object);
 			addCoreSuffixPropertyDescriptor(object);
 			addUiSuffixPropertyDescriptor(object);
 			addGenerateParentPropertyDescriptor(object);
@@ -337,6 +338,28 @@ public class ModuleItemProvider
 				 getString("_UI_Module_javaVersion_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_javaVersion_feature", "_UI_Module_type"),
 				 ModulespecificationPackage.Literals.MODULE__JAVA_VERSION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Base Location feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addBaseLocationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_baseLocation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_baseLocation_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__BASE_LOCATION,
 				 true,
 				 false,
 				 false,
@@ -1010,6 +1033,7 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 			case ModulespecificationPackage.MODULE__TYCHO_VERSION:
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
+			case ModulespecificationPackage.MODULE__BASE_LOCATION:
 			case ModulespecificationPackage.MODULE__CORE_SUFFIX:
 			case ModulespecificationPackage.MODULE__UI_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_PARENT:

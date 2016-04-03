@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getProviderName <em>Provider Name</em>}</li>
  *   <li>{@link modulespecification.Module#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.Module#getJavaVersion <em>Java Version</em>}</li>
+ *   <li>{@link modulespecification.Module#getBaseLocation <em>Base Location</em>}</li>
  *   <li>{@link modulespecification.Module#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateParent <em>Generate Parent</em>}</li>
@@ -356,6 +357,33 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	void setJavaVersion(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Base Location</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base Location</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Location</em>' attribute.
+	 * @see #setBaseLocation(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_BaseLocation()
+	 * @model default="" unique="false"
+	 * @generated
+	 */
+	String getBaseLocation();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getBaseLocation <em>Base Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Location</em>' attribute.
+	 * @see #getBaseLocation()
+	 * @generated
+	 */
+	void setBaseLocation(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Core Suffix</b></em>' attribute.

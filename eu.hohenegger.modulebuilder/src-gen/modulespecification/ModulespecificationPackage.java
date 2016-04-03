@@ -167,13 +167,22 @@ public interface ModulespecificationPackage extends EPackage {
 	int MODULE__JAVA_VERSION = 10;
 
 	/**
+	 * The feature id for the '<em><b>Base Location</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__BASE_LOCATION = 11;
+
+	/**
 	 * The feature id for the '<em><b>Core Suffix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_SUFFIX = 11;
+	int MODULE__CORE_SUFFIX = 12;
 
 	/**
 	 * The feature id for the '<em><b>Ui Suffix</b></em>' attribute.
@@ -182,7 +191,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_SUFFIX = 12;
+	int MODULE__UI_SUFFIX = 13;
 
 	/**
 	 * The feature id for the '<em><b>Generate Parent</b></em>' attribute.
@@ -191,7 +200,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_PARENT = 13;
+	int MODULE__GENERATE_PARENT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Tycho Parent Name</b></em>' attribute.
@@ -200,7 +209,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TYCHO_PARENT_NAME = 14;
+	int MODULE__TYCHO_PARENT_NAME = 15;
 
 	/**
 	 * The feature id for the '<em><b>Generate Tests</b></em>' attribute.
@@ -209,7 +218,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TESTS = 15;
+	int MODULE__GENERATE_TESTS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -218,7 +227,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_SUFFIX = 16;
+	int MODULE__TESTS_SUFFIX = 17;
 
 	/**
 	 * The feature id for the '<em><b>Generate Feature</b></em>' attribute.
@@ -227,7 +236,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_FEATURE = 17;
+	int MODULE__GENERATE_FEATURE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -236,7 +245,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_SUFFIX = 18;
+	int MODULE__FEATURE_SUFFIX = 19;
 
 	/**
 	 * The feature id for the '<em><b>Generate Updatesite</b></em>' attribute.
@@ -245,7 +254,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UPDATESITE = 19;
+	int MODULE__GENERATE_UPDATESITE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -254,7 +263,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_SUFFIX = 20;
+	int MODULE__UPDATE_SITE_SUFFIX = 21;
 
 	/**
 	 * The feature id for the '<em><b>Generate Target</b></em>' attribute.
@@ -263,7 +272,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TARGET = 21;
+	int MODULE__GENERATE_TARGET = 22;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -272,7 +281,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_SUFFIX = 22;
+	int MODULE__TARGET_SUFFIX = 23;
 
 	/**
 	 * The feature id for the '<em><b>Generate Ui Fragment</b></em>' attribute.
@@ -281,7 +290,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UI_FRAGMENT = 23;
+	int MODULE__GENERATE_UI_FRAGMENT = 24;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Suffix</b></em>' attribute.
@@ -290,7 +299,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_SUFFIX = 24;
+	int MODULE__UIE3_SUFFIX = 25;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -299,7 +308,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION_SUFFIX = 25;
+	int MODULE__MAVEN_VERSION_SUFFIX = 26;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -308,7 +317,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION_QUALIFIER = 26;
+	int MODULE__OSGI_VERSION_QUALIFIER = 27;
 
 	/**
 	 * The feature id for the '<em><b>Core Id</b></em>' attribute.
@@ -317,7 +326,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_ID = 27;
+	int MODULE__CORE_ID = 28;
 
 	/**
 	 * The feature id for the '<em><b>Ui Id</b></em>' attribute.
@@ -326,7 +335,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_ID = 28;
+	int MODULE__UI_ID = 29;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Id</b></em>' attribute.
@@ -335,7 +344,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_ID = 29;
+	int MODULE__UIE3_ID = 30;
 
 	/**
 	 * The feature id for the '<em><b>Tests Id</b></em>' attribute.
@@ -344,7 +353,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_ID = 30;
+	int MODULE__TESTS_ID = 31;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Id</b></em>' attribute.
@@ -353,7 +362,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_ID = 31;
+	int MODULE__UPDATE_SITE_ID = 32;
 
 	/**
 	 * The feature id for the '<em><b>Feature Id</b></em>' attribute.
@@ -362,7 +371,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_ID = 32;
+	int MODULE__FEATURE_ID = 33;
 
 	/**
 	 * The feature id for the '<em><b>Target Id</b></em>' attribute.
@@ -371,7 +380,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_ID = 33;
+	int MODULE__TARGET_ID = 34;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -380,7 +389,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION = 34;
+	int MODULE__MAVEN_VERSION = 35;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -389,7 +398,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION = 35;
+	int MODULE__OSGI_VERSION = 36;
 
 	/**
 	 * The feature id for the '<em><b>Core Module Name</b></em>' attribute.
@@ -398,7 +407,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_MODULE_NAME = 36;
+	int MODULE__CORE_MODULE_NAME = 37;
 
 	/**
 	 * The feature id for the '<em><b>Ui Module Name</b></em>' attribute.
@@ -407,7 +416,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_MODULE_NAME = 37;
+	int MODULE__UI_MODULE_NAME = 38;
 
 	/**
 	 * The feature id for the '<em><b>Is License Empty</b></em>' attribute.
@@ -416,7 +425,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_LICENSE_EMPTY = 38;
+	int MODULE__IS_LICENSE_EMPTY = 39;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -425,7 +434,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = 39;
+	int MODULE_FEATURE_COUNT = 40;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -607,6 +616,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_JavaVersion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#getBaseLocation <em>Base Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Location</em>'.
+	 * @see modulespecification.Module#getBaseLocation()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_BaseLocation();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Module#getCoreSuffix <em>Core Suffix</em>}'.
@@ -1084,6 +1104,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__JAVA_VERSION = eINSTANCE.getModule_JavaVersion();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Location</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__BASE_LOCATION = eINSTANCE.getModule_BaseLocation();
 
 		/**
 		 * The meta object literal for the '<em><b>Core Suffix</b></em>' attribute feature.

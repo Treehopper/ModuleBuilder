@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getProviderName <em>Provider Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getJavaVersion <em>Java Version</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getBaseLocation <em>Base Location</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCoreSuffix <em>Core Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateParent <em>Generate Parent</em>}</li>
@@ -283,6 +284,26 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @ordered
 	 */
 	protected String javaVersion = JAVA_VERSION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getBaseLocation() <em>Base Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BASE_LOCATION_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getBaseLocation() <em>Base Location</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBaseLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected String baseLocation = BASE_LOCATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCoreSuffix() <em>Core Suffix</em>}' attribute.
@@ -979,6 +1000,27 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getBaseLocation() {
+		return baseLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBaseLocation(String newBaseLocation) {
+		String oldBaseLocation = baseLocation;
+		baseLocation = newBaseLocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__BASE_LOCATION, oldBaseLocation, baseLocation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getCoreSuffix() {
 		return coreSuffix;
 	}
@@ -1469,6 +1511,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return getTychoVersion();
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
 				return getJavaVersion();
+			case ModulespecificationPackage.MODULE__BASE_LOCATION:
+				return getBaseLocation();
 			case ModulespecificationPackage.MODULE__CORE_SUFFIX:
 				return getCoreSuffix();
 			case ModulespecificationPackage.MODULE__UI_SUFFIX:
@@ -1570,6 +1614,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
 				setJavaVersion((String)newValue);
 				return;
+			case ModulespecificationPackage.MODULE__BASE_LOCATION:
+				setBaseLocation((String)newValue);
+				return;
 			case ModulespecificationPackage.MODULE__CORE_SUFFIX:
 				setCoreSuffix((String)newValue);
 				return;
@@ -1663,6 +1710,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
 				setJavaVersion(JAVA_VERSION_EDEFAULT);
 				return;
+			case ModulespecificationPackage.MODULE__BASE_LOCATION:
+				setBaseLocation(BASE_LOCATION_EDEFAULT);
+				return;
 			case ModulespecificationPackage.MODULE__CORE_SUFFIX:
 				setCoreSuffix(CORE_SUFFIX_EDEFAULT);
 				return;
@@ -1745,6 +1795,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return TYCHO_VERSION_EDEFAULT == null ? tychoVersion != null : !TYCHO_VERSION_EDEFAULT.equals(tychoVersion);
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
 				return JAVA_VERSION_EDEFAULT == null ? javaVersion != null : !JAVA_VERSION_EDEFAULT.equals(javaVersion);
+			case ModulespecificationPackage.MODULE__BASE_LOCATION:
+				return BASE_LOCATION_EDEFAULT == null ? baseLocation != null : !BASE_LOCATION_EDEFAULT.equals(baseLocation);
 			case ModulespecificationPackage.MODULE__CORE_SUFFIX:
 				return CORE_SUFFIX_EDEFAULT == null ? coreSuffix != null : !CORE_SUFFIX_EDEFAULT.equals(coreSuffix);
 			case ModulespecificationPackage.MODULE__UI_SUFFIX:
@@ -1837,6 +1889,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(tychoVersion);
 		result.append(", javaVersion: ");
 		result.append(javaVersion);
+		result.append(", baseLocation: ");
+		result.append(baseLocation);
 		result.append(", coreSuffix: ");
 		result.append(coreSuffix);
 		result.append(", uiSuffix: ");
