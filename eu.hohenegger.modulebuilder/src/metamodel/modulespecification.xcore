@@ -43,7 +43,7 @@ class Module {
 	OSGiName tychoParentName = "parent"
 	
 	boolean generateTests = "true"
-	OSGiSegment testsSuffix = ".tests"
+	OSGiSegment testsSuffix = ".test"
 	
 	boolean generateFeature = "true"
 	OSGiSegment featureSuffix = ".feature"

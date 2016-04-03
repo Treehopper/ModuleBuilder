@@ -32,7 +32,7 @@ public class ModuleUtil {
 	private static final String MANIFEST_MF = "MANIFEST.MF";
 	private static final String POM_XML = "pom.xml";
 
-	private static void generateJavaProject(Module module, String projectName, String templateMask,
+	private static IResource generateJavaProject(Module module, String projectName, String templateMask,
 			String baseLocation, IProgressMonitor monitor, boolean isFragment) throws CoreException {
 		// get project root folder as absolute file system path
 		SubMonitor sub = SubMonitor.convert(monitor, "Generating Java project", 13);
@@ -55,11 +55,25 @@ public class ModuleUtil {
 
 		// refresh the project to get external updates:
 		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
+
+		return javaPackage;
 	}
 
-	private static void generateJavaProject(Module module, String projectName, String templateMask, String baseLocation,
+	private static void generateJavaTestProject(Module module, String projectName, String templateMask,
+			String baseLocation, IProgressMonitor monitor) throws CoreException {
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating Java test project", 13);
+
+		IResource javaPackage = generateJavaProject(module, projectName, templateMask, baseLocation, sub.newChild(1), true);
+
+		expandTemplate(module, javaPackage, "AllTests.java", templateMask, sub.newChild(1));
+		expandTemplate(module, javaPackage, "MyTest.java", templateMask, sub.newChild(1));
+
+		javaPackage.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
+	}
+
+	private static IResource generateJavaProject(Module module, String projectName, String templateMask, String baseLocation,
 			IProgressMonitor monitor) throws CoreException {
-		generateJavaProject(module, projectName, templateMask, baseLocation, monitor, false);
+		return generateJavaProject(module, projectName, templateMask, baseLocation, monitor, false);
 	}
 
 	private static void generateFullFeature(Module module, String baseName, String templateMask,
@@ -128,7 +142,7 @@ public class ModuleUtil {
 	}
 
 	public static void generateModule(Module module, IProgressMonitor monitor) {
-		SubMonitor sub = SubMonitor.convert(monitor, "Generating module", 7);
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating module", 8);
 
 		try {
 			generateParentProject(module, module.getTychoParentName(), createTemplateMask("parent"), module.getBaseLocation(), sub.newChild(1));
@@ -141,6 +155,8 @@ public class ModuleUtil {
 			generateJavaProject(module, module.getUiId(), createTemplateMask("ui"), baseLocation, sub.newChild(1));
 
 			generateJavaProject(module, module.getUie3Id(), createTemplateMask("ui::e3"), baseLocation, sub.newChild(1), true);
+
+			generateJavaTestProject(module, module.getTestsId(), createTemplateMask("test"), baseLocation, sub.newChild(1));
 
 			generateFullFeature(module, module.getFeatureId(), createTemplateMask("feature"), baseLocation, sub.newChild(1));
 

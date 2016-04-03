@@ -413,7 +413,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TESTS_SUFFIX_EDEFAULT = ".tests";
+	protected static final String TESTS_SUFFIX_EDEFAULT = ".test";
 
 	/**
 	 * The cached value of the '{@link #getTestsSuffix() <em>Tests Suffix</em>}' attribute.

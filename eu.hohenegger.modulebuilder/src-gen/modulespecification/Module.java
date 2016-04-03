@@ -522,7 +522,7 @@ public interface Module extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tests Suffix</b></em>' attribute.
-	 * The default value is <code>".tests"</code>.
+	 * The default value is <code>".test"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tests Suffix</em>' attribute isn't clear,
@@ -532,7 +532,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Tests Suffix</em>' attribute.
 	 * @see #setTestsSuffix(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_TestsSuffix()
-	 * @model default=".tests" unique="false" dataType="modulespecification.OSGiSegment"
+	 * @model default=".test" unique="false" dataType="modulespecification.OSGiSegment"
 	 * @generated
 	 */
 	String getTestsSuffix();
