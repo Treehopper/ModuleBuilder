@@ -21,7 +21,6 @@
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<configuration>
 					<!--excludes> <exclude>**/Test*.class</exclude> </excludes -->
-					<argLine>${test.vmparams} ${coretest.vmparams}</argLine>
 					<useUIHarness>false</useUIHarness>
 					<useUIThread>false</useUIThread>
 				</configuration>
@@ -35,6 +34,11 @@
 							<requirement>
 								<type>eclipse-feature</type>
 								<id>eu.hohenegger.modulebuilder.feature</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>org.eclipse.pde</id>
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 						</extraRequirements>
