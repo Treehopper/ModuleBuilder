@@ -4,8 +4,8 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <wizard
-            name="Tycho p2 update site layout"
-            icon="icons/sample.gif"
+            name="Eclipse/Tycho Module"
+            icon="icons/newftrprj_wiz.gif"
             class="eu.hohenegger.modulebuilder.ui.wizard.NewP2UpdateSiteWizard"
             id="eu.hohenegger.modulebuilder.ui.wizard.NewP2UpdateSiteWizard">
       </wizard>
