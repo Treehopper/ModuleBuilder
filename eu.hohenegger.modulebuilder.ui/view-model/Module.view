@@ -44,16 +44,6 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/osgiVersionQualifier"/>
           </domainModelReference>
         </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSIvqLEeWGifCWsdAgKw" name="Control mavenVersion">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSI_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/mavenVersion"/>
-          </domainModelReference>
-        </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSJPqLEeWGifCWsdAgKw" name="Control osgiVersion">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSJfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/osgiVersion"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq8PqLEeWGifCWsdAgKw" name="Control providerName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq8fqLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/providerName"/>
@@ -66,11 +56,6 @@
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSJvqLEeWGifCWsdAgKw" name="Control coreModuleName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSJ_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreModuleName"/>
-          </domainModelReference>
-        </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSFPqLEeWGifCWsdAgKw" name="Control coreId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSFfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreId"/>
           </domainModelReference>
         </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR9PqLEeWGifCWsdAgKw" name="Control coreSuffix">
@@ -131,11 +116,6 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/isLicenseEmpty"/>
           </domainModelReference>
         </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSHvqLEeWGifCWsdAgKw" name="Control featureId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSH_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/featureId"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq6vqLEeWGifCWsdAgKw" name="Control copyRightAuthorName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq6_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/copyRightAuthorName"/>
@@ -184,11 +164,6 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/updateSiteSuffix"/>
           </domainModelReference>
         </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSHPqLEeWGifCWsdAgKw" name="Control updateSiteId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSHfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/updateSiteId"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5PqLEeWGifCWsdAgKw" name="Control categoryName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5fqLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/categoryName"/>
@@ -208,11 +183,6 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/testsSuffix"/>
           </domainModelReference>
         </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSGvqLEeWGifCWsdAgKw" name="Control testsId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSG_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/testsId"/>
-          </domainModelReference>
-        </children>
       </composite>
     </categorizations>
     <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_-PL90PqaEeWGifCWsdAgKw" name="Releng">
@@ -225,11 +195,6 @@
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSCvqLEeWGifCWsdAgKw" name="Control targetSuffix">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSC_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/targetSuffix"/>
-          </domainModelReference>
-        </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSIPqLEeWGifCWsdAgKw" name="Control targetId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSIfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/targetId"/>
           </domainModelReference>
         </children>
       </composite>
