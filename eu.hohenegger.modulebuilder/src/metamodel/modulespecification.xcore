@@ -17,10 +17,10 @@ type OSGiName wraps String
 type MandatoryString wraps String
 
 class Module {
-	OSGiName baseId = "TODO"
+	OSGiName baseId
 	
-	MandatoryString moduleName = "TODO"
-	MandatoryString categoryName = "TODO"
+	MandatoryString moduleName
+	MandatoryString categoryName
  	
  	@GenModel(propertyMultiLine="true")
 	String license = ""

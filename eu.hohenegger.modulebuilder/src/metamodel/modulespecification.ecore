@@ -29,11 +29,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Module">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseId" unique="false"
-        eType="#//OSGiName" defaultValueLiteral="TODO"/>
+        eType="#//OSGiName"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleName" unique="false"
-        eType="#//MandatoryString" defaultValueLiteral="TODO"/>
+        eType="#//MandatoryString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="categoryName" unique="false"
-        eType="#//MandatoryString" defaultValueLiteral="TODO"/>
+        eType="#//MandatoryString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="license" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="">

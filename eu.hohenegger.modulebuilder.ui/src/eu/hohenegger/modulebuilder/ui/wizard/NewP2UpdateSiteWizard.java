@@ -49,7 +49,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 	 */
 
 	public void addPages() {
-		String intialBaseId = "foo.bar";
+		String intialBaseId = "";
 		if (!selection.isEmpty() && selection.getFirstElement() instanceof IProjectNature) {
 			IProjectNature nature = (IProjectNature) selection.getFirstElement();
 			intialBaseId = nature.getProject().getName();

@@ -73,7 +73,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String BASE_ID_EDEFAULT = "TODO";
+	protected static final String BASE_ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getBaseId() <em>Base Id</em>}' attribute.
@@ -93,7 +93,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String MODULE_NAME_EDEFAULT = "TODO";
+	protected static final String MODULE_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getModuleName() <em>Module Name</em>}' attribute.
@@ -113,7 +113,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CATEGORY_NAME_EDEFAULT = "TODO";
+	protected static final String CATEGORY_NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCategoryName() <em>Category Name</em>}' attribute.

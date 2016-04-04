@@ -62,7 +62,6 @@ import org.eclipse.emf.ecore.EObject;
 public interface Module extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Base Id</b></em>' attribute.
-	 * The default value is <code>"TODO"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Base Id</em>' attribute isn't clear,
@@ -72,7 +71,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Base Id</em>' attribute.
 	 * @see #setBaseId(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_BaseId()
-	 * @model default="TODO" unique="false" dataType="modulespecification.OSGiName"
+	 * @model unique="false" dataType="modulespecification.OSGiName"
 	 * @generated
 	 */
 	String getBaseId();
@@ -89,7 +88,6 @@ public interface Module extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Module Name</b></em>' attribute.
-	 * The default value is <code>"TODO"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Module Name</em>' attribute isn't clear,
@@ -99,7 +97,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Module Name</em>' attribute.
 	 * @see #setModuleName(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_ModuleName()
-	 * @model default="TODO" unique="false" dataType="modulespecification.MandatoryString"
+	 * @model unique="false" dataType="modulespecification.MandatoryString"
 	 * @generated
 	 */
 	String getModuleName();
@@ -116,7 +114,6 @@ public interface Module extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Category Name</b></em>' attribute.
-	 * The default value is <code>"TODO"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Category Name</em>' attribute isn't clear,
@@ -126,7 +123,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Category Name</em>' attribute.
 	 * @see #setCategoryName(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_CategoryName()
-	 * @model default="TODO" unique="false" dataType="modulespecification.MandatoryString"
+	 * @model unique="false" dataType="modulespecification.MandatoryString"
 	 * @generated
 	 */
 	String getCategoryName();
