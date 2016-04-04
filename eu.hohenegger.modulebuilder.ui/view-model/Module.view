@@ -91,11 +91,6 @@
     </categorizations>
     <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_0C6-IPqaEeWGifCWsdAgKw" name="Core Project">
       <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_HAIPAPqbEeWGifCWsdAgKw">
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSJvqLEeWGifCWsdAgKw" name="Control coreModuleName">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSJ_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreModuleName"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR9PqLEeWGifCWsdAgKw" name="Control coreSuffix">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR9fqLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreSuffix"/>
@@ -105,11 +100,6 @@
     </categorizations>
     <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_7zLOYPqaEeWGifCWsdAgKw" name="UI Project">
       <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_HXg0QPqbEeWGifCWsdAgKw">
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSKPqLEeWGifCWsdAgKw" name="Control uiModuleName">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSKfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiModuleName"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR9vqLEeWGifCWsdAgKw" name="Control uiSuffix">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR9_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiSuffix"/>
