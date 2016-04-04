@@ -115,11 +115,6 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiSuffix"/>
           </domainModelReference>
         </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSFvqLEeWGifCWsdAgKw" name="Control uiId">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSF_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiId"/>
-          </domainModelReference>
-        </children>
       </composite>
     </categorizations>
     <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_uA_7IPqeEeWfb5zbR0iA1Q" name="UI Fragment Project">
