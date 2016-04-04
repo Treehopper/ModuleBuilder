@@ -129,11 +129,6 @@
         </condition>
       </attachments>
       <composite xsi:type="org.eclipse.emf.ecp.view.vertical.model:VerticalLayout" xmi:id="_v5yBsPqeEeWfb5zbR0iA1Q">
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSGPqLEeWGifCWsdAgKw" name="Control uie3Id">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSGfqLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uie3Id"/>
-          </domainModelReference>
-        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSDvqLEeWGifCWsdAgKw" name="Control uie3Suffix">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSD_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uie3Suffix"/>
@@ -153,11 +148,6 @@
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSAvqLEeWGifCWsdAgKw" name="Control featureSuffix">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSA_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/featureSuffix"/>
-          </domainModelReference>
-        </children>
-        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSKvqLEeWGifCWsdAgKw" name="Control isLicenseEmpty">
-          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSK_qLEeWGifCWsdAgKw">
-            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/isLicenseEmpty"/>
           </domainModelReference>
         </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq6vqLEeWGifCWsdAgKw" name="Control copyRightAuthorName">
