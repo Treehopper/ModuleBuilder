@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.group.model="http://org/eclipse/emf/ecp/view/group/model" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/170" xmi:id="_GZEpUPqLEeWGifCWsdAgKw" name="Module" ecorePath="/eu.hohenegger.modulebuilder/src/metamodel/modulespecification.xcore">
+  <rootEClass href="modulespecification#//Module"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_wAVI4PqOEeWGifCWsdAgKw" name="Global">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4PqLEeWGifCWsdAgKw" name="Control baseId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/baseId"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4vqLEeWGifCWsdAgKw" name="Control moduleName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/moduleName"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5vqLEeWGifCWsdAgKw" name="Control license">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/license"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq6PqLEeWGifCWsdAgKw" name="Control version">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq6fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/version"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR8PqLEeWGifCWsdAgKw" name="Control javaVersion">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR8fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/javaVersion"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq8vqLEeWGifCWsdAgKw" name="Control tychoVersion">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq8_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/tychoVersion"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR8vqLEeWGifCWsdAgKw" name="Control baseLocation">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR8_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/baseLocation"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSEPqLEeWGifCWsdAgKw" name="Control mavenVersionSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSEfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/mavenVersionSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSEvqLEeWGifCWsdAgKw" name="Control osgiVersionQualifier">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSE_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/osgiVersionQualifier"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSIvqLEeWGifCWsdAgKw" name="Control mavenVersion">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSI_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/mavenVersion"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSJPqLEeWGifCWsdAgKw" name="Control osgiVersion">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSJfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/osgiVersion"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq8PqLEeWGifCWsdAgKw" name="Control providerName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq8fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/providerName"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_6zRHAPqOEeWGifCWsdAgKw" name="Core Project">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR9PqLEeWGifCWsdAgKw" name="Control coreSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR9fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSJvqLEeWGifCWsdAgKw" name="Control coreModuleName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSJ_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreModuleName"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSFPqLEeWGifCWsdAgKw" name="Control coreId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSFfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/coreId"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_bVA68PqPEeWGifCWsdAgKw" name="UI Project">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSKPqLEeWGifCWsdAgKw" name="Control uiModuleName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSKfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiModuleName"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSDPqLEeWGifCWsdAgKw" name="Control generateUiFragment">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSDfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateUiFragment"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR9vqLEeWGifCWsdAgKw" name="Control uiSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR9_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSFvqLEeWGifCWsdAgKw" name="Control uiId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSF_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uiId"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSGPqLEeWGifCWsdAgKw" name="Control uie3Id">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSGfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uie3Id"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSDvqLEeWGifCWsdAgKw" name="Control uie3Suffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSD_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/uie3Suffix"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_BPx3cPqPEeWGifCWsdAgKw" name="Feature">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSAPqLEeWGifCWsdAgKw" name="Control generateFeature">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSAfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateFeature"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSAvqLEeWGifCWsdAgKw" name="Control featureSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSA_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/featureSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSKvqLEeWGifCWsdAgKw" name="Control isLicenseEmpty">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSK_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/isLicenseEmpty"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSHvqLEeWGifCWsdAgKw" name="Control featureId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSH_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/featureId"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq6vqLEeWGifCWsdAgKw" name="Control copyRightAuthorName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq6_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/copyRightAuthorName"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq7PqLEeWGifCWsdAgKw" name="Control copyRightUrl">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq7fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/copyRightUrl"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq7vqLEeWGifCWsdAgKw" name="Control copyRightYear">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq7_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/copyRightYear"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_JMHb4PqPEeWGifCWsdAgKw" name="Parent Project">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR-PqLEeWGifCWsdAgKw" name="Control generateParent">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR-fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateParent"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR-vqLEeWGifCWsdAgKw" name="Control tychoParentName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR-_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/tychoParentName"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_yt_MgPqPEeWGifCWsdAgKw" name="Update Site">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSBPqLEeWGifCWsdAgKw" name="Control generateUpdatesite">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSBfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateUpdatesite"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSBvqLEeWGifCWsdAgKw" name="Control updateSiteSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSB_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/updateSiteSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSHPqLEeWGifCWsdAgKw" name="Control updateSiteId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSHfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/updateSiteId"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5PqLEeWGifCWsdAgKw" name="Control categoryName">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/categoryName"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_6iN90PqPEeWGifCWsdAgKw" name="Test Project">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR_PqLEeWGifCWsdAgKw" name="Control generateTests">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR_fqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateTests"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeR_vqLEeWGifCWsdAgKw" name="Control testsSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeR__qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/testsSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSGvqLEeWGifCWsdAgKw" name="Control testsId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSG_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/testsId"/>
+      </domainModelReference>
+    </children>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.group.model:Group" xmi:id="_nHMIgPqPEeWGifCWsdAgKw" name="Releng">
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSCPqLEeWGifCWsdAgKw" name="Control generateTarget">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSCfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/generateTarget"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSCvqLEeWGifCWsdAgKw" name="Control targetSuffix">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSC_qLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/targetSuffix"/>
+      </domainModelReference>
+    </children>
+    <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZeSIPqLEeWGifCWsdAgKw" name="Control targetId">
+      <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZeSIfqLEeWGifCWsdAgKw">
+        <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/targetId"/>
+      </domainModelReference>
+    </children>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>

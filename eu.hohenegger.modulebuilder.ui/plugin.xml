@@ -10,4 +10,8 @@
             id="eu.hohenegger.modulebuilder.ui.wizard.NewP2UpdateSiteWizard">
       </wizard>
    </extension>
+
+<extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
+<file filePath="view-model/Module.view"/>
+</extension>
 </plugin>
