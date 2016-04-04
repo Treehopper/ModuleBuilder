@@ -133,7 +133,7 @@
         </children>
       </composite>
     </categorizations>
-    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_89noQPqaEeWGifCWsdAgKw" name="Feature">
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_89noQPqaEeWGifCWsdAgKw" name="Feature Project">
       <attachments xsi:type="org.eclipse.emf.ecp.view.rule.model:ShowRule" xmi:id="_BLUQYPqeEeWGifCWsdAgKw">
         <condition xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="_GJhPwPqeEeWGifCWsdAgKw" expectedValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_KLPYwPqeEeWGifCWsdAgKw">
@@ -185,7 +185,7 @@
         </children>
       </composite>
     </categorizations>
-    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_9le5gPqaEeWGifCWsdAgKw" name="Update Site">
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_9le5gPqaEeWGifCWsdAgKw" name="Update Site Project">
       <attachments xsi:type="org.eclipse.emf.ecp.view.rule.model:ShowRule" xmi:id="_B8o_oPqeEeWGifCWsdAgKw">
         <condition xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="_Gz-iAPqeEeWGifCWsdAgKw" expectedValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JgGKAPqeEeWGifCWsdAgKw">
@@ -222,7 +222,7 @@
         </children>
       </composite>
     </categorizations>
-    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_-PL90PqaEeWGifCWsdAgKw" name="Releng">
+    <categorizations xsi:type="org.eclipse.emf.ecp.view.categorization.model:Category" xmi:id="_-PL90PqaEeWGifCWsdAgKw" name="Target Project">
       <attachments xsi:type="org.eclipse.emf.ecp.view.rule.model:ShowRule" xmi:id="_QkP0IPqcEeWGifCWsdAgKw">
         <condition xsi:type="org.eclipse.emf.ecp.view.rule.model:LeafCondition" xmi:id="_RZ-iQPqcEeWGifCWsdAgKw" expectedValue="ACED0005737200116A6176612E6C616E672E426F6F6C65616ECD207280D59CFAEE0200015A000576616C7565787001">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_TNxbIPqcEeWGifCWsdAgKw">
