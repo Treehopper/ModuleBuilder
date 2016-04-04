@@ -50,8 +50,9 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 	public NewP2UpdateSiteWizardPage(Module module) {
 		super("wizardPage");
 		this.module = module;
-		setTitle("Tycho p2 layout");
-		setDescription("This wizard creates new projects that can be built with Tycho, producing a p2 update site.");
+		setTitle("Eclipse/Tycho Module Builder");
+		setDescription(
+				"This wizard generates all projects and files that are necessary to to build an Eclipse update site with Maven Tycho.");
 		validationStatusUpdater = new ValidationStatusUpdater();
 		module.eAdapters().add(validationStatusUpdater);
 	}
