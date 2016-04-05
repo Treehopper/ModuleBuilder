@@ -150,7 +150,7 @@ public class ModuleUtil {
 		try {
 			generateParentProject(module, module.getTychoParentName(), createTemplateMask("parent"), module.getBaseLocation(), sub.newChild(1));
 
-			String baseLocation = module.getBaseLocation() + File.pathSeparator + module.getTychoParentName();
+			String baseLocation = module.getBaseLocation() + File.separatorChar + module.getTychoParentName();
 
 			generateJavaProject(module, module.getBaseId(), createTemplateMask("core"), baseLocation, sub.newChild(1));
 
