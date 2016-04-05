@@ -8,7 +8,7 @@
 «FILE "MANIFEST.MF"»Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: «this.uie3Id»
+Bundle-SymbolicName: «this.uie3Id»;singleton:=true
 Bundle-Version: «this.osgiVersion»
 Fragment-Host: «this.uiId»;bundle-version="«this.version»"
 Bundle-RequiredExecutionEnvironment: «this.javaVersion»
