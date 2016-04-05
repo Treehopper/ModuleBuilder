@@ -1,5 +1,6 @@
 package eu.hohenegger.modulebuilder;
 
+import static eu.hohenegger.modulebuilder.impl.Activator.logError;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addSourcePath;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addToClassPathEntries;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.createFolder;
@@ -164,8 +165,7 @@ public class ModuleUtil {
 
 			generateTargetProject(module, module.getTargetId(), createTemplateMask("target"), baseLocation, sub.newChild(1));
 		} catch (CoreException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logError(e);
 		}
 	}
 

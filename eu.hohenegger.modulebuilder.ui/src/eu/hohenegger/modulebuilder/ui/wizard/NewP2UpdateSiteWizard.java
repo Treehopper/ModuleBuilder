@@ -2,6 +2,7 @@ package eu.hohenegger.modulebuilder.ui.wizard;
 
 
 import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
+import static eu.hohenegger.modulebuilder.ui.Activator.logError;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
 
 import java.lang.reflect.InvocationTargetException;
@@ -79,8 +80,7 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 				monitor.done();
 			});
 		} catch (InvocationTargetException | InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logError(e);
 		}
 
 
