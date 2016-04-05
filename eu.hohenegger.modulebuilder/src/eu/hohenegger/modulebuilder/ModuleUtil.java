@@ -162,9 +162,13 @@ public class ModuleUtil {
 
 			generateJavaProject(module, module.getUiId(), createTemplateMask("ui"), baseLocation, sub.newChild(1));
 
-			generateJavaProject(module, module.getUie3Id(), createTemplateMask("ui::e3"), baseLocation, sub.newChild(1), true);
+			if (module.isGenerateUiFragment()) {
+				generateJavaProject(module, module.getUie3Id(), createTemplateMask("ui::e3"), baseLocation, sub.newChild(1), true);
+			}
 
-			generateJavaTestProject(module, module.getTestsId(), createTemplateMask("test"), baseLocation, sub.newChild(1));
+			if (module.isGenerateTests()) {
+				generateJavaTestProject(module, module.getTestsId(), createTemplateMask("test"), baseLocation, sub.newChild(1));
+			}
 
 			generateFullFeature(module, module.getFeatureId(), createTemplateMask("feature"), baseLocation, sub.newChild(1));
 

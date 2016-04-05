@@ -41,6 +41,7 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getUiId()).exists());
 		assertTrue(getProject(module.getUie3Id()).exists());
 		assertTrue(getProject(module.getTychoParentName()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 	}
 
 	@Test
@@ -54,6 +55,7 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getTargetId()).exists());
 		assertTrue(getProject(module.getUiId()).exists());
 		assertTrue(getProject(module.getUie3Id()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 
 		assertFalse(getProject(module.getTychoParentName()).exists());
 	}
@@ -69,6 +71,7 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getUiId()).exists());
 		assertTrue(getProject(module.getUie3Id()).exists());
 		assertTrue(getProject(module.getTychoParentName()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 
 		assertFalse(getProject(module.getFeatureId()).exists());
 	}
@@ -84,6 +87,7 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getUiId()).exists());
 		assertTrue(getProject(module.getUie3Id()).exists());
 		assertTrue(getProject(module.getTychoParentName()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 
 		assertFalse(getProject(module.getTargetId()).exists());
 	}
@@ -99,13 +103,14 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getUiId()).exists());
 		assertTrue(getProject(module.getUie3Id()).exists());
 		assertTrue(getProject(module.getTychoParentName()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 
 		assertFalse(getProject(module.getUpdateSiteId()).exists());
 	}
 
 	@Test
 	public void testGenerateNoUiFragment() {
-		module.setGenerateUpdatesite(false);
+		module.setGenerateUiFragment(false);
 		generateModule(module, monitor);
 
 		assertTrue(getProject(module.getCoreId()).exists());
@@ -113,8 +118,24 @@ public class ModuleUtilTest extends AbstractTest {
 		assertTrue(getProject(module.getUpdateSiteId()).exists());
 		assertTrue(getProject(module.getTargetId()).exists());
 		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getTestsId()).exists());
 
 		assertFalse(getProject(module.getUie3Id()).exists());
+	}
+
+	@Test
+	public void testGenerateNoTests() {
+		module.setGenerateTests(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+
+		assertFalse(getProject(module.getTestsId()).exists());
 	}
 
 	@After
