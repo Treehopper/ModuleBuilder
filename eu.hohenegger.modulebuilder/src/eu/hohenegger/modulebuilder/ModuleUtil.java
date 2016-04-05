@@ -9,6 +9,8 @@ import static eu.hohenegger.modulebuilder.impl.ProjectFactory.createProject;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.makeJavaProject;
 import static eu.hohenegger.modulebuilder.impl.XPandUtil.expandTemplate;
 
+import java.io.File;
+
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -148,8 +150,7 @@ public class ModuleUtil {
 		try {
 			generateParentProject(module, module.getTychoParentName(), createTemplateMask("parent"), module.getBaseLocation(), sub.newChild(1));
 
-			// TODO: platform dependent separator
-			String baseLocation = module.getBaseLocation() + "/" + module.getTychoParentName();
+			String baseLocation = module.getBaseLocation() + File.pathSeparator + module.getTychoParentName();
 
 			generateJavaProject(module, module.getBaseId(), createTemplateMask("core"), baseLocation, sub.newChild(1));
 
