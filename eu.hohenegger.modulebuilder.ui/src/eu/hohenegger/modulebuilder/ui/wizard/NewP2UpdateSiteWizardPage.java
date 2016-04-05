@@ -71,7 +71,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 
 	private void scrolled(Composite rootComposite) {
 		ScrolledComposite sc = new ScrolledComposite(rootComposite, SWT.H_SCROLL | SWT.V_SCROLL);
-		sc.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).hint(SWT.DEFAULT, 400).create());
+		sc.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).hint(SWT.DEFAULT, 450).create());
 		sc.setExpandHorizontal(true);
 		sc.setExpandVertical(true);
 
