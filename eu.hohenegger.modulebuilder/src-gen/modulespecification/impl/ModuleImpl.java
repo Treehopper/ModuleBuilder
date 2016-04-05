@@ -24,10 +24,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getModuleName <em>Module Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCategoryName <em>Category Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getLicense <em>License</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getLicenseUrl <em>License Url</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCopyRightAuthorName <em>Copy Right Author Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCopyRightUrl <em>Copy Right Url</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getCopyRightYear <em>Copy Right Year</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getAuthorEmail <em>Author Email</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getProviderName <em>Provider Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getJavaVersion <em>Java Version</em>}</li>
@@ -42,6 +44,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getFeatureSuffix <em>Feature Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateUpdatesite <em>Generate Updatesite</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getUpdateSiteUrl <em>Update Site Url</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTargetSuffix <em>Target Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateUiFragment <em>Generate Ui Fragment</em>}</li>
@@ -60,6 +63,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getCoreModuleName <em>Core Module Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getUiModuleName <em>Ui Module Name</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isIsLicenseEmpty <em>Is License Empty</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#isIsLicenseUrlEmpty <em>Is License Url Empty</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#isIsUpdateSiteUrlEmpty <em>Is Update Site Url Empty</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#isIsAuthorEmailEmpty <em>Is Author Email Empty</em>}</li>
  * </ul>
  *
  * @generated
@@ -146,6 +152,26 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	protected String license = LICENSE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getLicenseUrl() <em>License Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLicenseUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LICENSE_URL_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getLicenseUrl() <em>License Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLicenseUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String licenseUrl = LICENSE_URL_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,6 +250,26 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @ordered
 	 */
 	protected String copyRightYear = COPY_RIGHT_YEAR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAuthorEmail() <em>Author Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String AUTHOR_EMAIL_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getAuthorEmail() <em>Author Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthorEmail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String authorEmail = AUTHOR_EMAIL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getProviderName() <em>Provider Name</em>}' attribute.
@@ -506,6 +552,26 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	protected String updateSiteSuffix = UPDATE_SITE_SUFFIX_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getUpdateSiteUrl() <em>Update Site Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUpdateSiteUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UPDATE_SITE_URL_EDEFAULT = "http://www.example.org";
+
+	/**
+	 * The cached value of the '{@link #getUpdateSiteUrl() <em>Update Site Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUpdateSiteUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String updateSiteUrl = UPDATE_SITE_URL_EDEFAULT;
+
+	/**
 	 * The default value of the '{@link #isGenerateTarget() <em>Generate Target</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -746,6 +812,36 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	protected static final boolean IS_LICENSE_EMPTY_EDEFAULT = false;
 
 	/**
+	 * The default value of the '{@link #isIsLicenseUrlEmpty() <em>Is License Url Empty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsLicenseUrlEmpty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_LICENSE_URL_EMPTY_EDEFAULT = false;
+
+	/**
+	 * The default value of the '{@link #isIsUpdateSiteUrlEmpty() <em>Is Update Site Url Empty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsUpdateSiteUrlEmpty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_UPDATE_SITE_URL_EMPTY_EDEFAULT = false;
+
+	/**
+	 * The default value of the '{@link #isIsAuthorEmailEmpty() <em>Is Author Email Empty</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsAuthorEmailEmpty()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_AUTHOR_EMAIL_EMPTY_EDEFAULT = false;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -853,6 +949,27 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLicenseUrl() {
+		return licenseUrl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLicenseUrl(String newLicenseUrl) {
+		String oldLicenseUrl = licenseUrl;
+		licenseUrl = newLicenseUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__LICENSE_URL, oldLicenseUrl, licenseUrl));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getVersion() {
 		return version;
 	}
@@ -930,6 +1047,27 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		copyRightYear = newCopyRightYear;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR, oldCopyRightYear, copyRightYear));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getAuthorEmail() {
+		return authorEmail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAuthorEmail(String newAuthorEmail) {
+		String oldAuthorEmail = authorEmail;
+		authorEmail = newAuthorEmail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__AUTHOR_EMAIL, oldAuthorEmail, authorEmail));
 	}
 
 	/**
@@ -1231,6 +1369,27 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUpdateSiteUrl() {
+		return updateSiteUrl;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUpdateSiteUrl(String newUpdateSiteUrl) {
+		String oldUpdateSiteUrl = updateSiteUrl;
+		updateSiteUrl = newUpdateSiteUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__UPDATE_SITE_URL, oldUpdateSiteUrl, updateSiteUrl));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isGenerateTarget() {
 		return generateTarget;
 	}
@@ -1486,6 +1645,36 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsLicenseUrlEmpty() {
+		String _licenseUrl = this.getLicenseUrl();
+		return _licenseUrl.isEmpty();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsUpdateSiteUrlEmpty() {
+		String _updateSiteUrl = this.getUpdateSiteUrl();
+		return _updateSiteUrl.isEmpty();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsAuthorEmailEmpty() {
+		String _authorEmail = this.getAuthorEmail();
+		return _authorEmail.isEmpty();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -1497,6 +1686,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return getCategoryName();
 			case ModulespecificationPackage.MODULE__LICENSE:
 				return getLicense();
+			case ModulespecificationPackage.MODULE__LICENSE_URL:
+				return getLicenseUrl();
 			case ModulespecificationPackage.MODULE__VERSION:
 				return getVersion();
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_AUTHOR_NAME:
@@ -1505,6 +1696,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return getCopyRightUrl();
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR:
 				return getCopyRightYear();
+			case ModulespecificationPackage.MODULE__AUTHOR_EMAIL:
+				return getAuthorEmail();
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 				return getProviderName();
 			case ModulespecificationPackage.MODULE__TYCHO_VERSION:
@@ -1533,6 +1726,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return isGenerateUpdatesite();
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
 				return getUpdateSiteSuffix();
+			case ModulespecificationPackage.MODULE__UPDATE_SITE_URL:
+				return getUpdateSiteUrl();
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 				return isGenerateTarget();
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
@@ -1569,6 +1764,12 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return getUiModuleName();
 			case ModulespecificationPackage.MODULE__IS_LICENSE_EMPTY:
 				return isIsLicenseEmpty();
+			case ModulespecificationPackage.MODULE__IS_LICENSE_URL_EMPTY:
+				return isIsLicenseUrlEmpty();
+			case ModulespecificationPackage.MODULE__IS_UPDATE_SITE_URL_EMPTY:
+				return isIsUpdateSiteUrlEmpty();
+			case ModulespecificationPackage.MODULE__IS_AUTHOR_EMAIL_EMPTY:
+				return isIsAuthorEmailEmpty();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1593,6 +1794,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__LICENSE:
 				setLicense((String)newValue);
 				return;
+			case ModulespecificationPackage.MODULE__LICENSE_URL:
+				setLicenseUrl((String)newValue);
+				return;
 			case ModulespecificationPackage.MODULE__VERSION:
 				setVersion((String)newValue);
 				return;
@@ -1604,6 +1808,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return;
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR:
 				setCopyRightYear((String)newValue);
+				return;
+			case ModulespecificationPackage.MODULE__AUTHOR_EMAIL:
+				setAuthorEmail((String)newValue);
 				return;
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 				setProviderName((String)newValue);
@@ -1647,6 +1854,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
 				setUpdateSiteSuffix((String)newValue);
 				return;
+			case ModulespecificationPackage.MODULE__UPDATE_SITE_URL:
+				setUpdateSiteUrl((String)newValue);
+				return;
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 				setGenerateTarget((Boolean)newValue);
 				return;
@@ -1689,6 +1899,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__LICENSE:
 				setLicense(LICENSE_EDEFAULT);
 				return;
+			case ModulespecificationPackage.MODULE__LICENSE_URL:
+				setLicenseUrl(LICENSE_URL_EDEFAULT);
+				return;
 			case ModulespecificationPackage.MODULE__VERSION:
 				setVersion(VERSION_EDEFAULT);
 				return;
@@ -1700,6 +1913,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return;
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR:
 				setCopyRightYear(COPY_RIGHT_YEAR_EDEFAULT);
+				return;
+			case ModulespecificationPackage.MODULE__AUTHOR_EMAIL:
+				setAuthorEmail(AUTHOR_EMAIL_EDEFAULT);
 				return;
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 				setProviderName(PROVIDER_NAME_EDEFAULT);
@@ -1743,6 +1959,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
 				setUpdateSiteSuffix(UPDATE_SITE_SUFFIX_EDEFAULT);
 				return;
+			case ModulespecificationPackage.MODULE__UPDATE_SITE_URL:
+				setUpdateSiteUrl(UPDATE_SITE_URL_EDEFAULT);
+				return;
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 				setGenerateTarget(GENERATE_TARGET_EDEFAULT);
 				return;
@@ -1781,6 +2000,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return CATEGORY_NAME_EDEFAULT == null ? categoryName != null : !CATEGORY_NAME_EDEFAULT.equals(categoryName);
 			case ModulespecificationPackage.MODULE__LICENSE:
 				return LICENSE_EDEFAULT == null ? license != null : !LICENSE_EDEFAULT.equals(license);
+			case ModulespecificationPackage.MODULE__LICENSE_URL:
+				return LICENSE_URL_EDEFAULT == null ? licenseUrl != null : !LICENSE_URL_EDEFAULT.equals(licenseUrl);
 			case ModulespecificationPackage.MODULE__VERSION:
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_AUTHOR_NAME:
@@ -1789,6 +2010,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return COPY_RIGHT_URL_EDEFAULT == null ? copyRightUrl != null : !COPY_RIGHT_URL_EDEFAULT.equals(copyRightUrl);
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR:
 				return COPY_RIGHT_YEAR_EDEFAULT == null ? copyRightYear != null : !COPY_RIGHT_YEAR_EDEFAULT.equals(copyRightYear);
+			case ModulespecificationPackage.MODULE__AUTHOR_EMAIL:
+				return AUTHOR_EMAIL_EDEFAULT == null ? authorEmail != null : !AUTHOR_EMAIL_EDEFAULT.equals(authorEmail);
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 				return PROVIDER_NAME_EDEFAULT == null ? providerName != null : !PROVIDER_NAME_EDEFAULT.equals(providerName);
 			case ModulespecificationPackage.MODULE__TYCHO_VERSION:
@@ -1817,6 +2040,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return generateUpdatesite != GENERATE_UPDATESITE_EDEFAULT;
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
 				return UPDATE_SITE_SUFFIX_EDEFAULT == null ? updateSiteSuffix != null : !UPDATE_SITE_SUFFIX_EDEFAULT.equals(updateSiteSuffix);
+			case ModulespecificationPackage.MODULE__UPDATE_SITE_URL:
+				return UPDATE_SITE_URL_EDEFAULT == null ? updateSiteUrl != null : !UPDATE_SITE_URL_EDEFAULT.equals(updateSiteUrl);
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 				return generateTarget != GENERATE_TARGET_EDEFAULT;
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
@@ -1853,6 +2078,12 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return UI_MODULE_NAME_EDEFAULT == null ? getUiModuleName() != null : !UI_MODULE_NAME_EDEFAULT.equals(getUiModuleName());
 			case ModulespecificationPackage.MODULE__IS_LICENSE_EMPTY:
 				return isIsLicenseEmpty() != IS_LICENSE_EMPTY_EDEFAULT;
+			case ModulespecificationPackage.MODULE__IS_LICENSE_URL_EMPTY:
+				return isIsLicenseUrlEmpty() != IS_LICENSE_URL_EMPTY_EDEFAULT;
+			case ModulespecificationPackage.MODULE__IS_UPDATE_SITE_URL_EMPTY:
+				return isIsUpdateSiteUrlEmpty() != IS_UPDATE_SITE_URL_EMPTY_EDEFAULT;
+			case ModulespecificationPackage.MODULE__IS_AUTHOR_EMAIL_EMPTY:
+				return isIsAuthorEmailEmpty() != IS_AUTHOR_EMAIL_EMPTY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1875,6 +2106,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(categoryName);
 		result.append(", license: ");
 		result.append(license);
+		result.append(", licenseUrl: ");
+		result.append(licenseUrl);
 		result.append(", version: ");
 		result.append(version);
 		result.append(", copyRightAuthorName: ");
@@ -1883,6 +2116,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(copyRightUrl);
 		result.append(", copyRightYear: ");
 		result.append(copyRightYear);
+		result.append(", authorEmail: ");
+		result.append(authorEmail);
 		result.append(", providerName: ");
 		result.append(providerName);
 		result.append(", tychoVersion: ");
@@ -1911,6 +2146,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(generateUpdatesite);
 		result.append(", updateSiteSuffix: ");
 		result.append(updateSiteSuffix);
+		result.append(", updateSiteUrl: ");
+		result.append(updateSiteUrl);
 		result.append(", generateTarget: ");
 		result.append(generateTarget);
 		result.append(", targetSuffix: ");

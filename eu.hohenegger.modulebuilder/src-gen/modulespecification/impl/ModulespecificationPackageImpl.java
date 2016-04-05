@@ -182,7 +182,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Version() {
+	public EAttribute getModule_LicenseUrl() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -191,7 +191,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CopyRightAuthorName() {
+	public EAttribute getModule_Version() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -200,7 +200,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CopyRightUrl() {
+	public EAttribute getModule_CopyRightAuthorName() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -209,7 +209,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CopyRightYear() {
+	public EAttribute getModule_CopyRightUrl() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -218,7 +218,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_ProviderName() {
+	public EAttribute getModule_CopyRightYear() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -227,7 +227,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TychoVersion() {
+	public EAttribute getModule_AuthorEmail() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -236,7 +236,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_JavaVersion() {
+	public EAttribute getModule_ProviderName() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -245,7 +245,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_BaseLocation() {
+	public EAttribute getModule_TychoVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -254,7 +254,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CoreSuffix() {
+	public EAttribute getModule_JavaVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -263,7 +263,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UiSuffix() {
+	public EAttribute getModule_BaseLocation() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -272,7 +272,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateParent() {
+	public EAttribute getModule_CoreSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(14);
 	}
 
@@ -281,7 +281,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TychoParentName() {
+	public EAttribute getModule_UiSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(15);
 	}
 
@@ -290,7 +290,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateTests() {
+	public EAttribute getModule_GenerateParent() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(16);
 	}
 
@@ -299,7 +299,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TestsSuffix() {
+	public EAttribute getModule_TychoParentName() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(17);
 	}
 
@@ -308,7 +308,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateFeature() {
+	public EAttribute getModule_GenerateTests() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -317,7 +317,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_FeatureSuffix() {
+	public EAttribute getModule_TestsSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -326,7 +326,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateUpdatesite() {
+	public EAttribute getModule_GenerateFeature() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -335,7 +335,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UpdateSiteSuffix() {
+	public EAttribute getModule_FeatureSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -344,7 +344,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateTarget() {
+	public EAttribute getModule_GenerateUpdatesite() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -353,7 +353,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TargetSuffix() {
+	public EAttribute getModule_UpdateSiteSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -362,7 +362,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateUiFragment() {
+	public EAttribute getModule_UpdateSiteUrl() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -371,7 +371,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Uie3Suffix() {
+	public EAttribute getModule_GenerateTarget() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -380,7 +380,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_MavenVersionSuffix() {
+	public EAttribute getModule_TargetSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -389,7 +389,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_OsgiVersionQualifier() {
+	public EAttribute getModule_GenerateUiFragment() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -398,7 +398,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CoreId() {
+	public EAttribute getModule_Uie3Suffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(28);
 	}
 
@@ -407,7 +407,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UiId() {
+	public EAttribute getModule_MavenVersionSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(29);
 	}
 
@@ -416,7 +416,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Uie3Id() {
+	public EAttribute getModule_OsgiVersionQualifier() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -425,7 +425,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TestsId() {
+	public EAttribute getModule_CoreId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(31);
 	}
 
@@ -434,7 +434,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UpdateSiteId() {
+	public EAttribute getModule_UiId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(32);
 	}
 
@@ -443,7 +443,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_FeatureId() {
+	public EAttribute getModule_Uie3Id() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(33);
 	}
 
@@ -452,7 +452,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TargetId() {
+	public EAttribute getModule_TestsId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(34);
 	}
 
@@ -461,7 +461,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_MavenVersion() {
+	public EAttribute getModule_UpdateSiteId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(35);
 	}
 
@@ -470,7 +470,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_OsgiVersion() {
+	public EAttribute getModule_FeatureId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(36);
 	}
 
@@ -479,7 +479,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CoreModuleName() {
+	public EAttribute getModule_TargetId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(37);
 	}
 
@@ -488,7 +488,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UiModuleName() {
+	public EAttribute getModule_MavenVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(38);
 	}
 
@@ -497,8 +497,62 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_IsLicenseEmpty() {
+	public EAttribute getModule_OsgiVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(39);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_CoreModuleName() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(40);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_UiModuleName() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(41);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_IsLicenseEmpty() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(42);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_IsLicenseUrlEmpty() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(43);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_IsUpdateSiteUrlEmpty() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(44);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_IsAuthorEmailEmpty() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(45);
 	}
 
 	/**
@@ -570,10 +624,12 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(moduleEClass, MODULE__MODULE_NAME);
 		createEAttribute(moduleEClass, MODULE__CATEGORY_NAME);
 		createEAttribute(moduleEClass, MODULE__LICENSE);
+		createEAttribute(moduleEClass, MODULE__LICENSE_URL);
 		createEAttribute(moduleEClass, MODULE__VERSION);
 		createEAttribute(moduleEClass, MODULE__COPY_RIGHT_AUTHOR_NAME);
 		createEAttribute(moduleEClass, MODULE__COPY_RIGHT_URL);
 		createEAttribute(moduleEClass, MODULE__COPY_RIGHT_YEAR);
+		createEAttribute(moduleEClass, MODULE__AUTHOR_EMAIL);
 		createEAttribute(moduleEClass, MODULE__PROVIDER_NAME);
 		createEAttribute(moduleEClass, MODULE__TYCHO_VERSION);
 		createEAttribute(moduleEClass, MODULE__JAVA_VERSION);
@@ -588,6 +644,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(moduleEClass, MODULE__FEATURE_SUFFIX);
 		createEAttribute(moduleEClass, MODULE__GENERATE_UPDATESITE);
 		createEAttribute(moduleEClass, MODULE__UPDATE_SITE_SUFFIX);
+		createEAttribute(moduleEClass, MODULE__UPDATE_SITE_URL);
 		createEAttribute(moduleEClass, MODULE__GENERATE_TARGET);
 		createEAttribute(moduleEClass, MODULE__TARGET_SUFFIX);
 		createEAttribute(moduleEClass, MODULE__GENERATE_UI_FRAGMENT);
@@ -606,6 +663,9 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(moduleEClass, MODULE__CORE_MODULE_NAME);
 		createEAttribute(moduleEClass, MODULE__UI_MODULE_NAME);
 		createEAttribute(moduleEClass, MODULE__IS_LICENSE_EMPTY);
+		createEAttribute(moduleEClass, MODULE__IS_LICENSE_URL_EMPTY);
+		createEAttribute(moduleEClass, MODULE__IS_UPDATE_SITE_URL_EMPTY);
+		createEAttribute(moduleEClass, MODULE__IS_AUTHOR_EMAIL_EMPTY);
 
 		// Create data types
 		versionEDataType = createEDataType(VERSION);
@@ -652,10 +712,12 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getModule_ModuleName(), this.getMandatoryString(), "moduleName", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_CategoryName(), this.getMandatoryString(), "categoryName", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_License(), theEcorePackage.getEString(), "license", "", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_LicenseUrl(), theEcorePackage.getEString(), "licenseUrl", "", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_Version(), this.getVersion(), "version", "1.0.0", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_CopyRightAuthorName(), theEcorePackage.getEString(), "copyRightAuthorName", "", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_CopyRightUrl(), theEcorePackage.getEString(), "copyRightUrl", "http://www.example.org", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_CopyRightYear(), theEcorePackage.getEString(), "copyRightYear", "", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_AuthorEmail(), theEcorePackage.getEString(), "authorEmail", "", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_ProviderName(), theEcorePackage.getEString(), "providerName", "http://www.example.org", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_TychoVersion(), theEcorePackage.getEString(), "tychoVersion", "0.24.0", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_JavaVersion(), theEcorePackage.getEString(), "javaVersion", "JavaSE-1.8", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -670,6 +732,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getModule_FeatureSuffix(), this.getOSGiSegment(), "featureSuffix", ".feature", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateUpdatesite(), theEcorePackage.getEBoolean(), "generateUpdatesite", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_UpdateSiteSuffix(), this.getOSGiSegment(), "updateSiteSuffix", ".p2updateSite", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_UpdateSiteUrl(), theEcorePackage.getEString(), "updateSiteUrl", "http://www.example.org", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateTarget(), theEcorePackage.getEBoolean(), "generateTarget", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_TargetSuffix(), this.getOSGiSegment(), "targetSuffix", ".releng.targetplatform", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateUiFragment(), theEcorePackage.getEBoolean(), "generateUiFragment", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -688,6 +751,9 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getModule_CoreModuleName(), theEcorePackage.getEString(), "coreModuleName", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_UiModuleName(), theEcorePackage.getEString(), "uiModuleName", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_IsLicenseEmpty(), theEcorePackage.getEBoolean(), "isLicenseEmpty", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_IsLicenseUrlEmpty(), theEcorePackage.getEBoolean(), "isLicenseUrlEmpty", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_IsUpdateSiteUrlEmpty(), theEcorePackage.getEBoolean(), "isUpdateSiteUrlEmpty", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_IsAuthorEmailEmpty(), theEcorePackage.getEBoolean(), "isAuthorEmailEmpty", null, 0, 1, Module.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Initialize data types
 		initEDataType(versionEDataType, String.class, "Version", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

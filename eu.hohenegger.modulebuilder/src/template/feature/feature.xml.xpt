@@ -17,8 +17,14 @@ All rights reserved.
    </copyright>
 
 	«IF !this.isLicenseEmpty»
-   <license>«this.license»</license>
+   <license «IF !this.isLicenseUrlEmpty»url="«this.licenseUrl»"«ENDIF»>«this.license»</license>
 	«ENDIF»
+
+«IF !this.isUpdateSiteUrlEmpty»
+   <url>
+      <update url="«this.updateSiteUrl»"/>
+   </url>
+«ENDIF»
 
    <requires />
 

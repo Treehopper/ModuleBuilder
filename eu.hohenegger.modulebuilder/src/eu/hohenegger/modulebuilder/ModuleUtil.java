@@ -131,7 +131,7 @@ public class ModuleUtil {
 
 	private static void generateParentProject(Module module, String baseName, String templateMask, String baseLocation,
 			IProgressMonitor monitor) throws CoreException {
-		SubMonitor sub = SubMonitor.convert(monitor, "Generating parent project", 3);
+		SubMonitor sub = SubMonitor.convert(monitor, "Generating parent project", 7);
 
 		if (!module.isGenerateParent()) {
 			return;
@@ -140,6 +140,12 @@ public class ModuleUtil {
 		IProject project = ProjectFactory.createProject(baseName, baseLocation, sub.newChild(1));
 
 		expandTemplate(module, project, POM_XML, templateMask, sub.newChild(1));
+		expandTemplate(module, project, "gitignore", templateMask, sub.newChild(1));
+		expandTemplate(module, project, "travis.yml", templateMask, sub.newChild(1));
+		if (!module.isIsLicenseEmpty()) {
+			expandTemplate(module, project, "LICENSE", templateMask, sub.newChild(1));
+		}
+		expandTemplate(module, project, "README.md", templateMask, sub.newChild(1));
 
 		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
 	}

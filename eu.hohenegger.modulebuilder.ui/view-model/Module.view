@@ -47,6 +47,11 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/baseId"/>
           </domainModelReference>
         </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4_qLEeWGifCWsdAgKw" name="Control authorEmail">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4_qLEeWGifCWsdAgKw">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/authorEmail"/>
+          </domainModelReference>
+        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4vqLEeWGifCWsdAgKw" name="Control moduleName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/moduleName"/>
@@ -152,6 +157,11 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/copyRightYear"/>
           </domainModelReference>
         </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5vqLEeWGifCWsdAgKw" name="Control licenseUrl">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5vqLEeWGifCWsdAgKw">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/licenseUrl"/>
+          </domainModelReference>
+        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5vqLEeWGifCWsdAgKw" name="Control license">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/license"/>
@@ -192,6 +202,11 @@
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5PqLEeWGifCWsdAgKw" name="Control categoryName">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5fqLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/categoryName"/>
+          </domainModelReference>
+        </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq5PqLEeWGifCWsdAgKw" name="Control categoryName">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq5fqLEeWGifCWsdAgKw">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/updateSiteUrl"/>
           </domainModelReference>
         </children>
       </composite>

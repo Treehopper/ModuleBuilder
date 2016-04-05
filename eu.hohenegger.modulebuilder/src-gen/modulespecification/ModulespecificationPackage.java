@@ -104,13 +104,22 @@ public interface ModulespecificationPackage extends EPackage {
 	int MODULE__LICENSE = 3;
 
 	/**
+	 * The feature id for the '<em><b>License Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__LICENSE_URL = 4;
+
+	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__VERSION = 4;
+	int MODULE__VERSION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Author Name</b></em>' attribute.
@@ -119,7 +128,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__COPY_RIGHT_AUTHOR_NAME = 5;
+	int MODULE__COPY_RIGHT_AUTHOR_NAME = 6;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Url</b></em>' attribute.
@@ -128,7 +137,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__COPY_RIGHT_URL = 6;
+	int MODULE__COPY_RIGHT_URL = 7;
 
 	/**
 	 * The feature id for the '<em><b>Copy Right Year</b></em>' attribute.
@@ -137,7 +146,16 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__COPY_RIGHT_YEAR = 7;
+	int MODULE__COPY_RIGHT_YEAR = 8;
+
+	/**
+	 * The feature id for the '<em><b>Author Email</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__AUTHOR_EMAIL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Provider Name</b></em>' attribute.
@@ -146,7 +164,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__PROVIDER_NAME = 8;
+	int MODULE__PROVIDER_NAME = 10;
 
 	/**
 	 * The feature id for the '<em><b>Tycho Version</b></em>' attribute.
@@ -155,7 +173,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TYCHO_VERSION = 9;
+	int MODULE__TYCHO_VERSION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Java Version</b></em>' attribute.
@@ -164,7 +182,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__JAVA_VERSION = 10;
+	int MODULE__JAVA_VERSION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Base Location</b></em>' attribute.
@@ -173,7 +191,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__BASE_LOCATION = 11;
+	int MODULE__BASE_LOCATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Core Suffix</b></em>' attribute.
@@ -182,7 +200,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_SUFFIX = 12;
+	int MODULE__CORE_SUFFIX = 14;
 
 	/**
 	 * The feature id for the '<em><b>Ui Suffix</b></em>' attribute.
@@ -191,7 +209,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_SUFFIX = 13;
+	int MODULE__UI_SUFFIX = 15;
 
 	/**
 	 * The feature id for the '<em><b>Generate Parent</b></em>' attribute.
@@ -200,7 +218,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_PARENT = 14;
+	int MODULE__GENERATE_PARENT = 16;
 
 	/**
 	 * The feature id for the '<em><b>Tycho Parent Name</b></em>' attribute.
@@ -209,7 +227,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TYCHO_PARENT_NAME = 15;
+	int MODULE__TYCHO_PARENT_NAME = 17;
 
 	/**
 	 * The feature id for the '<em><b>Generate Tests</b></em>' attribute.
@@ -218,7 +236,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TESTS = 16;
+	int MODULE__GENERATE_TESTS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -227,7 +245,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_SUFFIX = 17;
+	int MODULE__TESTS_SUFFIX = 19;
 
 	/**
 	 * The feature id for the '<em><b>Generate Feature</b></em>' attribute.
@@ -236,7 +254,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_FEATURE = 18;
+	int MODULE__GENERATE_FEATURE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -245,7 +263,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_SUFFIX = 19;
+	int MODULE__FEATURE_SUFFIX = 21;
 
 	/**
 	 * The feature id for the '<em><b>Generate Updatesite</b></em>' attribute.
@@ -254,7 +272,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UPDATESITE = 20;
+	int MODULE__GENERATE_UPDATESITE = 22;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -263,7 +281,16 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_SUFFIX = 21;
+	int MODULE__UPDATE_SITE_SUFFIX = 23;
+
+	/**
+	 * The feature id for the '<em><b>Update Site Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__UPDATE_SITE_URL = 24;
 
 	/**
 	 * The feature id for the '<em><b>Generate Target</b></em>' attribute.
@@ -272,7 +299,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TARGET = 22;
+	int MODULE__GENERATE_TARGET = 25;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -281,7 +308,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_SUFFIX = 23;
+	int MODULE__TARGET_SUFFIX = 26;
 
 	/**
 	 * The feature id for the '<em><b>Generate Ui Fragment</b></em>' attribute.
@@ -290,7 +317,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UI_FRAGMENT = 24;
+	int MODULE__GENERATE_UI_FRAGMENT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Suffix</b></em>' attribute.
@@ -299,7 +326,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_SUFFIX = 25;
+	int MODULE__UIE3_SUFFIX = 28;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -308,7 +335,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION_SUFFIX = 26;
+	int MODULE__MAVEN_VERSION_SUFFIX = 29;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -317,7 +344,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION_QUALIFIER = 27;
+	int MODULE__OSGI_VERSION_QUALIFIER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Core Id</b></em>' attribute.
@@ -326,7 +353,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_ID = 28;
+	int MODULE__CORE_ID = 31;
 
 	/**
 	 * The feature id for the '<em><b>Ui Id</b></em>' attribute.
@@ -335,7 +362,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_ID = 29;
+	int MODULE__UI_ID = 32;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Id</b></em>' attribute.
@@ -344,7 +371,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_ID = 30;
+	int MODULE__UIE3_ID = 33;
 
 	/**
 	 * The feature id for the '<em><b>Tests Id</b></em>' attribute.
@@ -353,7 +380,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_ID = 31;
+	int MODULE__TESTS_ID = 34;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Id</b></em>' attribute.
@@ -362,7 +389,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_ID = 32;
+	int MODULE__UPDATE_SITE_ID = 35;
 
 	/**
 	 * The feature id for the '<em><b>Feature Id</b></em>' attribute.
@@ -371,7 +398,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_ID = 33;
+	int MODULE__FEATURE_ID = 36;
 
 	/**
 	 * The feature id for the '<em><b>Target Id</b></em>' attribute.
@@ -380,7 +407,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_ID = 34;
+	int MODULE__TARGET_ID = 37;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -389,7 +416,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION = 35;
+	int MODULE__MAVEN_VERSION = 38;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -398,7 +425,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION = 36;
+	int MODULE__OSGI_VERSION = 39;
 
 	/**
 	 * The feature id for the '<em><b>Core Module Name</b></em>' attribute.
@@ -407,7 +434,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_MODULE_NAME = 37;
+	int MODULE__CORE_MODULE_NAME = 40;
 
 	/**
 	 * The feature id for the '<em><b>Ui Module Name</b></em>' attribute.
@@ -416,7 +443,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_MODULE_NAME = 38;
+	int MODULE__UI_MODULE_NAME = 41;
 
 	/**
 	 * The feature id for the '<em><b>Is License Empty</b></em>' attribute.
@@ -425,7 +452,34 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_LICENSE_EMPTY = 39;
+	int MODULE__IS_LICENSE_EMPTY = 42;
+
+	/**
+	 * The feature id for the '<em><b>Is License Url Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__IS_LICENSE_URL_EMPTY = 43;
+
+	/**
+	 * The feature id for the '<em><b>Is Update Site Url Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__IS_UPDATE_SITE_URL_EMPTY = 44;
+
+	/**
+	 * The feature id for the '<em><b>Is Author Email Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__IS_AUTHOR_EMAIL_EMPTY = 45;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -434,7 +488,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = 40;
+	int MODULE_FEATURE_COUNT = 46;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -541,6 +595,17 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getModule_License();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#getLicenseUrl <em>License Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>License Url</em>'.
+	 * @see modulespecification.Module#getLicenseUrl()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_LicenseUrl();
+
+	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Module#getVersion <em>Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -583,6 +648,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_CopyRightYear();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#getAuthorEmail <em>Author Email</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Author Email</em>'.
+	 * @see modulespecification.Module#getAuthorEmail()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_AuthorEmail();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Module#getProviderName <em>Provider Name</em>}'.
@@ -737,6 +813,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_UpdateSiteSuffix();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#getUpdateSiteUrl <em>Update Site Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Update Site Url</em>'.
+	 * @see modulespecification.Module#getUpdateSiteUrl()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_UpdateSiteUrl();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Module#isGenerateTarget <em>Generate Target</em>}'.
@@ -937,6 +1024,39 @@ public interface ModulespecificationPackage extends EPackage {
 	EAttribute getModule_IsLicenseEmpty();
 
 	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#isIsLicenseUrlEmpty <em>Is License Url Empty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is License Url Empty</em>'.
+	 * @see modulespecification.Module#isIsLicenseUrlEmpty()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_IsLicenseUrlEmpty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#isIsUpdateSiteUrlEmpty <em>Is Update Site Url Empty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Update Site Url Empty</em>'.
+	 * @see modulespecification.Module#isIsUpdateSiteUrlEmpty()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_IsUpdateSiteUrlEmpty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#isIsAuthorEmailEmpty <em>Is Author Email Empty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Author Email Empty</em>'.
+	 * @see modulespecification.Module#isIsAuthorEmailEmpty()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_IsAuthorEmailEmpty();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,6 +1170,14 @@ public interface ModulespecificationPackage extends EPackage {
 		EAttribute MODULE__LICENSE = eINSTANCE.getModule_License();
 
 		/**
+		 * The meta object literal for the '<em><b>License Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__LICENSE_URL = eINSTANCE.getModule_LicenseUrl();
+
+		/**
 		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1080,6 +1208,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__COPY_RIGHT_YEAR = eINSTANCE.getModule_CopyRightYear();
+
+		/**
+		 * The meta object literal for the '<em><b>Author Email</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__AUTHOR_EMAIL = eINSTANCE.getModule_AuthorEmail();
 
 		/**
 		 * The meta object literal for the '<em><b>Provider Name</b></em>' attribute feature.
@@ -1192,6 +1328,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__UPDATE_SITE_SUFFIX = eINSTANCE.getModule_UpdateSiteSuffix();
+
+		/**
+		 * The meta object literal for the '<em><b>Update Site Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__UPDATE_SITE_URL = eINSTANCE.getModule_UpdateSiteUrl();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Target</b></em>' attribute feature.
@@ -1336,6 +1480,30 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__IS_LICENSE_EMPTY = eINSTANCE.getModule_IsLicenseEmpty();
+
+		/**
+		 * The meta object literal for the '<em><b>Is License Url Empty</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__IS_LICENSE_URL_EMPTY = eINSTANCE.getModule_IsLicenseUrlEmpty();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Update Site Url Empty</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__IS_UPDATE_SITE_URL_EMPTY = eINSTANCE.getModule_IsUpdateSiteUrlEmpty();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Author Email Empty</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__IS_AUTHOR_EMAIL_EMPTY = eINSTANCE.getModule_IsAuthorEmailEmpty();
 
 		/**
 		 * The meta object literal for the '<em>Version</em>' data type.

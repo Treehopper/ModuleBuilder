@@ -64,10 +64,12 @@ public class ModuleItemProvider
 			addModuleNamePropertyDescriptor(object);
 			addCategoryNamePropertyDescriptor(object);
 			addLicensePropertyDescriptor(object);
+			addLicenseUrlPropertyDescriptor(object);
 			addVersionPropertyDescriptor(object);
 			addCopyRightAuthorNamePropertyDescriptor(object);
 			addCopyRightUrlPropertyDescriptor(object);
 			addCopyRightYearPropertyDescriptor(object);
+			addAuthorEmailPropertyDescriptor(object);
 			addProviderNamePropertyDescriptor(object);
 			addTychoVersionPropertyDescriptor(object);
 			addJavaVersionPropertyDescriptor(object);
@@ -82,6 +84,7 @@ public class ModuleItemProvider
 			addFeatureSuffixPropertyDescriptor(object);
 			addGenerateUpdatesitePropertyDescriptor(object);
 			addUpdateSiteSuffixPropertyDescriptor(object);
+			addUpdateSiteUrlPropertyDescriptor(object);
 			addGenerateTargetPropertyDescriptor(object);
 			addTargetSuffixPropertyDescriptor(object);
 			addGenerateUiFragmentPropertyDescriptor(object);
@@ -100,6 +103,9 @@ public class ModuleItemProvider
 			addCoreModuleNamePropertyDescriptor(object);
 			addUiModuleNamePropertyDescriptor(object);
 			addIsLicenseEmptyPropertyDescriptor(object);
+			addIsLicenseUrlEmptyPropertyDescriptor(object);
+			addIsUpdateSiteUrlEmptyPropertyDescriptor(object);
+			addIsAuthorEmailEmptyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -193,6 +199,28 @@ public class ModuleItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the License Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLicenseUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_licenseUrl_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_licenseUrl_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__LICENSE_URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Version feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,6 +300,28 @@ public class ModuleItemProvider
 				 getString("_UI_Module_copyRightYear_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_copyRightYear_feature", "_UI_Module_type"),
 				 ModulespecificationPackage.Literals.MODULE__COPY_RIGHT_YEAR,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Author Email feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAuthorEmailPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_authorEmail_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_authorEmail_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__AUTHOR_EMAIL,
 				 true,
 				 false,
 				 false,
@@ -602,6 +652,28 @@ public class ModuleItemProvider
 				 getString("_UI_Module_updateSiteSuffix_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_updateSiteSuffix_feature", "_UI_Module_type"),
 				 ModulespecificationPackage.Literals.MODULE__UPDATE_SITE_SUFFIX,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Update Site Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUpdateSiteUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_updateSiteUrl_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_updateSiteUrl_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__UPDATE_SITE_URL,
 				 true,
 				 false,
 				 false,
@@ -985,6 +1057,72 @@ public class ModuleItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is License Url Empty feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsLicenseUrlEmptyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_isLicenseUrlEmpty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_isLicenseUrlEmpty_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__IS_LICENSE_URL_EMPTY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Update Site Url Empty feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsUpdateSiteUrlEmptyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_isUpdateSiteUrlEmpty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_isUpdateSiteUrlEmpty_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__IS_UPDATE_SITE_URL_EMPTY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Author Email Empty feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsAuthorEmailEmptyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_isAuthorEmailEmpty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_isAuthorEmailEmpty_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__IS_AUTHOR_EMAIL_EMPTY,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Module.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1026,10 +1164,12 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__MODULE_NAME:
 			case ModulespecificationPackage.MODULE__CATEGORY_NAME:
 			case ModulespecificationPackage.MODULE__LICENSE:
+			case ModulespecificationPackage.MODULE__LICENSE_URL:
 			case ModulespecificationPackage.MODULE__VERSION:
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_AUTHOR_NAME:
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_URL:
 			case ModulespecificationPackage.MODULE__COPY_RIGHT_YEAR:
+			case ModulespecificationPackage.MODULE__AUTHOR_EMAIL:
 			case ModulespecificationPackage.MODULE__PROVIDER_NAME:
 			case ModulespecificationPackage.MODULE__TYCHO_VERSION:
 			case ModulespecificationPackage.MODULE__JAVA_VERSION:
@@ -1044,6 +1184,7 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__FEATURE_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_UPDATESITE:
 			case ModulespecificationPackage.MODULE__UPDATE_SITE_SUFFIX:
+			case ModulespecificationPackage.MODULE__UPDATE_SITE_URL:
 			case ModulespecificationPackage.MODULE__GENERATE_TARGET:
 			case ModulespecificationPackage.MODULE__TARGET_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_UI_FRAGMENT:
@@ -1062,6 +1203,9 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__CORE_MODULE_NAME:
 			case ModulespecificationPackage.MODULE__UI_MODULE_NAME:
 			case ModulespecificationPackage.MODULE__IS_LICENSE_EMPTY:
+			case ModulespecificationPackage.MODULE__IS_LICENSE_URL_EMPTY:
+			case ModulespecificationPackage.MODULE__IS_UPDATE_SITE_URL_EMPTY:
+			case ModulespecificationPackage.MODULE__IS_AUTHOR_EMAIL_EMPTY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -17,10 +17,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getModuleName <em>Module Name</em>}</li>
  *   <li>{@link modulespecification.Module#getCategoryName <em>Category Name</em>}</li>
  *   <li>{@link modulespecification.Module#getLicense <em>License</em>}</li>
+ *   <li>{@link modulespecification.Module#getLicenseUrl <em>License Url</em>}</li>
  *   <li>{@link modulespecification.Module#getVersion <em>Version</em>}</li>
  *   <li>{@link modulespecification.Module#getCopyRightAuthorName <em>Copy Right Author Name</em>}</li>
  *   <li>{@link modulespecification.Module#getCopyRightUrl <em>Copy Right Url</em>}</li>
  *   <li>{@link modulespecification.Module#getCopyRightYear <em>Copy Right Year</em>}</li>
+ *   <li>{@link modulespecification.Module#getAuthorEmail <em>Author Email</em>}</li>
  *   <li>{@link modulespecification.Module#getProviderName <em>Provider Name</em>}</li>
  *   <li>{@link modulespecification.Module#getTychoVersion <em>Tycho Version</em>}</li>
  *   <li>{@link modulespecification.Module#getJavaVersion <em>Java Version</em>}</li>
@@ -35,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getFeatureSuffix <em>Feature Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateUpdatesite <em>Generate Updatesite</em>}</li>
  *   <li>{@link modulespecification.Module#getUpdateSiteSuffix <em>Update Site Suffix</em>}</li>
+ *   <li>{@link modulespecification.Module#getUpdateSiteUrl <em>Update Site Url</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateTarget <em>Generate Target</em>}</li>
  *   <li>{@link modulespecification.Module#getTargetSuffix <em>Target Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateUiFragment <em>Generate Ui Fragment</em>}</li>
@@ -53,6 +56,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getCoreModuleName <em>Core Module Name</em>}</li>
  *   <li>{@link modulespecification.Module#getUiModuleName <em>Ui Module Name</em>}</li>
  *   <li>{@link modulespecification.Module#isIsLicenseEmpty <em>Is License Empty</em>}</li>
+ *   <li>{@link modulespecification.Module#isIsLicenseUrlEmpty <em>Is License Url Empty</em>}</li>
+ *   <li>{@link modulespecification.Module#isIsUpdateSiteUrlEmpty <em>Is Update Site Url Empty</em>}</li>
+ *   <li>{@link modulespecification.Module#isIsAuthorEmailEmpty <em>Is Author Email Empty</em>}</li>
  * </ul>
  *
  * @see modulespecification.ModulespecificationPackage#getModule()
@@ -167,6 +173,33 @@ public interface Module extends EObject {
 	void setLicense(String value);
 
 	/**
+	 * Returns the value of the '<em><b>License Url</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>License Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>License Url</em>' attribute.
+	 * @see #setLicenseUrl(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_LicenseUrl()
+	 * @model default="" unique="false"
+	 * @generated
+	 */
+	String getLicenseUrl();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getLicenseUrl <em>License Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>License Url</em>' attribute.
+	 * @see #getLicenseUrl()
+	 * @generated
+	 */
+	void setLicenseUrl(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Version</b></em>' attribute.
 	 * The default value is <code>"1.0.0"</code>.
 	 * <!-- begin-user-doc -->
@@ -273,6 +306,33 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	void setCopyRightYear(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Author Email</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Author Email</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Author Email</em>' attribute.
+	 * @see #setAuthorEmail(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_AuthorEmail()
+	 * @model default="" unique="false"
+	 * @generated
+	 */
+	String getAuthorEmail();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getAuthorEmail <em>Author Email</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Author Email</em>' attribute.
+	 * @see #getAuthorEmail()
+	 * @generated
+	 */
+	void setAuthorEmail(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Provider Name</b></em>' attribute.
@@ -653,6 +713,33 @@ public interface Module extends EObject {
 	void setUpdateSiteSuffix(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Update Site Url</b></em>' attribute.
+	 * The default value is <code>"http://www.example.org"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Update Site Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Update Site Url</em>' attribute.
+	 * @see #setUpdateSiteUrl(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_UpdateSiteUrl()
+	 * @model default="http://www.example.org" unique="false"
+	 * @generated
+	 */
+	String getUpdateSiteUrl();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getUpdateSiteUrl <em>Update Site Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Update Site Url</em>' attribute.
+	 * @see #getUpdateSiteUrl()
+	 * @generated
+	 */
+	void setUpdateSiteUrl(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Generate Target</b></em>' attribute.
 	 * The default value is <code>"true"</code>.
 	 * <!-- begin-user-doc -->
@@ -1005,5 +1092,53 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	boolean isIsLicenseEmpty();
+
+	/**
+	 * Returns the value of the '<em><b>Is License Url Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is License Url Empty</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is License Url Empty</em>' attribute.
+	 * @see modulespecification.ModulespecificationPackage#getModule_IsLicenseUrlEmpty()
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _licenseUrl = this.getLicenseUrl();\nreturn _licenseUrl.isEmpty();'"
+	 * @generated
+	 */
+	boolean isIsLicenseUrlEmpty();
+
+	/**
+	 * Returns the value of the '<em><b>Is Update Site Url Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Update Site Url Empty</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Update Site Url Empty</em>' attribute.
+	 * @see modulespecification.ModulespecificationPackage#getModule_IsUpdateSiteUrlEmpty()
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _updateSiteUrl = this.getUpdateSiteUrl();\nreturn _updateSiteUrl.isEmpty();'"
+	 * @generated
+	 */
+	boolean isIsUpdateSiteUrlEmpty();
+
+	/**
+	 * Returns the value of the '<em><b>Is Author Email Empty</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Author Email Empty</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Author Email Empty</em>' attribute.
+	 * @see modulespecification.ModulespecificationPackage#getModule_IsAuthorEmailEmpty()
+	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _authorEmail = this.getAuthorEmail();\nreturn _authorEmail.isEmpty();'"
+	 * @generated
+	 */
+	boolean isIsAuthorEmailEmpty();
 
 } // Module

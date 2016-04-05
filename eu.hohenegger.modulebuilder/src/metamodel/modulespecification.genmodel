@@ -31,10 +31,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/moduleName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/categoryName"/>
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/license"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/licenseUrl"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/copyRightAuthorName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/copyRightUrl"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/copyRightYear"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/authorEmail"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/providerName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/tychoVersion"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/javaVersion"/>
@@ -49,6 +51,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/featureSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/generateUpdatesite"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/updateSiteSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/updateSiteUrl"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/generateTarget"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/targetSuffix"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/generateUiFragment"/>
@@ -67,6 +70,9 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/coreModuleName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/uiModuleName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/isLicenseEmpty"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/isLicenseUrlEmpty"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/isUpdateSiteUrlEmpty"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute modulespecification.ecore#//Module/isAuthorEmailEmpty"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

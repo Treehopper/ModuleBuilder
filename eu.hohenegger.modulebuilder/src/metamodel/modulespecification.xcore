@@ -24,10 +24,12 @@ class Module {
  	
  	@GenModel(propertyMultiLine="true")
 	String license = ""
+	String licenseUrl = ""
 	Version version = "1.0.0"
 	String copyRightAuthorName = ""
 	String copyRightUrl = "http://www.example.org"
 	String copyRightYear = ""
+	String authorEmail = ""
 	
 	String providerName = "http://www.example.org"
 	
@@ -50,6 +52,7 @@ class Module {
 	
 	boolean generateUpdatesite = "true"
 	OSGiSegment updateSiteSuffix = ".p2updateSite"
+	String updateSiteUrl = "http://www.example.org"
 	
 	boolean generateTarget = "true"
 	OSGiSegment targetSuffix = ".releng.targetplatform"
@@ -106,5 +109,17 @@ class Module {
 
 	derived boolean isLicenseEmpty get {
 		license.empty
+	}
+
+	derived boolean isLicenseUrlEmpty get {
+		licenseUrl.empty
+	}
+
+	derived boolean isUpdateSiteUrlEmpty get {
+		updateSiteUrl.empty
+	}
+
+	derived boolean isAuthorEmailEmpty get {
+		authorEmail.empty
 	}
 }
