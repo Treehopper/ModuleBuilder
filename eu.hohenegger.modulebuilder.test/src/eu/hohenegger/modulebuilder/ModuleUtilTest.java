@@ -1,76 +1,137 @@
 package eu.hohenegger.modulebuilder;
 
 import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
-import static org.eclipse.emf.common.util.Diagnostic.OK;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.ecore.util.Diagnostician;
-import org.junit.AfterClass;
+import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import modulespecification.Module;
-import modulespecification.ModulespecificationFactory;
 
-public class ModuleUtilTest {
+public class ModuleUtilTest extends AbstractTest {
 
 	private Module module;
 	private NullProgressMonitor monitor;
 
 	@Before
 	public void setup() {
+		if (getProjects().length != 0) {
+			fail();
+		}
+
 		module = createModel("TODO");
 		monitor = new NullProgressMonitor();
-	}
-
-	private Module createModel(String pluginId) {
-		Module module = ModulespecificationFactory.eINSTANCE.createModule();
-		module.setBaseId(pluginId);
-
-		return module;
 	}
 
 	@Test
 	public void testGenerateModule() {
 		generateModule(module, monitor);
 
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		assertTrue(root.getProject(module.getCoreId()).exists());
-		assertTrue(root.getProject(module.getFeatureId()).exists());
-		assertTrue(root.getProject(module.getUpdateSiteId()).exists());
-		assertTrue(root.getProject(module.getTargetId()).exists());
-		assertTrue(root.getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+		assertTrue(getProject(module.getTychoParentName()).exists());
 	}
 
 	@Test
-	public void testValidation() {
-		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(module);
-		assertEquals(OK, diagnostic.getSeverity());
+	public void testGenerateNoParent() {
+		module.setGenerateParent(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+
+		assertFalse(getProject(module.getTychoParentName()).exists());
 	}
 
 	@Test
-	@Ignore // validation is not yet working properly
-	public void testValidationFail() {
-		Module failingMmodule = ModulespecificationFactory.eINSTANCE.createModule();
-		module.setBaseId("!@#$%^&*()");
-		Diagnostic diagnostic = Diagnostician.INSTANCE.validate(failingMmodule);
-		assertNotEquals(OK, diagnostic.getSeverity());
+	public void testGenerateNoFeature() {
+		module.setGenerateFeature(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+		assertTrue(getProject(module.getTychoParentName()).exists());
+
+		assertFalse(getProject(module.getFeatureId()).exists());
 	}
 
-	@AfterClass
-	public static void tearDown() throws Exception {
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		IProject[] projects = root.getProjects();
+	@Test
+	public void testGenerateNoTarget() {
+		module.setGenerateTarget(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+		assertTrue(getProject(module.getTychoParentName()).exists());
+
+		assertFalse(getProject(module.getTargetId()).exists());
+	}
+
+	@Test
+	public void testGenerateNoUpdateSite() {
+		module.setGenerateUpdatesite(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+		assertTrue(getProject(module.getUie3Id()).exists());
+		assertTrue(getProject(module.getTychoParentName()).exists());
+
+		assertFalse(getProject(module.getUpdateSiteId()).exists());
+	}
+
+	@Test
+	public void testGenerateNoUiFragment() {
+		module.setGenerateUpdatesite(false);
+		generateModule(module, monitor);
+
+		assertTrue(getProject(module.getCoreId()).exists());
+		assertTrue(getProject(module.getFeatureId()).exists());
+		assertTrue(getProject(module.getUpdateSiteId()).exists());
+		assertTrue(getProject(module.getTargetId()).exists());
+		assertTrue(getProject(module.getUiId()).exists());
+
+		assertFalse(getProject(module.getUie3Id()).exists());
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		IProject[] projects = getProjects();
 		for (IProject iProject : projects) {
 			iProject.delete(true, null);
 		}
+	}
+
+	private IProject[] getProjects() {
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		return root.getProjects();
+	}
+
+	private IProject getProject(String id) {
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		return root.getProject(id);
 	}
 }
