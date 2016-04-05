@@ -34,7 +34,7 @@ public class ProjectFactory {
 		IJavaProject javaProject = JavaCore.create(project);
 		addBuilders(project, monitor);
 		addBinPath(project, javaProject, monitor);
-		defineClassPathEntries(javaProject, javaVersion);
+		defineClassPathEntries(javaProject, javaVersion, monitor);
 		return javaProject;
 	}
 
@@ -90,20 +90,20 @@ public class ProjectFactory {
 		return sourceFolder;
 	}
 
-	private static void defineClassPathEntries(IJavaProject javaProject, String javaVersion) throws JavaModelException {
+	private static void defineClassPathEntries(IJavaProject javaProject, String javaVersion, IProgressMonitor monitor) throws JavaModelException {
 		List<IClasspathEntry> entries = new ArrayList<IClasspathEntry>();
 		entries.add(JavaCore.newContainerEntry(new Path(
 				"org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/"
 						+ javaVersion)));
 		entries.add(JavaCore.newContainerEntry(new Path("org.eclipse.pde.core.requiredPlugins")));
 
-		addLibsToProjectClassPath(javaProject, entries);
+		addLibsToProjectClassPath(javaProject, entries, monitor);
 
 	}
 
-	private static void addLibsToProjectClassPath(IJavaProject javaProject, List<IClasspathEntry> entries)
+	private static void addLibsToProjectClassPath(IJavaProject javaProject, List<IClasspathEntry> entries, IProgressMonitor monitor)
 			throws JavaModelException {
-		javaProject.setRawClasspath(entries.toArray(new IClasspathEntry[entries.size()]), null);
+		javaProject.setRawClasspath(entries.toArray(new IClasspathEntry[entries.size()]), monitor);
 	}
 
 	private static void addBinPath(IProject project, IJavaProject javaProject, IProgressMonitor monitor) throws CoreException {
