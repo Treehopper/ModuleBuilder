@@ -23,8 +23,14 @@ import org.eclipse.jdt.core.JavaCore;
 import org.eclipse.jdt.core.JavaModelException;
 
 public class ProjectFactory {
+	private static final String BIN_FOLDER = "bin";
+	private static final String SRC_FOLDER = "src";
+	private static final String SCHEMA_BUILDER = "org.eclipse.pde.SchemaBuilder";
+	private static final String MANIFEST_BUILDER = "org.eclipse.pde.ManifestBuilder";
+	private static final String PDE_PLUGIN_NATURE = "org.eclipse.pde.PluginNature";
+
 	public static IJavaProject makeJavaProject(IProject project, IProgressMonitor monitor, String javaVersion) throws CoreException {
-		addNature(project, monitor, JavaCore.NATURE_ID, "org.eclipse.pde.PluginNature");
+		addNature(project, monitor, JavaCore.NATURE_ID, PDE_PLUGIN_NATURE);
 		IJavaProject javaProject = JavaCore.create(project);
 		addBuilders(project, monitor);
 		addBinPath(project, javaProject, monitor);
@@ -38,10 +44,10 @@ public class ProjectFactory {
 		java.setBuilderName(JavaCore.BUILDER_ID);
 
 		final ICommand manifest = projectDescription.newCommand();
-		manifest.setBuilderName("org.eclipse.pde.ManifestBuilder");
+		manifest.setBuilderName(MANIFEST_BUILDER);
 
 		final ICommand schema = projectDescription.newCommand();
-		schema.setBuilderName("org.eclipse.pde.SchemaBuilder");
+		schema.setBuilderName(SCHEMA_BUILDER);
 
 		projectDescription.setBuildSpec(new ICommand[] { java, manifest, schema });
 
@@ -73,7 +79,7 @@ public class ProjectFactory {
 	}
 
 	public static IFolder addSourcePath(IProject project, IProgressMonitor monitor) throws CoreException {
-		return createFolder("src", project, monitor);
+		return createFolder(SRC_FOLDER, project, monitor);
 	}
 
 	public static IFolder createFolder(String folderName, IProject project, IProgressMonitor monitor) throws CoreException {
@@ -86,27 +92,22 @@ public class ProjectFactory {
 
 	private static void defineClassPathEntries(IJavaProject javaProject, String javaVersion) throws JavaModelException {
 		List<IClasspathEntry> entries = new ArrayList<IClasspathEntry>();
-
-		// TODO: remove: alternate way to add java libs
-		// IVMInstall vmInstall = JavaRuntime.getDefaultVMInstall();
-		// LibraryLocation[] locations =
-		// JavaRuntime.getLibraryLocations(vmInstall);
-		// for (LibraryLocation element : locations) {
-		// entries.add(JavaCore.newLibraryEntry(element.getSystemLibraryPath(),
-		// null, null));
-		// }
 		entries.add(JavaCore.newContainerEntry(new Path(
 				"org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/"
 						+ javaVersion)));
 		entries.add(JavaCore.newContainerEntry(new Path("org.eclipse.pde.core.requiredPlugins")));
 
-		// add libs to project class path
-		javaProject.setRawClasspath(entries.toArray(new IClasspathEntry[entries.size()]), null);
+		addLibsToProjectClassPath(javaProject, entries);
 
 	}
 
+	private static void addLibsToProjectClassPath(IJavaProject javaProject, List<IClasspathEntry> entries)
+			throws JavaModelException {
+		javaProject.setRawClasspath(entries.toArray(new IClasspathEntry[entries.size()]), null);
+	}
+
 	private static void addBinPath(IProject project, IJavaProject javaProject, IProgressMonitor monitor) throws CoreException {
-		IFolder binFolder = project.getFolder("bin");
+		IFolder binFolder = project.getFolder(BIN_FOLDER);
 		if (!binFolder.exists()) {
 			binFolder.create(false, true, monitor);
 			javaProject.setOutputLocation(binFolder.getFullPath(), monitor);
