@@ -43,6 +43,7 @@ class Module {
 	
 	boolean generateParent = "true"
 	OSGiName tychoParentName = "parent"
+	MandatoryString mavenGroupId
 	
 	boolean generateTests = "true"
 	OSGiSegment testsSuffix = ".test"

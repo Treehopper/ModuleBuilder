@@ -78,6 +78,7 @@ public class ModuleItemProvider
 			addUiSuffixPropertyDescriptor(object);
 			addGenerateParentPropertyDescriptor(object);
 			addTychoParentNamePropertyDescriptor(object);
+			addMavenGroupIdPropertyDescriptor(object);
 			addGenerateTestsPropertyDescriptor(object);
 			addTestsSuffixPropertyDescriptor(object);
 			addGenerateFeaturePropertyDescriptor(object);
@@ -520,6 +521,28 @@ public class ModuleItemProvider
 				 getString("_UI_Module_tychoParentName_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_tychoParentName_feature", "_UI_Module_type"),
 				 ModulespecificationPackage.Literals.MODULE__TYCHO_PARENT_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Maven Group Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMavenGroupIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_mavenGroupId_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_mavenGroupId_feature", "_UI_Module_type"),
+				 ModulespecificationPackage.Literals.MODULE__MAVEN_GROUP_ID,
 				 true,
 				 false,
 				 false,
@@ -1178,6 +1201,7 @@ public class ModuleItemProvider
 			case ModulespecificationPackage.MODULE__UI_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_PARENT:
 			case ModulespecificationPackage.MODULE__TYCHO_PARENT_NAME:
+			case ModulespecificationPackage.MODULE__MAVEN_GROUP_ID:
 			case ModulespecificationPackage.MODULE__GENERATE_TESTS:
 			case ModulespecificationPackage.MODULE__TESTS_SUFFIX:
 			case ModulespecificationPackage.MODULE__GENERATE_FEATURE:

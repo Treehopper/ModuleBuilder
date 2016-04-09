@@ -230,13 +230,22 @@ public interface ModulespecificationPackage extends EPackage {
 	int MODULE__TYCHO_PARENT_NAME = 17;
 
 	/**
+	 * The feature id for the '<em><b>Maven Group Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__MAVEN_GROUP_ID = 18;
+
+	/**
 	 * The feature id for the '<em><b>Generate Tests</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TESTS = 18;
+	int MODULE__GENERATE_TESTS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Tests Suffix</b></em>' attribute.
@@ -245,7 +254,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_SUFFIX = 19;
+	int MODULE__TESTS_SUFFIX = 20;
 
 	/**
 	 * The feature id for the '<em><b>Generate Feature</b></em>' attribute.
@@ -254,7 +263,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_FEATURE = 20;
+	int MODULE__GENERATE_FEATURE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Feature Suffix</b></em>' attribute.
@@ -263,7 +272,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_SUFFIX = 21;
+	int MODULE__FEATURE_SUFFIX = 22;
 
 	/**
 	 * The feature id for the '<em><b>Generate Updatesite</b></em>' attribute.
@@ -272,7 +281,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UPDATESITE = 22;
+	int MODULE__GENERATE_UPDATESITE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Suffix</b></em>' attribute.
@@ -281,7 +290,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_SUFFIX = 23;
+	int MODULE__UPDATE_SITE_SUFFIX = 24;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Url</b></em>' attribute.
@@ -290,7 +299,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_URL = 24;
+	int MODULE__UPDATE_SITE_URL = 25;
 
 	/**
 	 * The feature id for the '<em><b>Generate Target</b></em>' attribute.
@@ -299,7 +308,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_TARGET = 25;
+	int MODULE__GENERATE_TARGET = 26;
 
 	/**
 	 * The feature id for the '<em><b>Target Suffix</b></em>' attribute.
@@ -308,7 +317,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_SUFFIX = 26;
+	int MODULE__TARGET_SUFFIX = 27;
 
 	/**
 	 * The feature id for the '<em><b>Generate Ui Fragment</b></em>' attribute.
@@ -317,7 +326,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__GENERATE_UI_FRAGMENT = 27;
+	int MODULE__GENERATE_UI_FRAGMENT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Suffix</b></em>' attribute.
@@ -326,7 +335,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_SUFFIX = 28;
+	int MODULE__UIE3_SUFFIX = 29;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version Suffix</b></em>' attribute.
@@ -335,7 +344,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION_SUFFIX = 29;
+	int MODULE__MAVEN_VERSION_SUFFIX = 30;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version Qualifier</b></em>' attribute.
@@ -344,7 +353,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION_QUALIFIER = 30;
+	int MODULE__OSGI_VERSION_QUALIFIER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Core Id</b></em>' attribute.
@@ -353,7 +362,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_ID = 31;
+	int MODULE__CORE_ID = 32;
 
 	/**
 	 * The feature id for the '<em><b>Ui Id</b></em>' attribute.
@@ -362,7 +371,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_ID = 32;
+	int MODULE__UI_ID = 33;
 
 	/**
 	 * The feature id for the '<em><b>Uie3 Id</b></em>' attribute.
@@ -371,7 +380,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UIE3_ID = 33;
+	int MODULE__UIE3_ID = 34;
 
 	/**
 	 * The feature id for the '<em><b>Tests Id</b></em>' attribute.
@@ -380,7 +389,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TESTS_ID = 34;
+	int MODULE__TESTS_ID = 35;
 
 	/**
 	 * The feature id for the '<em><b>Update Site Id</b></em>' attribute.
@@ -389,7 +398,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UPDATE_SITE_ID = 35;
+	int MODULE__UPDATE_SITE_ID = 36;
 
 	/**
 	 * The feature id for the '<em><b>Feature Id</b></em>' attribute.
@@ -398,7 +407,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__FEATURE_ID = 36;
+	int MODULE__FEATURE_ID = 37;
 
 	/**
 	 * The feature id for the '<em><b>Target Id</b></em>' attribute.
@@ -407,7 +416,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__TARGET_ID = 37;
+	int MODULE__TARGET_ID = 38;
 
 	/**
 	 * The feature id for the '<em><b>Maven Version</b></em>' attribute.
@@ -416,7 +425,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MAVEN_VERSION = 38;
+	int MODULE__MAVEN_VERSION = 39;
 
 	/**
 	 * The feature id for the '<em><b>Osgi Version</b></em>' attribute.
@@ -425,7 +434,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__OSGI_VERSION = 39;
+	int MODULE__OSGI_VERSION = 40;
 
 	/**
 	 * The feature id for the '<em><b>Core Module Name</b></em>' attribute.
@@ -434,7 +443,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__CORE_MODULE_NAME = 40;
+	int MODULE__CORE_MODULE_NAME = 41;
 
 	/**
 	 * The feature id for the '<em><b>Ui Module Name</b></em>' attribute.
@@ -443,7 +452,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__UI_MODULE_NAME = 41;
+	int MODULE__UI_MODULE_NAME = 42;
 
 	/**
 	 * The feature id for the '<em><b>Is License Empty</b></em>' attribute.
@@ -452,7 +461,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_LICENSE_EMPTY = 42;
+	int MODULE__IS_LICENSE_EMPTY = 43;
 
 	/**
 	 * The feature id for the '<em><b>Is License Url Empty</b></em>' attribute.
@@ -461,7 +470,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_LICENSE_URL_EMPTY = 43;
+	int MODULE__IS_LICENSE_URL_EMPTY = 44;
 
 	/**
 	 * The feature id for the '<em><b>Is Update Site Url Empty</b></em>' attribute.
@@ -470,7 +479,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_UPDATE_SITE_URL_EMPTY = 44;
+	int MODULE__IS_UPDATE_SITE_URL_EMPTY = 45;
 
 	/**
 	 * The feature id for the '<em><b>Is Author Email Empty</b></em>' attribute.
@@ -479,7 +488,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__IS_AUTHOR_EMAIL_EMPTY = 45;
+	int MODULE__IS_AUTHOR_EMAIL_EMPTY = 46;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -488,7 +497,7 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = 46;
+	int MODULE_FEATURE_COUNT = 47;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -747,6 +756,17 @@ public interface ModulespecificationPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getModule_TychoParentName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link modulespecification.Module#getMavenGroupId <em>Maven Group Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Maven Group Id</em>'.
+	 * @see modulespecification.Module#getMavenGroupId()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EAttribute getModule_MavenGroupId();
 
 	/**
 	 * Returns the meta object for the attribute '{@link modulespecification.Module#isGenerateTests <em>Generate Tests</em>}'.
@@ -1280,6 +1300,14 @@ public interface ModulespecificationPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MODULE__TYCHO_PARENT_NAME = eINSTANCE.getModule_TychoParentName();
+
+		/**
+		 * The meta object literal for the '<em><b>Maven Group Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__MAVEN_GROUP_ID = eINSTANCE.getModule_MavenGroupId();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Tests</b></em>' attribute feature.

@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link modulespecification.impl.ModuleImpl#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateParent <em>Generate Parent</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTychoParentName <em>Tycho Parent Name</em>}</li>
+ *   <li>{@link modulespecification.impl.ModuleImpl#getMavenGroupId <em>Maven Group Id</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateTests <em>Generate Tests</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#getTestsSuffix <em>Tests Suffix</em>}</li>
  *   <li>{@link modulespecification.impl.ModuleImpl#isGenerateFeature <em>Generate Feature</em>}</li>
@@ -430,6 +431,26 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @ordered
 	 */
 	protected String tychoParentName = TYCHO_PARENT_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMavenGroupId() <em>Maven Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMavenGroupId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MAVEN_GROUP_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMavenGroupId() <em>Maven Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMavenGroupId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String mavenGroupId = MAVEN_GROUP_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isGenerateTests() <em>Generate Tests</em>}' attribute.
@@ -1243,6 +1264,27 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getMavenGroupId() {
+		return mavenGroupId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMavenGroupId(String newMavenGroupId) {
+		String oldMavenGroupId = mavenGroupId;
+		mavenGroupId = newMavenGroupId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModulespecificationPackage.MODULE__MAVEN_GROUP_ID, oldMavenGroupId, mavenGroupId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public boolean isGenerateTests() {
 		return generateTests;
 	}
@@ -1714,6 +1756,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return isGenerateParent();
 			case ModulespecificationPackage.MODULE__TYCHO_PARENT_NAME:
 				return getTychoParentName();
+			case ModulespecificationPackage.MODULE__MAVEN_GROUP_ID:
+				return getMavenGroupId();
 			case ModulespecificationPackage.MODULE__GENERATE_TESTS:
 				return isGenerateTests();
 			case ModulespecificationPackage.MODULE__TESTS_SUFFIX:
@@ -1836,6 +1880,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__TYCHO_PARENT_NAME:
 				setTychoParentName((String)newValue);
 				return;
+			case ModulespecificationPackage.MODULE__MAVEN_GROUP_ID:
+				setMavenGroupId((String)newValue);
+				return;
 			case ModulespecificationPackage.MODULE__GENERATE_TESTS:
 				setGenerateTests((Boolean)newValue);
 				return;
@@ -1941,6 +1988,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 			case ModulespecificationPackage.MODULE__TYCHO_PARENT_NAME:
 				setTychoParentName(TYCHO_PARENT_NAME_EDEFAULT);
 				return;
+			case ModulespecificationPackage.MODULE__MAVEN_GROUP_ID:
+				setMavenGroupId(MAVEN_GROUP_ID_EDEFAULT);
+				return;
 			case ModulespecificationPackage.MODULE__GENERATE_TESTS:
 				setGenerateTests(GENERATE_TESTS_EDEFAULT);
 				return;
@@ -2028,6 +2078,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 				return generateParent != GENERATE_PARENT_EDEFAULT;
 			case ModulespecificationPackage.MODULE__TYCHO_PARENT_NAME:
 				return TYCHO_PARENT_NAME_EDEFAULT == null ? tychoParentName != null : !TYCHO_PARENT_NAME_EDEFAULT.equals(tychoParentName);
+			case ModulespecificationPackage.MODULE__MAVEN_GROUP_ID:
+				return MAVEN_GROUP_ID_EDEFAULT == null ? mavenGroupId != null : !MAVEN_GROUP_ID_EDEFAULT.equals(mavenGroupId);
 			case ModulespecificationPackage.MODULE__GENERATE_TESTS:
 				return generateTests != GENERATE_TESTS_EDEFAULT;
 			case ModulespecificationPackage.MODULE__TESTS_SUFFIX:
@@ -2134,6 +2186,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 		result.append(generateParent);
 		result.append(", tychoParentName: ");
 		result.append(tychoParentName);
+		result.append(", mavenGroupId: ");
+		result.append(mavenGroupId);
 		result.append(", generateTests: ");
 		result.append(generateTests);
 		result.append(", testsSuffix: ");

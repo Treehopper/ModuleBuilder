@@ -47,6 +47,11 @@
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/baseId"/>
           </domainModelReference>
         </children>
+        <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4PqLEeWGifCWsdAgKw" name="Control mavenGroupId">
+          <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4fqLEeWGifCWsdAgKw">
+            <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/mavenGroupId"/>
+          </domainModelReference>
+        </children>
         <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_GZdq4_qLEeWGifCWsdAgKw" name="Control authorEmail">
           <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_GZdq4_qLEeWGifCWsdAgKw">
             <domainModelEFeature xsi:type="ecore:EAttribute" href="modulespecification#//Module/authorEmail"/>

@@ -10,7 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>«this.baseId»</groupId>
+		<groupId>«this.mavenGroupId»</groupId>
 		<artifactId>«this.tychoParentName»</artifactId>
 		<version>«this.mavenVersion»</version>
 	</parent>

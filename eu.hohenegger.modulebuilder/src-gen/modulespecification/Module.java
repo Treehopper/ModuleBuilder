@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modulespecification.Module#getUiSuffix <em>Ui Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateParent <em>Generate Parent</em>}</li>
  *   <li>{@link modulespecification.Module#getTychoParentName <em>Tycho Parent Name</em>}</li>
+ *   <li>{@link modulespecification.Module#getMavenGroupId <em>Maven Group Id</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateTests <em>Generate Tests</em>}</li>
  *   <li>{@link modulespecification.Module#getTestsSuffix <em>Tests Suffix</em>}</li>
  *   <li>{@link modulespecification.Module#isGenerateFeature <em>Generate Feature</em>}</li>
@@ -549,6 +550,32 @@ public interface Module extends EObject {
 	 * @generated
 	 */
 	void setTychoParentName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Maven Group Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Maven Group Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Maven Group Id</em>' attribute.
+	 * @see #setMavenGroupId(String)
+	 * @see modulespecification.ModulespecificationPackage#getModule_MavenGroupId()
+	 * @model unique="false" dataType="modulespecification.MandatoryString"
+	 * @generated
+	 */
+	String getMavenGroupId();
+
+	/**
+	 * Sets the value of the '{@link modulespecification.Module#getMavenGroupId <em>Maven Group Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Maven Group Id</em>' attribute.
+	 * @see #getMavenGroupId()
+	 * @generated
+	 */
+	void setMavenGroupId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Generate Tests</b></em>' attribute.

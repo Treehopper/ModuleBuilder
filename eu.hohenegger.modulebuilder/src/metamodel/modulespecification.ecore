@@ -79,6 +79,8 @@
         defaultValueLiteral="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoParentName" unique="false"
         eType="#//OSGiName" defaultValueLiteral="parent"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mavenGroupId" unique="false"
+        eType="#//MandatoryString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="generateTests" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EBoolean"
         defaultValueLiteral="true"/>

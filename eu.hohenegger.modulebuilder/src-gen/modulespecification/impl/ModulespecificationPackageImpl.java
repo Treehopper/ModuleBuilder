@@ -308,7 +308,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateTests() {
+	public EAttribute getModule_MavenGroupId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(18);
 	}
 
@@ -317,7 +317,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TestsSuffix() {
+	public EAttribute getModule_GenerateTests() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(19);
 	}
 
@@ -326,7 +326,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateFeature() {
+	public EAttribute getModule_TestsSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(20);
 	}
 
@@ -335,7 +335,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_FeatureSuffix() {
+	public EAttribute getModule_GenerateFeature() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(21);
 	}
 
@@ -344,7 +344,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateUpdatesite() {
+	public EAttribute getModule_FeatureSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(22);
 	}
 
@@ -353,7 +353,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UpdateSiteSuffix() {
+	public EAttribute getModule_GenerateUpdatesite() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(23);
 	}
 
@@ -362,7 +362,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UpdateSiteUrl() {
+	public EAttribute getModule_UpdateSiteSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(24);
 	}
 
@@ -371,7 +371,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateTarget() {
+	public EAttribute getModule_UpdateSiteUrl() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(25);
 	}
 
@@ -380,7 +380,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TargetSuffix() {
+	public EAttribute getModule_GenerateTarget() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(26);
 	}
 
@@ -389,7 +389,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_GenerateUiFragment() {
+	public EAttribute getModule_TargetSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(27);
 	}
 
@@ -398,7 +398,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Uie3Suffix() {
+	public EAttribute getModule_GenerateUiFragment() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(28);
 	}
 
@@ -407,7 +407,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_MavenVersionSuffix() {
+	public EAttribute getModule_Uie3Suffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(29);
 	}
 
@@ -416,7 +416,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_OsgiVersionQualifier() {
+	public EAttribute getModule_MavenVersionSuffix() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(30);
 	}
 
@@ -425,7 +425,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CoreId() {
+	public EAttribute getModule_OsgiVersionQualifier() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(31);
 	}
 
@@ -434,7 +434,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UiId() {
+	public EAttribute getModule_CoreId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(32);
 	}
 
@@ -443,7 +443,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_Uie3Id() {
+	public EAttribute getModule_UiId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(33);
 	}
 
@@ -452,7 +452,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TestsId() {
+	public EAttribute getModule_Uie3Id() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(34);
 	}
 
@@ -461,7 +461,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UpdateSiteId() {
+	public EAttribute getModule_TestsId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(35);
 	}
 
@@ -470,7 +470,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_FeatureId() {
+	public EAttribute getModule_UpdateSiteId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(36);
 	}
 
@@ -479,7 +479,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_TargetId() {
+	public EAttribute getModule_FeatureId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(37);
 	}
 
@@ -488,7 +488,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_MavenVersion() {
+	public EAttribute getModule_TargetId() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(38);
 	}
 
@@ -497,7 +497,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_OsgiVersion() {
+	public EAttribute getModule_MavenVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(39);
 	}
 
@@ -506,7 +506,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_CoreModuleName() {
+	public EAttribute getModule_OsgiVersion() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(40);
 	}
 
@@ -515,7 +515,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_UiModuleName() {
+	public EAttribute getModule_CoreModuleName() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(41);
 	}
 
@@ -524,7 +524,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_IsLicenseEmpty() {
+	public EAttribute getModule_UiModuleName() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(42);
 	}
 
@@ -533,7 +533,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_IsLicenseUrlEmpty() {
+	public EAttribute getModule_IsLicenseEmpty() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(43);
 	}
 
@@ -542,7 +542,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_IsUpdateSiteUrlEmpty() {
+	public EAttribute getModule_IsLicenseUrlEmpty() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(44);
 	}
 
@@ -551,8 +551,17 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getModule_IsAuthorEmailEmpty() {
+	public EAttribute getModule_IsUpdateSiteUrlEmpty() {
 		return (EAttribute)moduleEClass.getEStructuralFeatures().get(45);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModule_IsAuthorEmailEmpty() {
+		return (EAttribute)moduleEClass.getEStructuralFeatures().get(46);
 	}
 
 	/**
@@ -638,6 +647,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		createEAttribute(moduleEClass, MODULE__UI_SUFFIX);
 		createEAttribute(moduleEClass, MODULE__GENERATE_PARENT);
 		createEAttribute(moduleEClass, MODULE__TYCHO_PARENT_NAME);
+		createEAttribute(moduleEClass, MODULE__MAVEN_GROUP_ID);
 		createEAttribute(moduleEClass, MODULE__GENERATE_TESTS);
 		createEAttribute(moduleEClass, MODULE__TESTS_SUFFIX);
 		createEAttribute(moduleEClass, MODULE__GENERATE_FEATURE);
@@ -726,6 +736,7 @@ public class ModulespecificationPackageImpl extends EPackageImpl implements Modu
 		initEAttribute(getModule_UiSuffix(), this.getOSGiSegment(), "uiSuffix", ".ui", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateParent(), theEcorePackage.getEBoolean(), "generateParent", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_TychoParentName(), this.getOSGiName(), "tychoParentName", "parent", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModule_MavenGroupId(), this.getMandatoryString(), "mavenGroupId", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateTests(), theEcorePackage.getEBoolean(), "generateTests", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_TestsSuffix(), this.getOSGiSegment(), "testsSuffix", ".test", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModule_GenerateFeature(), theEcorePackage.getEBoolean(), "generateFeature", "true", 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
