@@ -2,6 +2,8 @@
  */
 package modulespecification.impl;
 
+import com.google.common.base.Objects;
+
 import modulespecification.Module;
 import modulespecification.ModulespecificationPackage;
 
@@ -1678,8 +1680,17 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 */
 	public boolean isIsLicenseEmpty() {
+		boolean _or = false;
 		String _license = this.getLicense();
-		return _license.isEmpty();
+		boolean _equals = Objects.equal(_license, null);
+		if (_equals) {
+			_or = true;
+		} else {
+			String _license_1 = this.getLicense();
+			boolean _isEmpty = _license_1.isEmpty();
+			_or = _isEmpty;
+		}
+		return _or;
 	}
 
 	/**
@@ -1688,8 +1699,17 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 */
 	public boolean isIsLicenseUrlEmpty() {
+		boolean _or = false;
 		String _licenseUrl = this.getLicenseUrl();
-		return _licenseUrl.isEmpty();
+		boolean _equals = Objects.equal(_licenseUrl, null);
+		if (_equals) {
+			_or = true;
+		} else {
+			String _licenseUrl_1 = this.getLicenseUrl();
+			boolean _isEmpty = _licenseUrl_1.isEmpty();
+			_or = _isEmpty;
+		}
+		return _or;
 	}
 
 	/**
@@ -1698,8 +1718,17 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 */
 	public boolean isIsUpdateSiteUrlEmpty() {
+		boolean _or = false;
 		String _updateSiteUrl = this.getUpdateSiteUrl();
-		return _updateSiteUrl.isEmpty();
+		boolean _equals = Objects.equal(_updateSiteUrl, null);
+		if (_equals) {
+			_or = true;
+		} else {
+			String _updateSiteUrl_1 = this.getUpdateSiteUrl();
+			boolean _isEmpty = _updateSiteUrl_1.isEmpty();
+			_or = _isEmpty;
+		}
+		return _or;
 	}
 
 	/**
@@ -1708,8 +1737,17 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 */
 	public boolean isIsAuthorEmailEmpty() {
+		boolean _or = false;
 		String _authorEmail = this.getAuthorEmail();
-		return _authorEmail.isEmpty();
+		boolean _equals = Objects.equal(_authorEmail, null);
+		if (_equals) {
+			_or = true;
+		} else {
+			String _authorEmail_1 = this.getAuthorEmail();
+			boolean _isEmpty = _authorEmail_1.isEmpty();
+			_or = _isEmpty;
+		}
+		return _or;
 	}
 
 	/**

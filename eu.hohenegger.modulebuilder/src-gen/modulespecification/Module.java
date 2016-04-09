@@ -1115,7 +1115,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Is License Empty</em>' attribute.
 	 * @see modulespecification.ModulespecificationPackage#getModule_IsLicenseEmpty()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _license = this.getLicense();\nreturn _license.isEmpty();'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='boolean _or = false;\n<%java.lang.String%> _license = this.getLicense();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_license, null);\nif (_equals)\n{\n\t_or = true;\n} else\n{\n\t<%java.lang.String%> _license_1 = this.getLicense();\n\tboolean _isEmpty = _license_1.isEmpty();\n\t_or = _isEmpty;\n}\nreturn _or;'"
 	 * @generated
 	 */
 	boolean isIsLicenseEmpty();
@@ -1131,7 +1131,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Is License Url Empty</em>' attribute.
 	 * @see modulespecification.ModulespecificationPackage#getModule_IsLicenseUrlEmpty()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _licenseUrl = this.getLicenseUrl();\nreturn _licenseUrl.isEmpty();'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='boolean _or = false;\n<%java.lang.String%> _licenseUrl = this.getLicenseUrl();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_licenseUrl, null);\nif (_equals)\n{\n\t_or = true;\n} else\n{\n\t<%java.lang.String%> _licenseUrl_1 = this.getLicenseUrl();\n\tboolean _isEmpty = _licenseUrl_1.isEmpty();\n\t_or = _isEmpty;\n}\nreturn _or;'"
 	 * @generated
 	 */
 	boolean isIsLicenseUrlEmpty();
@@ -1147,7 +1147,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Is Update Site Url Empty</em>' attribute.
 	 * @see modulespecification.ModulespecificationPackage#getModule_IsUpdateSiteUrlEmpty()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _updateSiteUrl = this.getUpdateSiteUrl();\nreturn _updateSiteUrl.isEmpty();'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='boolean _or = false;\n<%java.lang.String%> _updateSiteUrl = this.getUpdateSiteUrl();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_updateSiteUrl, null);\nif (_equals)\n{\n\t_or = true;\n} else\n{\n\t<%java.lang.String%> _updateSiteUrl_1 = this.getUpdateSiteUrl();\n\tboolean _isEmpty = _updateSiteUrl_1.isEmpty();\n\t_or = _isEmpty;\n}\nreturn _or;'"
 	 * @generated
 	 */
 	boolean isIsUpdateSiteUrlEmpty();
@@ -1163,7 +1163,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Is Author Email Empty</em>' attribute.
 	 * @see modulespecification.ModulespecificationPackage#getModule_IsAuthorEmailEmpty()
 	 * @model unique="false" transient="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='<%java.lang.String%> _authorEmail = this.getAuthorEmail();\nreturn _authorEmail.isEmpty();'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel get='boolean _or = false;\n<%java.lang.String%> _authorEmail = this.getAuthorEmail();\nboolean _equals = <%com.google.common.base.Objects%>.equal(_authorEmail, null);\nif (_equals)\n{\n\t_or = true;\n} else\n{\n\t<%java.lang.String%> _authorEmail_1 = this.getAuthorEmail();\n\tboolean _isEmpty = _authorEmail_1.isEmpty();\n\t_or = _isEmpty;\n}\nreturn _or;'"
 	 * @generated
 	 */
 	boolean isIsAuthorEmailEmpty();

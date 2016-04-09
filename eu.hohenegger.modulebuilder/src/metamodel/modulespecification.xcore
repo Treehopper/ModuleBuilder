@@ -109,18 +109,18 @@ class Module {
 	}
 
 	derived boolean isLicenseEmpty get {
-		license.empty
+		license == null || license.empty
 	}
 
 	derived boolean isLicenseUrlEmpty get {
-		licenseUrl.empty
+		licenseUrl == null || licenseUrl.empty
 	}
 
 	derived boolean isUpdateSiteUrlEmpty get {
-		updateSiteUrl.empty
+		updateSiteUrl == null || updateSiteUrl.empty
 	}
 
 	derived boolean isAuthorEmailEmpty get {
-		authorEmail.empty
+		authorEmail == null || authorEmail.empty
 	}
 }
