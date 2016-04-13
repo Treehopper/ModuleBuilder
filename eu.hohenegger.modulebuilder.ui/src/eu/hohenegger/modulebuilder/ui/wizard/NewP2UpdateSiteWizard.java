@@ -1,6 +1,7 @@
 package eu.hohenegger.modulebuilder.ui.wizard;
 
 
+import static eu.hohenegger.modulebuilder.Constants.EXTENSION;
 import static eu.hohenegger.modulebuilder.ModuleUtil.generateModule;
 import static eu.hohenegger.modulebuilder.ui.Activator.logError;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
@@ -8,16 +9,19 @@ import static org.eclipse.emf.common.util.Diagnostic.OK;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.resources.IProjectNature;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
+import eu.hohenegger.modulebuilder.XMIPersistenceUtil;
 import modulespecification.Module;
 import modulespecification.ModulespecificationFactory;
 
@@ -51,14 +55,29 @@ public class NewP2UpdateSiteWizard extends Wizard implements INewWizard {
 
 	public void addPages() {
 		String intialBaseId = "";
-		if (!selection.isEmpty() && selection.getFirstElement() instanceof IProjectNature) {
-			IProjectNature nature = (IProjectNature) selection.getFirstElement();
-			intialBaseId = nature.getProject().getName();
+		if (!selection.isEmpty()) {
+			if (selection.getFirstElement() instanceof IProjectNature) {
+				IProjectNature nature = (IProjectNature) selection.getFirstElement();
+				intialBaseId = nature.getProject().getName();
+
+				module = createModel(intialBaseId);
+				module.setBaseLocation(getOSWorkspaceLocation());
+			} else if (selection.getFirstElement() instanceof IResource) {
+				IResource resource = (IResource) selection.getFirstElement();
+				if (resource.getName().endsWith(EXTENSION)) {
+					module = loadModel(resource);
+				}
+			}
+		} else {
+			module = createModel(intialBaseId);
+			module.setBaseLocation(getOSWorkspaceLocation());
 		}
-		module = createModel(intialBaseId);
-		module.setBaseLocation(getOSWorkspaceLocation());
 		page = new NewP2UpdateSiteWizardPage(module);
 		addPage(page);
+	}
+
+	private static Module loadModel(IResource resource) {
+		return XMIPersistenceUtil.load(EXTENSION, URI.createFileURI(resource.getLocation().toPortableString()));
 	}
 
 	private String getOSWorkspaceLocation() {

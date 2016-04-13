@@ -1,5 +1,6 @@
 package eu.hohenegger.modulebuilder;
 
+import static eu.hohenegger.modulebuilder.Constants.EXTENSION;
 import static eu.hohenegger.modulebuilder.impl.Activator.logError;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addSourcePath;
 import static eu.hohenegger.modulebuilder.impl.ProjectFactory.addToClassPathEntries;
@@ -17,6 +18,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.SubMonitor;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.jdt.core.IJavaProject;
 
 import eu.hohenegger.modulebuilder.impl.ProjectFactory;
@@ -147,7 +149,13 @@ public class ModuleUtil {
 		}
 		expandTemplate(module, project, "README.md", templateMask, sub.newChild(1));
 
+		saveModel(module, baseName, project);
+
 		project.refreshLocal(IResource.DEPTH_INFINITE, sub.newChild(1));
+	}
+
+	private static void saveModel(Module module, String baseName, IProject project) {
+		XMIPersistenceUtil.save(module, EXTENSION, URI.createFileURI(project.getLocation().append(baseName) + "." + EXTENSION));
 	}
 
 	public static void generateModule(Module module, IProgressMonitor monitor) {

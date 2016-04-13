@@ -1,5 +1,6 @@
 @GenModel(modelDirectory="/eu.hohenegger.modulebuilder/src-gen")
 @GenModel(editDirectory="/eu.hohenegger.modulebuilder.edit/src-gen")
+@GenModel(fileExtensions="modulespecification")
 package modulespecification
 
 @ExtendedMetaData(pattern="((\\d+)\\.)((\\d+)\\.)(\\d+)")
