@@ -302,7 +302,7 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYCHO_VERSION_EDEFAULT = "0.24.0";
+	protected static final String TYCHO_VERSION_EDEFAULT = "0.25.0";
 
 	/**
 	 * The cached value of the '{@link #getTychoVersion() <em>Tycho Version</em>}' attribute.

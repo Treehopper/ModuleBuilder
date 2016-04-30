@@ -364,7 +364,7 @@ public interface Module extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Tycho Version</b></em>' attribute.
-	 * The default value is <code>"0.24.0"</code>.
+	 * The default value is <code>"0.25.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tycho Version</em>' attribute isn't clear,
@@ -374,7 +374,7 @@ public interface Module extends EObject {
 	 * @return the value of the '<em>Tycho Version</em>' attribute.
 	 * @see #setTychoVersion(String)
 	 * @see modulespecification.ModulespecificationPackage#getModule_TychoVersion()
-	 * @model default="0.24.0" unique="false"
+	 * @model default="0.25.0" unique="false"
 	 * @generated
 	 */
 	String getTychoVersion();

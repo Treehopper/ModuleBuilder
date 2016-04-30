@@ -4,6 +4,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="modelDirectory" value="/eu.hohenegger.modulebuilder/src-gen"/>
     <details key="editDirectory" value="/eu.hohenegger.modulebuilder.edit/src-gen"/>
+    <details key="fileExtensions" value="modulespecification"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EDataType" name="Version" instanceClassName="java.lang.String">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
@@ -63,7 +64,7 @@
         defaultValueLiteral="http://www.example.org"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tychoVersion" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
-        defaultValueLiteral="0.24.0"/>
+        defaultValueLiteral="0.25.0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="javaVersion" unique="false"
         eType="ecore:EDataType ../../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"
         defaultValueLiteral="JavaSE-1.8"/>

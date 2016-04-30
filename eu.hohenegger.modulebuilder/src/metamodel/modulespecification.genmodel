@@ -21,7 +21,8 @@
   <foreignModel>modulespecification.xcore</foreignModel>
   <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
   <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
-  <genPackages prefix="Modulespecification" disposableProviderFactory="true" ecorePackage="modulespecification.ecore#/">
+  <genPackages prefix="Modulespecification" disposableProviderFactory="true" fileExtensions="modulespecification"
+      ecorePackage="modulespecification.ecore#/">
     <genDataTypes ecoreDataType="modulespecification.ecore#//Version"/>
     <genDataTypes ecoreDataType="modulespecification.ecore#//OSGiSegment"/>
     <genDataTypes ecoreDataType="modulespecification.ecore#//OSGiName"/>
