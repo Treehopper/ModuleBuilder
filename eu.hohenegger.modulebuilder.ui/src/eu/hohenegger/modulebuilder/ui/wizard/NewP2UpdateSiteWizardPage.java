@@ -34,6 +34,8 @@ import modulespecification.ModulespecificationPackage;
  */
 
 public class NewP2UpdateSiteWizardPage extends WizardPage {
+	private static final int MIN_WIZARD_HEIGHT = 500;
+
 	private final class ValidationStatusUpdater extends AdapterImpl {
 		@Override
 		public void notifyChanged(Notification msg) {
@@ -95,7 +97,7 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 
 	private void scrolled(Composite rootComposite) {
 		ScrolledComposite sc = new ScrolledComposite(rootComposite, SWT.H_SCROLL | SWT.V_SCROLL);
-		sc.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).hint(SWT.DEFAULT, 450).create());
+		sc.setLayoutData(GridDataFactory.fillDefaults().grab(true, true).hint(SWT.DEFAULT, MIN_WIZARD_HEIGHT).create());
 		sc.setExpandHorizontal(true);
 		sc.setExpandVertical(true);
 
