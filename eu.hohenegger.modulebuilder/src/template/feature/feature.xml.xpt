@@ -9,7 +9,8 @@
 <feature
       id="«this.featureId»"
       label="«this.moduleName»"
-      version="«this.osgiVersion»">
+      version="«this.osgiVersion»"
+      provider-name="«this.providerName»">
 
    <copyright url="«this.copyRightUrl»">
       Copyright (c) «this.copyRightYear» «this.copyRightUrl».
