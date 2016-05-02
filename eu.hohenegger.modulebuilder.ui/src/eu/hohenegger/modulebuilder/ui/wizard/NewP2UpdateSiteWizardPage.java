@@ -1,7 +1,13 @@
 package eu.hohenegger.modulebuilder.ui.wizard;
 
+import static org.eclipse.core.databinding.UpdateValueStrategy.POLICY_NEVER;
 import static org.eclipse.emf.common.util.Diagnostic.OK;
+import static org.eclipse.emf.databinding.EMFProperties.value;
 
+import org.eclipse.core.databinding.DataBindingContext;
+import org.eclipse.core.databinding.UpdateValueStrategy;
+import org.eclipse.core.databinding.observable.value.IObservableValue;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -19,6 +25,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 
 import modulespecification.Module;
+import modulespecification.ModulespecificationPackage;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -55,6 +62,23 @@ public class NewP2UpdateSiteWizardPage extends WizardPage {
 				"This wizard generates all projects and files that are necessary to to build an Eclipse update site with Maven Tycho.");
 		validationStatusUpdater = new ValidationStatusUpdater();
 		module.eAdapters().add(validationStatusUpdater);
+
+		bindFirstBaseIdSet(module);
+	}
+
+	private void bindFirstBaseIdSet(Module module) {
+		DataBindingContext dataBindingContext = new DataBindingContext();
+		IObservableValue observeSource = value(ModulespecificationPackage.eINSTANCE.getModule_BaseId()).observe(module);
+		IObservableValue observeTarget = value(ModulespecificationPackage.eINSTANCE.getModule_MavenGroupId()).observe(module);
+		UpdateValueStrategy sourceToTarget = new UpdateValueStrategy();
+		sourceToTarget.setBeforeSetValidator(value -> {
+			Object currentValue = observeTarget.getValue();
+			if (currentValue != null) {
+				return Status.CANCEL_STATUS;
+			}
+			return Status.OK_STATUS;
+		});
+		dataBindingContext.bindValue(observeSource, observeTarget, sourceToTarget, new UpdateValueStrategy(POLICY_NEVER));
 	}
 
 	/**
