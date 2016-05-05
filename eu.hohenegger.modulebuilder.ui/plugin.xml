@@ -15,4 +15,7 @@
 <extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
 <file filePath="view-model/Module.view"/>
 </extension>
+<extension point="org.eclipse.emf.ecp.view.template">
+<viewTemplate xmi="view-model/Module.template"/>
+</extension>
 </plugin>
